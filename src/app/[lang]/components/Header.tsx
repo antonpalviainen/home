@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import LocaleSwitcher from './LocaleSwitcher'
+
 import { type getDictionary } from '@/lib/dictionaries'
 import type { Locale } from '@/lib/i18n'
+
+import LocaleSwitcher from './LocaleSwitcher'
 
 export default function Header({
   dictionary: d,

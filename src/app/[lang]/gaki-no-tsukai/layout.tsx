@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
+
+import Header from '@/components/Header'
 import { getDictionary } from '@/lib/dictionaries'
 import type { Locale } from '@/lib/i18n'
-import Header from '@/components/Header'
-import { ReactNode } from 'react'
 
 export default async function Layout({
   children,

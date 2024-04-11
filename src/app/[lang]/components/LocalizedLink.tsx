@@ -1,5 +1,6 @@
-import { ComponentProps } from 'react'
 import Link from 'next/link'
+import { ComponentProps } from 'react'
+
 import type { Locale } from '@/lib/i18n'
 import { localizedPathName } from '@/lib/utils'
 

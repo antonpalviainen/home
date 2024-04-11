@@ -1,7 +1,8 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 import { i18n, type Locale } from '@/lib/i18n'
 
 export default function LocaleSwitcher() {

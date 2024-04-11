@@ -1,5 +1,6 @@
-import { localizedPathName } from './utils'
 import { describe, expect, test } from 'vitest'
+
+import { localizedPathName } from './utils'
 
 describe('localizedPathName', () => {
   test('should add locale to pathname if missing', () => {
