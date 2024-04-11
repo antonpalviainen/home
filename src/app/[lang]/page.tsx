@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Page() {
+export default async function Page() {
   return (
     <main>
       <h1>gaki route</h1>
