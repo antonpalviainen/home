@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Episode {
+  id     Int      @id @default(autoincrement())
+  number Int?
+  date   DateTime
+
+  titles Phrase[]
+  series Series[]
+}
+
+model Series {
+  id    Int      @id @default(autoincrement())
+  names Phrase[]
+
+  episodes Episode[]
+}
+
+model Phrase {
+  id       String   @id @default(cuid())
+  text     String
+  language Language
+
+  episode   Episode? @relation(fields: [episodeId], references: [id])
+  episodeId Int?
+
+  series   Series? @relation(fields: [seriesId], references: [id])
+  seriesId Int?
+
+  // Covering indexes for queries by episode or series id
+  @@index([episodeId, language, text])
+  @@index([seriesId, language, text])
+}
+
+enum Language {
+  EN
+  JA
+}
