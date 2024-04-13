@@ -1,26 +1,27 @@
-import LocalizedLink from '@/components/LocalizedLink'
-import { fetchSeries } from '@/lib/data'
-import { Locale } from '@/lib/i18n'
+import Link from 'next/link'
+
+import { fetchSeries } from '@/lib/gaki-no-tsukai/data'
+import { resolveLanguage } from '@/lib/gaki-no-tsukai/utils'
 
 export default async function Page({
-  params: { lang },
+  searchParams,
 }: {
-  params: { lang: Locale }
+  searchParams?: { lang?: string; page?: string }
 }) {
-  const series = await fetchSeries(lang)
+  const language = resolveLanguage(searchParams?.lang)
+  const series = await fetchSeries(language)
 
   return (
     <ul>
-      {series.map((s) => (
-        <li key={s.id}>
-          <LocalizedLink
-            href={`/gaki-no-tsukai/series/${s.id}`}
-            locale={lang}
+      {series.map((series) => (
+        <li key={series.id}>
+          <Link
+            href={`/gaki-no-tsukai/series/${series.id}`}
             className="flex justify-between"
           >
-            <span>{s.names[0].text}</span>
-            <span>{s._count.episodes}</span>
-          </LocalizedLink>
+            <span>{series.names[0].text}</span>
+            <span>{series._count.episodes}</span>
+          </Link>
         </li>
       ))}
     </ul>

@@ -1,13 +1,7 @@
-import { Locale } from './i18n'
-import prisma from './prisma'
+import { Language } from '@/lib/gaki-no-tsukai/definitions'
+import prisma from '@/lib/prisma'
 
-function resolveLanguage(locale: Locale) {
-  return locale === 'ja' ? 'JA' : 'EN'
-}
-
-export async function fetchEpisodes(locale: Locale) {
-  const language = resolveLanguage(locale)
-
+export async function fetchEpisodes(language: Language) {
   const episodes = await prisma.episode.findMany({
     include: {
       series: {
@@ -24,9 +18,7 @@ export async function fetchEpisodes(locale: Locale) {
   return episodes
 }
 
-export async function fetchSeries(locale: Locale) {
-  const language = resolveLanguage(locale)
-
+export async function fetchSeries(language: Language) {
   const series = await prisma.series.findMany({
     include: {
       names: {

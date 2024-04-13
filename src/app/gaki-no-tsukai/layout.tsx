@@ -1,21 +1,11 @@
 import { ReactNode } from 'react'
 
-import Header from '@/components/Header'
-import { getDictionary } from '@/lib/dictionaries'
-import type { Locale } from '@/lib/i18n'
+import Header from '@/ui/gaki-no-tsukai/header'
 
-export default async function Layout({
-  children,
-  params: { lang },
-}: {
-  children: ReactNode
-  params: { lang: Locale }
-}) {
-  const d = await getDictionary(lang)
-
+export default async function Layout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Header dictionary={d} locale={lang} />
+      <Header />
       <main className="p-2">{children}</main>
     </>
   )
