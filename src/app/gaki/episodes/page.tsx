@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 
 import { fetchEpisodesPages } from '@/lib/gaki/data'
 import { resolveLanguage } from '@/lib/gaki/utils'
 import Pagination from '@/ui/gaki/episodes/pagination'
 import EpisodeTable from '@/ui/gaki/episodes/table'
+import { EpisodeTableSkeleton } from '@/ui/gaki/skeletons'
 
 export const metadata: Metadata = { title: 'Episodes' }
 
@@ -22,7 +24,12 @@ export default async function Page({
       <div className="mb-4 flex justify-center md:mb-5">
         <Pagination totalPages={totalPages} />
       </div>
-      <EpisodeTable language={language} currentPage={currentPage} />
+      <Suspense
+        key={language + currentPage}
+        fallback={<EpisodeTableSkeleton />}
+      >
+        <EpisodeTable language={language} currentPage={currentPage} />
+      </Suspense>
       <div className="mt-4 flex justify-center md:mt-5">
         <Pagination totalPages={totalPages} />
       </div>

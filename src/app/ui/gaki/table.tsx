@@ -1,6 +1,5 @@
-import { SeriesLabel } from './episodes/series-label'
-
 import type { Episodes, Language } from '@/lib/gaki/definitions'
+import { SeriesLabel } from '@/ui/gaki/episodes/series-label'
 
 export default function Table({
   episodes,
@@ -16,7 +15,7 @@ export default function Table({
       <table>
         <tbody className="divide-y dark:divide-neutral-700">
           {episodes.map((ep) => (
-            <tr key={ep.id} className="">
+            <tr key={ep.id}>
               <td className="px-2 py-1.5 ">{ep.number ?? '-'}</td>
               <td className="py-1.5 w-full">
                 <div className="flex justify-between">

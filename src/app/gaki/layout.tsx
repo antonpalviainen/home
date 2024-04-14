@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { ReactNode } from 'react'
+import { ReactNode, Suspense } from 'react'
 
 import Header from '@/ui/gaki/header'
+import { HeaderSkeleton } from '@/ui/gaki/skeletons'
 
 export const metadata: Metadata = {
   title: {
@@ -13,8 +14,12 @@ export const metadata: Metadata = {
 export default async function Layout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Header />
-      <main className="flex justify-center p-4 md:p-10 md:pt-5">{children}</main>
+      <Suspense fallback={<HeaderSkeleton />}>
+        <Header />
+      </Suspense>
+      <main className="flex justify-center p-4 md:p-10 md:pt-5">
+        {children}
+      </main>
     </>
   )
 }

@@ -1,5 +1,4 @@
-import { Language } from './definitions'
-
+import { Language } from '@/lib/gaki/definitions'
 import prisma from '@/lib/prisma'
 
 const ITEMS_PER_PAGE = 100

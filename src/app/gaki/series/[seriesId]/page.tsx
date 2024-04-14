@@ -1,5 +1,8 @@
+import { Suspense } from 'react'
+
 import { resolveLanguage } from '@/lib/gaki/utils'
 import SeriesTable from '@/ui/gaki/series/table'
+import { EpisodeTableSkeleton } from '@/ui/gaki/skeletons'
 
 export default async function Page({
   params,
@@ -10,5 +13,12 @@ export default async function Page({
 }) {
   const language = resolveLanguage(searchParams?.lang)
 
-  return <SeriesTable seriesId={Number(params.seriesId)} language={language} />
+  return (
+    <Suspense
+      key={language + params.seriesId}
+      fallback={<EpisodeTableSkeleton />}
+    >
+      <SeriesTable seriesId={Number(params.seriesId)} language={language} />
+    </Suspense>
+  )
 }
