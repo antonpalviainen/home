@@ -18,7 +18,7 @@ export default async function Page({
     <ul>
       {series.length ? (
         series.map((series) => (
-          <li key={series.id}>
+          <li key={series.id} className="py-0.5">
             <Link
               href={{
                 pathname: `/gaki/series/${series.id}`,

@@ -1,6 +1,5 @@
-import { fetchSeriesEpisodes } from '@/lib/gaki/data'
 import { resolveLanguage } from '@/lib/gaki/utils'
-import EpisodeTable from '@/ui/gaki/episodes/table'
+import SeriesTable from '@/ui/gaki/series/table'
 
 export default async function Page({
   params,
@@ -10,11 +9,6 @@ export default async function Page({
   searchParams?: { lang?: string }
 }) {
   const language = resolveLanguage(searchParams?.lang)
-  const episodes = await fetchSeriesEpisodes(
-    parseInt(params.seriesId),
-    language
-  )
 
-  // return <EpisodeTable />
-  return <p>episodes route</p>
+  return <SeriesTable seriesId={Number(params.seriesId)} language={language} />
 }
