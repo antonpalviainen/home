@@ -1,20 +1,27 @@
 'use client'
 
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
 import { fetchSeriesEpisodes } from '@/lib/gaki/data'
+import { resolveLanguage } from '@/lib/gaki/utils'
 
 type Episodes = Awaited<ReturnType<typeof fetchSeriesEpisodes>>
 type Series = Episodes[0]['series'][0]
 
 function SeriesLabel({ series }: { series: Series }) {
   const [hovered, setHovered] = useState(false)
+  const searchParams = useSearchParams()
+  const language = resolveLanguage(searchParams.get('lang'))
 
   return (
     <>
       <Link
-        href={`/gaki/series/${series.id}`}
+        href={{
+          pathname: `/gaki/series/${series.id}`,
+          query: { lang: language },
+        }}
         className="relative text-xs p-0.5 border border-black/15 rounded break-keep"
         onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
