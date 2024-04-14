@@ -17,7 +17,10 @@ export default async function Page({
         series.map((series) => (
           <li key={series.id}>
             <Link
-              href={`/gaki/series/${series.id}`}
+              href={{
+                pathname: `/gaki/series/${series.id}`,
+                query: { lang: language },
+              }}
               className="flex justify-between"
             >
               <span>{series.name}</span>
