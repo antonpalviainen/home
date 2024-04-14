@@ -21,7 +21,7 @@ export default async function Page({
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="mb-4 flex justify-center md:mb-5">
+      <div className="mb-4 flex justify-center">
         <Pagination totalPages={totalPages} />
       </div>
       <Suspense
@@ -30,7 +30,7 @@ export default async function Page({
       >
         <EpisodeTable language={language} currentPage={currentPage} />
       </Suspense>
-      <div className="mt-4 flex justify-center md:mt-5">
+      <div className="mt-4 flex justify-center">
         <Pagination totalPages={totalPages} />
       </div>
     </div>

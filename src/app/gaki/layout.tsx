@@ -17,7 +17,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
       <Suspense fallback={<HeaderSkeleton />}>
         <Header />
       </Suspense>
-      <main className="flex justify-center p-4 md:p-10 md:pt-5">
+      <main className="flex justify-center p-4 pb-10 md:p-10 md:pt-4">
         {children}
       </main>
     </>
