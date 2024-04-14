@@ -32,7 +32,7 @@ export async function fetchEpisodes(language: Language, currentPage: number) {
     const flattenedData = data.map((row) => ({
       id: row.id,
       number: row.number,
-      title: row.text[0].title,
+      title: row.text[0]?.title,
       date: row.date,
       series: row.series.map((series) => ({
         id: series.id,
@@ -45,6 +45,18 @@ export async function fetchEpisodes(language: Language, currentPage: number) {
   } catch (error) {
     console.error('Database Error:', error)
     throw new Error('Failed to fetch episodes')
+  }
+}
+
+export async function fetchEpisodesPages() {
+  try {
+    const data = await prisma.episode.count()
+    const totalPages = Math.ceil(data / ITEMS_PER_PAGE)
+
+    return totalPages
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch total number of episodes')
   }
 }
 

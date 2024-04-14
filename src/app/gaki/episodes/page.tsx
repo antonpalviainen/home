@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
-import { fetchEpisodes } from '@/lib/gaki/data'
+import { fetchEpisodesPages } from '@/lib/gaki/data'
 import { resolveLanguage } from '@/lib/gaki/utils'
+import Pagination from '@/ui/gaki/episodes/pagination'
 import EpisodeTable from '@/ui/gaki/episodes/table'
 
 export const metadata: Metadata = { title: 'Episodes' }
@@ -13,7 +14,18 @@ export default async function Page({
 }) {
   const language = resolveLanguage(searchParams?.lang)
   const currentPage = Number(searchParams?.page) || 1
-  const episodes = await fetchEpisodes(language, currentPage)
 
-  return <EpisodeTable language={language} currentPage={currentPage} />
+  const totalPages = await fetchEpisodesPages()
+
+  return (
+    <div>
+      <div className="mb-3 flex justify-center">
+        <Pagination totalPages={totalPages} />
+      </div>
+      <EpisodeTable language={language} currentPage={currentPage} />
+      <div className="mt-3 flex justify-center">
+        <Pagination totalPages={totalPages} />
+      </div>
+    </div>
+  )
 }
