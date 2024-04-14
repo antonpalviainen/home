@@ -1,6 +1,6 @@
 import { fetchSeriesEpisodes } from '@/lib/gaki/data'
 import { resolveLanguage } from '@/lib/gaki/utils'
-import EpisodeTable from '@/ui/gaki/table'
+import EpisodeTable from '@/ui/gaki/episodes/table'
 
 export default async function Page({
   params,
@@ -15,5 +15,6 @@ export default async function Page({
     language
   )
 
-  return <EpisodeTable episodes={episodes} />
+  // return <EpisodeTable />
+  return <p>episodes route</p>
 }

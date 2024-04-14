@@ -15,7 +15,7 @@ export default async function Page({
   const series = await fetchSeries(language)
 
   return (
-    <ul className="max-w-5xl mx-auto">
+    <ul>
       {series.length ? (
         series.map((series) => (
           <li key={series.id}>

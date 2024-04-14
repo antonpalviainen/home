@@ -2,8 +2,11 @@ import { Language } from './definitions'
 
 import prisma from '@/lib/prisma'
 
-export async function fetchEpisodes(language: Language, skip = 0, take = 100) {
+const ITEMS_PER_PAGE = 100
+
+export async function fetchEpisodes(language: Language, currentPage: number) {
   const languageOrder = language === 'en' ? 'asc' : 'desc'
+  const offset = (currentPage - 1) * ITEMS_PER_PAGE
 
   try {
     const data = await prisma.episode.findMany({
@@ -22,8 +25,8 @@ export async function fetchEpisodes(language: Language, skip = 0, take = 100) {
           },
         },
       },
-      skip,
-      take,
+      skip: offset,
+      take: ITEMS_PER_PAGE,
     })
 
     const flattenedData = data.map((row) => ({

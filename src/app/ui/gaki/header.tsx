@@ -13,9 +13,6 @@ export default function Header() {
   return (
     <header className="flex justify-between px-3 py-2 border-b border-black">
       <nav className="space-x-2">
-        <Link href={{ pathname: '/gaki', query: { lang: language } }}>
-          Home
-        </Link>
         <Link href={{ pathname: '/gaki/episodes', query: { lang: language } }}>
           Episodes
         </Link>
