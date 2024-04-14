@@ -112,6 +112,8 @@ export async function fetchSeries(language: Language) {
       episodes: row._count.episodes,
     }))
 
+    flattenedData.sort((a, b) => a.name.localeCompare(b.name))
+
     return flattenedData
   } catch (error) {
     console.error('Database Error:', error)
