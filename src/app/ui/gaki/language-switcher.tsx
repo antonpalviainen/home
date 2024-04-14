@@ -17,8 +17,12 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="space-x-2">
-      <Link href={createPageURL('en')}>EN</Link>
-      <Link href={createPageURL('ja')}>JA</Link>
+      <Link href={createPageURL('en')} replace>
+        EN
+      </Link>
+      <Link href={createPageURL('ja')} replace>
+        JA
+      </Link>
     </div>
   )
 }
