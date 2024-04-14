@@ -14,7 +14,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <main className="p-3">{children}</main>
+      <main className="flex justify-center p-4 md:p-10 md:pt-5">{children}</main>
     </>
   )
 }

@@ -15,10 +15,10 @@ export default async function Page({
   const series = await fetchSeries(language)
 
   return (
-    <ul>
+    <ul className="w-full max-w-6xl border rounded-lg divide-y">
       {series.length ? (
         series.map((series) => (
-          <li key={series.id} className="py-0.5">
+          <li key={series.id} className="px-2 py-1">
             <Link
               href={{
                 pathname: `/gaki/series/${series.id}`,

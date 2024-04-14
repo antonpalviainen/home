@@ -11,7 +11,7 @@ export default function Header() {
   const language = resolveLanguage(searchParams.get('lang'))
 
   return (
-    <header className="flex justify-between px-3 py-2 border-b border-black">
+    <header className="flex justify-between px-3 py-2 border-b font-medium">
       <nav className="space-x-2">
         <Link href={{ pathname: '/gaki/episodes', query: { lang: language } }}>
           Episodes

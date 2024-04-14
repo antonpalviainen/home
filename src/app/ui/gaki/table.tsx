@@ -12,30 +12,34 @@ export default function Table({
   const hasEpisodes = Array.isArray(episodes) && episodes.length > 0
 
   return hasEpisodes ? (
-    <table className="min-w-full border">
-      <tbody>
-        {episodes.map((ep) => (
-          <tr key={ep.id} className="border-b last-of-type:border-none">
-            <td className="px-2 py-1.5">{ep.number ?? '-'}</td>
-            <td className="py-1.5 flex justify-between items-center">
-              <span>{ep.title || '-'}</span>
-              <span className="space-x-1">
-                {ep.series.map((series) => (
-                  <SeriesLabel
-                    key={series.id}
-                    series={series}
-                    language={language}
-                  />
-                ))}
-              </span>
-            </td>
-            <td className="px-2 py-1.5 text-right whitespace-nowrap">
-              {ep.date.toISOString().slice(0, 10)}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="w-full border rounded-lg">
+      <table>
+        <tbody className="divide-y">
+          {episodes.map((ep) => (
+            <tr key={ep.id} className="">
+              <td className="px-2 py-1.5 ">{ep.number ?? '-'}</td>
+              <td className="py-1.5 w-full">
+                <div className="flex justify-between">
+                  <span>{ep.title || '-'}</span>
+                  <span className="space-x-1">
+                    {ep.series.map((series) => (
+                      <SeriesLabel
+                        key={series.id}
+                        series={series}
+                        language={language}
+                      />
+                    ))}
+                  </span>
+                </div>
+              </td>
+              <td className="px-2 py-1.5 text-right whitespace-nowrap ">
+                {ep.date.toISOString().slice(0, 10)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   ) : (
     <p>No episodes found</p>
   )

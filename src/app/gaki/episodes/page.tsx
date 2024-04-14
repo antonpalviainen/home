@@ -18,12 +18,12 @@ export default async function Page({
   const totalPages = await fetchEpisodesPages()
 
   return (
-    <div>
-      <div className="mb-3 flex justify-center">
+    <div className="w-full">
+      <div className="mb-4 flex justify-center md:mb-5">
         <Pagination totalPages={totalPages} />
       </div>
       <EpisodeTable language={language} currentPage={currentPage} />
-      <div className="mt-3 flex justify-center">
+      <div className="mt-4 flex justify-center md:mt-5">
         <Pagination totalPages={totalPages} />
       </div>
     </div>
