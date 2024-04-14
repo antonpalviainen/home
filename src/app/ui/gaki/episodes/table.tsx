@@ -15,28 +15,30 @@ export default async function EpisodeTable({
   const hasEpisodes = Array.isArray(episodes) && episodes.length > 0
 
   return hasEpisodes ? (
-    <ul>
-      {episodes.map((ep) => (
-        <li key={ep.id} className="flex px-2 py-1.5">
-          <span className="min-w-10">{ep.number ?? '-'}</span>
-          <span className="flex flex-1 justify-between items-center px-2">
-            <span>{ep.title || '-'}</span>
-            <div className="inline ml-2 space-x-2">
-              {ep.series.map((series) => (
-                <SeriesLabel
-                  key={series.id}
-                  series={series}
-                  language={language}
-                />
-              ))}
-            </div>
-          </span>
-          <span className=" min-w-24 whitespace-nowrap">
-            {ep.date.toISOString().slice(0, 10)}
-          </span>
-        </li>
-      ))}
-    </ul>
+    <table className="min-w-full border">
+      <tbody>
+        {episodes.map((ep) => (
+          <tr key={ep.id} className="border-b last-of-type:border-none">
+            <td className="px-2 py-1.5">{ep.number ?? '-'}</td>
+            <td className="py-1.5 flex justify-between items-center">
+              <span>{ep.title || '-'}</span>
+              <span className="space-x-1">
+                {ep.series.map((series) => (
+                  <SeriesLabel
+                    key={series.id}
+                    series={series}
+                    language={language}
+                  />
+                ))}
+              </span>
+            </td>
+            <td className="px-2 py-1.5 text-right whitespace-nowrap">
+              {ep.date.toISOString().slice(0, 10)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   ) : (
     <p>No episodes found</p>
   )
