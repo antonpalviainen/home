@@ -22,7 +22,7 @@ export function SeriesListItemSkeleton() {
     <li className={`${shimmer} relative overflow-hidden px-2 py-1`}>
       <div className="flex justify-between space-x-2">
         {/* Name */}
-        <div className="w-[48rem] h-6 bg-neutral-100 rounded"></div>
+        <div className="w-3/4 h-6 bg-neutral-100 rounded"></div>
         {/* Episodes */}
         <div className="w-6 h-6 bg-neutral-100 rounded"></div>
       </div>
@@ -52,7 +52,7 @@ export function TableRowSkeleton() {
       </td>
       {/* Title */}
       <td className="py-1.5 w-full">
-        <div className="w-[48rem] h-6 bg-neutral-100 rounded"></div>
+        <div className="w-3/4 h-6 bg-neutral-100 rounded"></div>
       </td>
       {/* Date */}
       <td className="px-2 py-1.5">

@@ -9,7 +9,6 @@ import LanguageSwitcher from '@/ui/gaki/language-switcher'
 export default function Header() {
   const searchParams = useSearchParams()
   const language = searchParams.get('lang')
-  
   const query = new URLSearchParams()
 
   if (language) {
