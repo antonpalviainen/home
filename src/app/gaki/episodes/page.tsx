@@ -18,7 +18,7 @@ export default async function Page({
   const totalPages = await fetchEpisodesPages()
 
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col items-center">
       <div className="mb-4 flex justify-center md:mb-5">
         <Pagination totalPages={totalPages} />
       </div>

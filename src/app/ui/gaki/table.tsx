@@ -12,7 +12,7 @@ export default function Table({
   const hasEpisodes = Array.isArray(episodes) && episodes.length > 0
 
   return hasEpisodes ? (
-    <div className="w-full border rounded-lg dark:border-neutral-700">
+    <div className="w-full max-w-7xl border rounded-lg dark:border-neutral-700">
       <table>
         <tbody className="divide-y dark:divide-neutral-700">
           {episodes.map((ep) => (
