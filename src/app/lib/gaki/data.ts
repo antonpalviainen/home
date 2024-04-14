@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client'
-
 import { Language } from './definitions'
 
-const prisma = new PrismaClient()
+import prisma from '@/lib/prisma'
 
 export async function fetchEpisodes(language: Language, skip = 0, take = 100) {
   const languageOrder = language === 'en' ? 'asc' : 'desc'

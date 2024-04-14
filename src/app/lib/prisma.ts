@@ -8,9 +8,7 @@ if (process.env.NODE_ENV === 'production') {
   const g = global as unknown as { prisma?: PrismaClient }
 
   if (!g.prisma) {
-    g.prisma = new PrismaClient({
-      log: ['query', 'info', 'warn', 'error'],
-    })
+    g.prisma = new PrismaClient()
   }
 
   prisma = g.prisma
