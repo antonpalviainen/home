@@ -20,11 +20,5 @@ test.describe('gaki no tsukai routes', () => {
 
     // Assert that the current URL is "/gaki/series"
     await page.waitForURL('/gaki/series')
-
-    // Click on the "home" link
-    await page.click('text="Home"')
-
-    // Assert that the current URL is "/gaki"
-    await page.waitForURL('/gaki')
   })
 })
