@@ -5,15 +5,21 @@ import { Language } from './definitions'
 const prisma = new PrismaClient()
 
 export async function fetchEpisodes(language: Language, skip = 0, take = 100) {
+  const languageOrder = language === 'en' ? 'asc' : 'desc'
+
   try {
     const data = await prisma.episode.findMany({
       include: {
-        text: { select: { title: true }, where: { language } },
+        text: {
+          select: { title: true },
+          // Select all languages for now
+          // where: { language },
+          orderBy: { language: languageOrder },
+        },
         series: {
           include: {
             text: {
               select: { id: true, name: true, abbreviation: true },
-              where: { language },
             },
           },
         },
@@ -42,13 +48,20 @@ export async function fetchEpisodes(language: Language, skip = 0, take = 100) {
 }
 
 export async function fetchSeriesEpisodes(id: number, language: Language) {
+  const languageOrder = language === 'en' ? 'asc' : 'desc'
+
   try {
     const data = await prisma.series.findFirst({
       where: { id },
       include: {
         episodes: {
           include: {
-            text: { select: { title: true }, where: { language } },
+            text: {
+              select: { title: true },
+              // Select all languages for now
+              // where: { language },
+              orderBy: { language: languageOrder },
+            },
             series: {
               include: {
                 text: {
@@ -67,7 +80,7 @@ export async function fetchSeriesEpisodes(id: number, language: Language) {
     const flattenedData = data.episodes.map((row) => ({
       id: row.id,
       number: row.number,
-      title: row.text[0]?.title,
+      title: row.text[0]?.title || row.text[1]?.title,
       date: row.date,
       series: row.series.map((series) => ({
         id: series.id,
