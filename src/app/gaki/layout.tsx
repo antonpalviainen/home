@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import Header from '@/ui/gaki-no-tsukai/header'
+import Header from '@/ui/gaki/header'
 
 export default async function Layout({ children }: { children: ReactNode }) {
   return (

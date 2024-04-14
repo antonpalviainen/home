@@ -1,8 +1,9 @@
 'use client'
 
-import { Language } from '@prisma/client'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
+
+import { Language } from '@/lib/gaki/definitions'
 
 export default function LanguageSwitcher() {
   const pathName = usePathname()
@@ -16,11 +17,8 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="space-x-2">
-      {Object.values(Language).map((language) => (
-        <Link href={createPageURL(language)} key={language}>
-          {language.toUpperCase()}
-        </Link>
-      ))}
+      <Link href={createPageURL('en')}>EN</Link>
+      <Link href={createPageURL('ja')}>JA</Link>
     </div>
   )
 }

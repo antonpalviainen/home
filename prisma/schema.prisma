@@ -13,34 +13,32 @@ model Episode {
   number Int?
   date   DateTime
 
-  titles Phrase[]
+  text   EpisodeTitle[]
   series Series[]
 }
 
 model Series {
-  id    Int      @id @default(autoincrement())
-  names Phrase[]
+  id Int @id @default(autoincrement())
 
+  text     SeriesName[]
   episodes Episode[]
 }
 
-model Phrase {
-  id       String   @id @default(cuid())
-  text     String
-  language Language
+model EpisodeTitle {
+  id       Int    @id @default(autoincrement())
+  title    String
+  language String
 
-  episode   Episode? @relation(fields: [episodeId], references: [id])
-  episodeId Int?
-
-  series   Series? @relation(fields: [seriesId], references: [id])
-  seriesId Int?
-
-  // Covering indexes for queries by episode or series id
-  @@index([episodeId, language, text])
-  @@index([seriesId, language, text])
+  Episode   Episode @relation(fields: [episodeId], references: [id])
+  episodeId Int
 }
 
-enum Language {
-  EN
-  JA
+model SeriesName {
+  id           Int    @id @default(autoincrement())
+  name         String
+  abbreviation String
+  language     String
+
+  Series   Series @relation(fields: [seriesId], references: [id])
+  seriesId Int
 }

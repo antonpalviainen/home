@@ -1,0 +1,33 @@
+import Link from 'next/link'
+
+import { fetchSeries } from '@/lib/gaki/data'
+import { resolveLanguage } from '@/lib/gaki/utils'
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: { lang?: string }
+}) {
+  const language = resolveLanguage(searchParams?.lang)
+  const series = await fetchSeries(language)
+
+  return (
+    <ul>
+      {series.length ? (
+        series.map((series) => (
+          <li key={series.id}>
+            <Link
+              href={`/gaki/series/${series.id}`}
+              className="flex justify-between"
+            >
+              <span>{series.name}</span>
+              <span>{series.episodes}</span>
+            </Link>
+          </li>
+        ))
+      ) : (
+        <p>No series found</p>
+      )}
+    </ul>
+  )
+}
