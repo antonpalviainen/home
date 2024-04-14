@@ -1,7 +1,10 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { fetchSeries } from '@/lib/gaki/data'
 import { resolveLanguage } from '@/lib/gaki/utils'
+
+export const metadata: Metadata = { title: 'Series' }
 
 export default async function Page({
   searchParams,
@@ -12,7 +15,7 @@ export default async function Page({
   const series = await fetchSeries(language)
 
   return (
-    <ul>
+    <ul className="max-w-5xl mx-auto">
       {series.length ? (
         series.map((series) => (
           <li key={series.id}>

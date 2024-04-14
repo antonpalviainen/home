@@ -15,13 +15,13 @@ function SeriesLabel({ series }: { series: Series }) {
     <>
       <Link
         href={`/gaki/series/${series.id}`}
-        className="relative text-xs p-0.5 border border-white/15 rounded break-keep hover:bg-white/5"
+        className="relative text-xs p-0.5 border border-black/15 rounded break-keep"
         onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
       >
         {series.abbreviation}
         {hovered ? (
-          <span className="absolute text-base -top-9 end-0 z-10 p-0.5 text-center bg-black border border-white/15 rounded whitespace-nowrap">
+          <span className="absolute text-base -top-9 end-0 z-10 px-1 py-0.5 text-center bg-white text-black border border-black/15 rounded whitespace-nowrap">
             {series.name}
           </span>
         ) : null}
@@ -34,9 +34,9 @@ export default function EpisodeTable({ episodes }: { episodes: Episodes }) {
   const hasEpisodes = Array.isArray(episodes) && episodes.length > 0
 
   return hasEpisodes ? (
-    <ul>
+    <ul className="max-w-[110rem] mx-auto">
       {episodes.map((ep) => (
-        <li key={ep.id} className="flex px-2 py-1.5 hover:bg-white/10">
+        <li key={ep.id} className="flex px-2 py-1.5">
           <span className="min-w-10">{ep.number ?? '-'}</span>
           <span className="flex flex-1 justify-between items-center px-2">
             <span>{ep.title || '-'}</span>
@@ -46,7 +46,7 @@ export default function EpisodeTable({ episodes }: { episodes: Episodes }) {
               ))}
             </div>
           </span>
-          <span className="whitespace-nowrap">
+          <span className=" min-w-24 whitespace-nowrap">
             {ep.date.toISOString().slice(0, 10)}
           </span>
         </li>
