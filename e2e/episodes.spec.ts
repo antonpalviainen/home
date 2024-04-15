@@ -60,34 +60,3 @@ test.describe('japanese toggle', () => {
     await expect(page.getByRole('rowgroup')).toContainText('1989-10-03')
   })
 })
-
-//   // Navigate to the second page
-//   await page.locator('.inline-flex > a').first().click()
-//   await expect(page).toHaveURL(
-//     'http://localhost:3000/gaki/episodes?lang=en&page=2'
-//   )
-
-//   // 101th episode
-//   await expect(page.getByRole('rowgroup')).toContainText('101')
-//   await expect(page.getByRole('rowgroup')).toContainText('1991-10-20')
-
-//   // Change language to Japanese
-//   await page.getByRole('link', { name: 'JA' }).click()
-
-//   // 101th episode with Japanese title
-//   await expect(page.getByRole('rowgroup')).toContainText('101')
-//   await expect(page.getByRole('rowgroup')).toContainText(
-//     '商店街まるごと間違い探し!!'
-//   )
-//   await expect(page.getByRole('rowgroup')).toContainText('1991-10-20')
-
-//   // Navigate to the first page
-//   await page.locator('.inline-flex > a').first().click()
-
-//   // First episode with Japanese title
-//   await expect(page.getByRole('rowgroup')).toContainText('1')
-//   await expect(page.getByRole('rowgroup')).toContainText(
-//     '偉いさん・医者・クイズ'
-//   )
-//   await expect(page.getByRole('rowgroup')).toContainText('1989-10-03')
-// })
