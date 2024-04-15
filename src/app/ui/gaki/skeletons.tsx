@@ -4,7 +4,7 @@ const shimmer =
 
 export function HeaderSkeleton() {
   return (
-    <div className="flex justify-between px-3 py-2 border-b dark:border-slate-700">
+    <div className="flex justify-between px-3 py-2 border-b dark:border-white/10">
       <div className="flex space-x-2">
         <div className="inline-block w-16 h-6 bg-neutral-100 rounded dark:bg-white/10"></div>
         <div className="inline-block w-16 h-6 bg-neutral-100 rounded dark:bg-white/10"></div>
@@ -32,7 +32,7 @@ export function SeriesListItemSkeleton() {
 
 export function SeriesListSkeleton() {
   return (
-    <ul className="w-full max-w-7xl border rounded-lg divide-y dark:border-slate-700 dark:divide-slate-700">
+    <ul className="w-full max-w-7xl border rounded-lg divide-y dark:border-white/10 dark:divide-white/10">
       {Array.from({ length: 50 }).map((_, index) => (
         <SeriesListItemSkeleton key={index} />
       ))}
@@ -61,9 +61,9 @@ export function TableRowSkeleton() {
 
 export function EpisodeTableSkeleton() {
   return (
-    <div className="w-full max-w-7xl border rounded-lg dark:border-slate-700">
+    <div className="w-full max-w-7xl border rounded-lg dark:border-white/10">
       <table className={`${shimmer} relative overflow-hidden`}>
-        <tbody className="divide-y dark:divide-slate-700">
+        <tbody className="divide-y dark:divide-white/10">
           {Array.from({ length: 50 }).map((_, index) => (
             <TableRowSkeleton key={index} />
           ))}

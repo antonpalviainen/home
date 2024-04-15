@@ -16,7 +16,7 @@ export default function Header() {
   }
 
   return (
-    <header className="flex justify-between px-3 py-2 border-b font-medium dark:border-slate-700">
+    <header className="flex justify-between px-3 py-2 border-b font-medium dark:border-white/10">
       <nav className="space-x-2">
         <Link href={{ pathname: '/gaki/episodes', query: query.toString() }}>
           Episodes

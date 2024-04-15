@@ -11,9 +11,9 @@ export default function Table({
   const hasEpisodes = Array.isArray(episodes) && episodes.length > 0
 
   return hasEpisodes ? (
-    <div className="w-full max-w-7xl border rounded-lg dark:border-slate-700">
+    <div className="w-full max-w-7xl border rounded-lg dark:border-white/10">
       <table>
-        <tbody className="divide-y dark:divide-slate-700">
+        <tbody className="divide-y dark:divide-white/10">
           {episodes.map((ep) => (
             <tr key={ep.id}>
               <td className="px-2 py-1.5 ">{ep.number ?? '-'}</td>
