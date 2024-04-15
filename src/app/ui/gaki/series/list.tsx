@@ -13,7 +13,7 @@ export async function SeriesList({ language }: { language: Language }) {
   const series = await getCachedSeries(language)
 
   return series.length ? (
-    <ul className="w-full border rounded-lg divide-y dark:border-white/10 dark:divide-white/10">
+    <ul className="w-full rounded-lg sm:border sm:divide-y dark:border-white/10 dark:divide-white/10">
       {series.map((series) => (
         <li key={series.id} className="px-2 py-1">
           <Link
