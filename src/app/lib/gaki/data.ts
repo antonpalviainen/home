@@ -20,6 +20,7 @@ export async function fetchEpisodes(language: Language, currentPage: number) {
           include: {
             text: {
               select: { id: true, name: true, abbreviation: true },
+              where: { language },
             },
           },
         },

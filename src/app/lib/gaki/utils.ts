@@ -2,7 +2,7 @@ import { Language } from '@/lib/gaki/definitions'
 
 export function resolveLanguage(lang?: string | null): Language {
   if (!lang) return 'en'
-  return lang === 'en' ? 'en' : 'ja'
+  return lang === 'ja' ? 'ja' : 'en'
 }
 
 export function generatePagination(currentPage: number, totalPages: number) {

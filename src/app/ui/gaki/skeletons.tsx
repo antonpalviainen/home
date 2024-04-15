@@ -33,12 +33,9 @@ export function SeriesListItemSkeleton() {
 export function SeriesListSkeleton() {
   return (
     <ul className="w-full max-w-7xl border rounded-lg divide-y">
-      <SeriesListItemSkeleton />
-      <SeriesListItemSkeleton />
-      <SeriesListItemSkeleton />
-      <SeriesListItemSkeleton />
-      <SeriesListItemSkeleton />
-      <SeriesListItemSkeleton />
+      {Array.from({ length: 50 }).map((_, index) => (
+        <SeriesListItemSkeleton key={index} />
+      ))}
     </ul>
   )
 }
@@ -67,12 +64,9 @@ export function EpisodeTableSkeleton() {
     <div className="w-full max-w-7xl border rounded-lg">
       <table className={`${shimmer} relative overflow-hidden`}>
         <tbody className="divide-y">
-          <TableRowSkeleton />
-          <TableRowSkeleton />
-          <TableRowSkeleton />
-          <TableRowSkeleton />
-          <TableRowSkeleton />
-          <TableRowSkeleton />
+          {Array.from({ length: 50 }).map((_, index) => (
+            <TableRowSkeleton key={index} />
+          ))}
         </tbody>
       </table>
     </div>
