@@ -6,7 +6,7 @@ import type { Language } from '@/lib/gaki/definitions'
 
 const getCachedSeries = cache(
   async (language: Language) => await fetchSeries(language),
-  ['home-gaki-series']
+  ['gaki-series']
 )
 
 export async function SeriesList({ language }: { language: Language }) {
