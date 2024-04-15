@@ -9772,7 +9772,7 @@
     {
       "n": 772,
       "date": "2005-09-04",
-      "title_en": "Hamada's '???' Guerrilla Live Showdown!!",
+      "title_en": "Hamada's 'Souseiki' Guerrilla Live Showdown!!",
       "title_ja": "浜田”創聖鬼”ゲリラライブ決行!",
       "talk_segments": [
         "タクシーで風俗話",
@@ -9878,7 +9878,7 @@
     {
       "n": 782,
       "date": "2005-11-20",
-      "title_en": "Yamaramu Recommends a Mansion!!",
+      "title_en": "Yama-Gollum Recommends a Mansion!!",
       "title_ja": "ヤマラムがオススメ豪邸を紹介",
       "talk_segments": [
         "セット変更",
@@ -10077,15 +10077,15 @@
     {
       "n": 802,
       "date": "2006-04-23",
-      "title_en": "",
+      "title_en": "Shouhei's New Regular? Gaki no Tsukai Final Audition",
       "title_ja": "笑瓶が新レギュラーに? ガキ使最終オーディション",
       "talk_segments": null,
-      "series": []
+      "series": ["shouhei"]
     },
     {
       "n": 803,
       "date": "2006-04-30",
-      "title_en": "",
+      "title_en": "A Change in the Inn's Ceiling from the Attic",
       "title_ja": "温泉旅館で天井裏から一変化",
       "talk_segments": null,
       "series": []
@@ -10093,7 +10093,7 @@
     {
       "n": 804,
       "date": "2006-05-07",
-      "title_en": "",
+      "title_en": "Edited by Kenji Suga",
       "title_ja": "編集by菅賢治",
       "talk_segments": [
         "｢へぇ｣の番組が思い出せなくて…",
@@ -10105,15 +10105,15 @@
     {
       "n": 805,
       "date": "2006-05-14",
-      "title_en": "",
+      "title_en": "Who Was the Most Convincing!? Self-Taught Health Presentation Contest!!",
       "title_ja": "一番納得できたのは誰！？　独学で健康プレゼン発表会～!!",
       "talk_segments": null,
-      "series": []
+      "series": ["presentation"]
     },
     {
       "n": 806,
       "date": "2006-05-21",
-      "title_en": "",
+      "title_en": "Hamada's May Sickness Crisis!? Recording Canceled!?",
       "title_ja": "浜田が五月病 収録中止の危機!?",
       "talk_segments": [
         "顔にぷっくぅ(吹き出物)が出来た話",
@@ -10148,7 +10148,7 @@
     {
       "n": 809,
       "date": "2006-06-11",
-      "title_en": "",
+      "title_en": "Yamasaki's Music Production (2nd Episode)",
       "title_ja": "山崎邦正音楽プロデュース（第2弾）",
       "talk_segments": null,
       "series": ["yamasaki produce"]
@@ -10156,7 +10156,7 @@
     {
       "n": 810,
       "date": "2006-06-18",
-      "title_en": "",
+      "title_en": "High Tension Special: Do Your Best Japan!!",
       "title_ja": "ハイテンションスペシャル ガンバレ日本!!",
       "talk_segments": null,
       "series": ["high tension"]
@@ -10180,7 +10180,7 @@
     {
       "n": 813,
       "date": "2006-07-09",
-      "title_en": "",
+      "title_en": "Sunday Night Special 4: The Master Dent",
       "title_ja": "日曜ナイトスペシャル4 凄腕入れ歯万引きGメン ピカデリー梅田 緊急来日特番!!",
       "talk_segments": ["おにぎりの梅干のタネ"],
       "series": []
@@ -10196,7 +10196,7 @@
     {
       "n": 815,
       "date": "2006-07-23",
-      "title_en": "",
+      "title_en": "Put Your Life on the Line! Hang On for Dear Life Club!!",
       "title_ja": "死ぬ気でしがみつけ!引きずられ部～!!",
       "talk_segments": null,
       "series": ["club activities"]
@@ -10204,7 +10204,7 @@
     {
       "n": 816,
       "date": "2006-07-30",
-      "title_en": "",
+      "title_en": "Yamasaki vs Moriman Compilation",
       "title_ja": "山崎邦正vsモリマン総集編",
       "talk_segments": [
         "[ハガキ]すごく素朴な疑問なのですが、幽霊は何を食べているのですか？",
@@ -10212,23 +10212,23 @@
         "松本さんはＴＶ東京のテレビチャンピオンで３回チャンピオンに輝いたことがあるそうですが、その回は何王決定戦だったのですか？",
         "カレーうどんの汁を飛ばさずに食べる方法を教えてください"
       ],
-      "series": []
+      "series": ["yamasaki vs moriman"]
     },
     {
       "n": 817,
       "date": "2006-08-06",
-      "title_en": "",
+      "title_en": "Yamasaki vs Moriman Legendary Super Final Revenge Match (Part 1)",
       "title_ja": "山崎vsモリマン伝説のスーパーファイナルリベンジマッチ前半",
       "talk_segments": null,
-      "series": []
+      "series": ["yamasaki vs moriman"]
     },
     {
       "n": 818,
       "date": "2006-08-13",
-      "title_en": "",
+      "title_en": "Yamasaki vs Moriman Legendary Super Final Revenge Match (Part 2)",
       "title_ja": "山崎vsモリマン伝説のスーパーファイナルリベンジマッチ後半",
       "talk_segments": null,
-      "series": []
+      "series": ["yamasaki vs moriman"]
     },
     {
       "n": 819,
@@ -10248,7 +10248,7 @@
     {
       "n": 820,
       "date": "2006-08-27",
-      "title_en": "",
+      "title_en": "If You Lose, It's a Punishment Game! Bra Hook Removal Showdown!!",
       "title_ja": "ビリになったら罰ゲーム　ブラホックはずし対決!!",
       "talk_segments": null,
       "series": []
@@ -10256,7 +10256,7 @@
     {
       "n": 821,
       "date": "2006-09-03",
-      "title_en": "",
+      "title_en": "Entertainer Safari Park",
       "title_ja": "芸能人サファリパーク",
       "talk_segments": null,
       "series": []
@@ -10264,15 +10264,15 @@
     {
       "n": 822,
       "date": "2006-09-10",
-      "title_en": "",
+      "title_en": "Heipo Horror Shichi Henge!!",
       "title_ja": "ヘイポー ホラー七変化!!",
       "talk_segments": null,
-      "series": ["shichi henge"]
+      "series": ["heipo", "shichi henge"]
     },
     {
       "n": 823,
       "date": "2006-09-17",
-      "title_en": "",
+      "title_en": "The 1st Classroom Series: Shoji Murakami's Ninja Classroom",
       "title_ja": "教室シリーズ第1弾　村上ショージの忍者教室",
       "talk_segments": ["サウナ盗撮事件について"],
       "series": ["classroom"]
@@ -10280,7 +10280,7 @@
     {
       "n": 824,
       "date": "2006-09-24",
-      "title_en": "",
+      "title_en": "Quiz: Tanaka's 500 Things",
       "title_ja": "クイズ田中の500のコト",
       "talk_segments": null,
       "series": ["quiz"]
@@ -10288,15 +10288,15 @@
     {
       "n": 825,
       "date": "2006-10-08",
-      "title_en": "",
+      "title_en": "If It Fall, Hell Awaits! Wash Basin Roulette Showdown!!",
       "title_ja": "落ちれば地獄が待っている！　タライアンルーレット対決～!!",
       "talk_segments": null,
-      "series": []
+      "series": ["batsu competition"]
     },
     {
       "n": 826,
       "date": "2006-10-15",
-      "title_en": "",
+      "title_en": "Possession by Hamada at Karaoke",
       "title_ja": "カラオケで浜田に憑依",
       "talk_segments": [
         "[ハガキ]探偵は尾行が1時間1万円などと細かく料金設定が決まっていますが、一番高い捜査はどんな捜査ですか？",
@@ -10308,28 +10308,28 @@
     {
       "n": 827,
       "date": "2006-10-22",
-      "title_en": "",
+      "title_en": "Heipo & Harumi Nemoto Exciting Date!!",
       "title_ja": "ヘイポー＆根本はるみ ときめきデート!!",
       "talk_segments": ["飛行機の手荷物検査の話", "察しの悪い店員"],
-      "series": []
+      "series": ["heipo"]
     },
     {
       "n": 828,
       "date": "2006-10-29",
-      "title_en": "",
+      "title_en": "Sunday Night Special 5: Emergency Special!! The Truth of the Legendary Charismatic Denture Host Piccadilly Umeda!!",
       "title_ja": "日曜ナイトスペシャル5　緊急特番!! 伝説のカリスマ入れ歯ホスト　 ピカデリー梅田の真実!!",
       "talk_segments": [
         "[ハガキ]砲丸投げの玉をより遠くに飛ばすための掛け声を教えてください"
       ],
-      "series": []
+      "series": ["piccadilly umeda"]
     },
     {
       "n": 829,
       "date": "2006-11-05",
-      "title_en": "",
+      "title_en": "Everyone, Let's Join Forces!! Eat All the Food with Sweets!!",
       "title_ja": "みんなで力を合わせて!!　お菓子でご飯を食べ尽くせ～!!",
       "talk_segments": null,
-      "series": []
+      "series": ["eat all rice"]
     },
     {
       "n": 830,
@@ -10347,7 +10347,7 @@
     {
       "n": 831,
       "date": "2006-11-19",
-      "title_en": "",
+      "title_en": "The 2nd Gaki no Tsukai Team vs Former Natural Material Team Showdown!! (Part 1)",
       "title_ja": "第2回 ガキ使チームVS元天然素材チームで対決しまっしょい～!!（前編）",
       "talk_segments": null,
       "series": []
@@ -10355,7 +10355,7 @@
     {
       "n": 832,
       "date": "2006-11-26",
-      "title_en": "",
+      "title_en": "The 2nd Gaki no Tsukai Team vs Former Natural Material Team Showdown!! (Part 2)",
       "title_ja": "第2回 ガキ使チームVS元天然素材チームで対決しまっしょい～!!（中編）",
       "talk_segments": null,
       "series": []
@@ -10363,7 +10363,7 @@
     {
       "n": 833,
       "date": "2006-12-03",
-      "title_en": "",
+      "title_en": "The 2nd Gaki no Tsukai Team vs Former Natural Material Team Showdown!! (Part 3)",
       "title_ja": "第2回 ガキ使チームVS元天然素材チームで対決しまっしょい～!!（後編）",
       "talk_segments": [
         "ガラガラのラーメン屋に一人で行った話",
@@ -10385,7 +10385,7 @@
     {
       "n": 835,
       "date": "2006-12-17",
-      "title_en": "",
+      "title_en": "The 9th 2006 Gaki no Tsukai Funny VTR Top 10!!",
       "title_ja": "第9回 2006年 ガキの使いおもしろVTRベスト10!!",
       "talk_segments": null,
       "series": ["vtr top 10"]
@@ -10393,7 +10393,7 @@
     {
       "n": 836,
       "date": "2006-12-24",
-      "title_en": "",
+      "title_en": "No Laughing Police 24 Hours Pre-Broadcast Special!!",
       "title_ja": "笑ってはいけない警察24時放送直前SP",
       "talk_segments": [
         "風の強い日に路上にダンボールが…",
@@ -10405,18 +10405,18 @@
     {
       "n": null,
       "date": "2006-12-31",
-      "title_en": "",
+      "title_en": "New Year's Eve Year-End SP: Hamada, Yamasaki, Endo Punishment Game Absolutely No Laughing Police 24 Hours!!",
       "title_ja": "大晦日年越しSP浜田･山崎･遠藤罰ゲーム絶対に笑ってはいけない警察24時!!",
       "talk_segments": null,
-      "series": []
+      "series": ["batsu"]
     },
     {
       "n": 837,
       "date": "2007-01-07",
-      "title_en": "",
+      "title_en": "No Laughing Police Unaired Scenes",
       "title_ja": "笑ってはいけない警察 未公開シーン",
       "talk_segments": null,
-      "series": []
+      "series": ["batsu"]
     },
     {
       "n": 838,
@@ -10438,7 +10438,7 @@
     {
       "n": 839,
       "date": "2007-01-21",
-      "title_en": "",
+      "title_en": "Classroom Series 2: Green Beret Classroom",
       "title_ja": "教室シリーズ 第2弾 グリーンベレー教室",
       "talk_segments": null,
       "series": ["classroom"]
@@ -10446,15 +10446,15 @@
     {
       "n": 840,
       "date": "2007-01-28",
-      "title_en": "",
+      "title_en": "The 18th New Year's Party: Yama-1 Grand Prix",
       "title_ja": "第18回 大新年会 山-1グランプリ",
       "talk_segments": null,
-      "series": []
+      "series": ["new years party"]
     },
     {
       "n": 841,
       "date": "2007-02-04",
-      "title_en": "",
+      "title_en": "If You Lose, It's a Punishment Game! Beach Stick Poking Match!!",
       "title_ja": "ビリになったら罰ゲーム ビーチクいじりマッチ!!",
       "talk_segments": null,
       "series": []
@@ -10462,7 +10462,7 @@
     {
       "n": 842,
       "date": "2007-02-11",
-      "title_en": "",
+      "title_en": "Housei Yamasaki 20th Anniversary 100-Person Slaying Challenge!!",
       "title_ja": "山崎邦正20周年100人斬りに挑む!!",
       "talk_segments": null,
       "series": []
@@ -10478,7 +10478,7 @@
     {
       "n": 844,
       "date": "2007-02-25",
-      "title_en": "",
+      "title_en": "FUJIWARA Fujimoto Shichi Henge!!",
       "title_ja": "FUJIWARA・藤本 七変化～!!",
       "talk_segments": [
         "ライセンスの前説の話",
@@ -10491,7 +10491,7 @@
     {
       "n": 845,
       "date": "2007-03-04",
-      "title_en": "",
+      "title_en": "Journey to the West in a Game",
       "title_ja": "ゲームで新西遊記",
       "talk_segments": null,
       "series": []
@@ -10507,7 +10507,7 @@
     {
       "n": 847,
       "date": "2007-03-18",
-      "title_en": "",
+      "title_en": "Gaki no Tsukai Graduation: Goodbye Housei Yamasaki",
       "title_ja": "ガキの使い卒業 さようなら山崎邦正",
       "talk_segments": null,
       "series": ["goodbye yamasaki"]
@@ -10523,7 +10523,7 @@
     {
       "n": 849,
       "date": "2007-04-01",
-      "title_en": "",
+      "title_en": "Quiz: Hamada's 500 Things",
       "title_ja": "クイズ浜田の500のコト",
       "talk_segments": null,
       "series": ["quiz"]
@@ -10531,7 +10531,7 @@
     {
       "n": 850,
       "date": "2007-04-15",
-      "title_en": "",
+      "title_en": "New Regular Member Final Audition (Part 1)",
       "title_ja": "新レギュラーメンバー最終オーディション（前編）",
       "talk_segments": null,
       "series": []
@@ -10539,7 +10539,7 @@
     {
       "n": 851,
       "date": "2007-04-22",
-      "title_en": "",
+      "title_en": "New Regular Member Final Audition (Part 2)",
       "title_ja": "新レギュラーメンバー最終オーディション（後編）",
       "talk_segments": null,
       "series": []
@@ -10547,7 +10547,7 @@
     {
       "n": 852,
       "date": "2007-04-29",
-      "title_en": "",
+      "title_en": "FUJIWARA Haranishi Shichi Henge!!",
       "title_ja": "FUJIWARA原西七変化～!!",
       "talk_segments": ["月末に『TV Taro』を買ったら…", "浜田マクドナルド話"],
       "series": ["shichi henge"]
@@ -10563,7 +10563,7 @@
     {
       "n": 854,
       "date": "2007-05-13",
-      "title_en": "",
+      "title_en": "Classroom Series 3: Shoji Murakami's Pirate Classroom",
       "title_ja": "教室シリーズ 第3弾 村上ショージの海賊教室",
       "talk_segments": null,
       "series": ["classroom"]
@@ -10571,7 +10571,7 @@
     {
       "n": 855,
       "date": "2007-05-20",
-      "title_en": "",
+      "title_en": "Pants-Off Contest!!",
       "title_ja": "パンツ脱がし選手権!!",
       "talk_segments": null,
       "series": []
@@ -10579,7 +10579,7 @@
     {
       "n": 856,
       "date": "2007-05-27",
-      "title_en": "",
+      "title_en": "Congratulations on the Marriage of Tomonori Jinnai & Norika Fujiwara!!",
       "title_ja": "陣内智則＆藤原紀香結婚おめでとう!!",
       "talk_segments": [
         "[ハガキ]ロナウジーニョと家族ぐるみの付き合いをしてるそうですが、ロナウジーニョは普段どんな感じですか？",
@@ -10591,7 +10591,7 @@
     {
       "n": 857,
       "date": "2007-06-03",
-      "title_en": "",
+      "title_en": "Endo's Wife Chiaki Has Disappeared!?",
       "title_ja": "遠藤の嫁千秋がいなくなった!?",
       "talk_segments": null,
       "series": []
@@ -10599,7 +10599,7 @@
     {
       "n": 858,
       "date": "2007-06-10",
-      "title_en": "",
+      "title_en": "High Tension Special: Funny Hallway Walking Contest!!",
       "title_ja": "おもしろ廊下歩きコンテスト～!!",
       "talk_segments": null,
       "series": ["high tension"]
@@ -10607,7 +10607,7 @@
     {
       "n": 859,
       "date": "2007-06-17",
-      "title_en": "",
+      "title_en": "Everyone, Let's Join Forces! Gachinko Big Eating Showdown!!",
       "title_ja": "力を合わせてギャル曽根を倒せ！　ガチンコ大喰い対決～!!",
       "talk_segments": null,
       "series": []
@@ -10615,15 +10615,15 @@
     {
       "n": 860,
       "date": "2007-06-24",
-      "title_en": "",
+      "title_en": "Hamada's Forced Wake-Up Prank!!",
       "title_ja": "浜田の無理やり寝起きドッキリ!!",
       "talk_segments": null,
-      "series": []
+      "series": ["dokkiri"]
     },
     {
       "n": 861,
       "date": "2007-07-01",
-      "title_en": "",
+      "title_en": "Itao Itao's Bride Wedding Banquet",
       "title_ja": "板尾 板尾のヨメ結婚披露宴",
       "talk_segments": [
         "[ハガキ]自動販売機に120円を入れて缶コーヒーを買うとき、10円玉がそのままお釣りの返却口に落ちてくることがあります。落ちる10円玉と落ちない10円玉の違いを教えて下さい。"
@@ -10633,17 +10633,17 @@
     {
       "n": 862,
       "date": "2007-07-08",
-      "title_en": "",
+      "title_en": "Who is the Leader of Morisanchu!? Sauna Rubik's Cube Showdown!!",
       "title_ja": "森三中真のリーダーは誰だ!?　サウナでルービックキューブ対決～!!",
       "talk_segments": [
         "[ハガキ]美容院でカラーはどうなさいますか？と聞かれたときに何と答えれば美容師にナメられずに済みますか？"
       ],
-      "series": []
+      "series": ["morisanchuu"]
     },
     {
       "n": 863,
       "date": "2007-07-15",
-      "title_en": "",
+      "title_en": "Quiz: IKKO's 500 Things",
       "title_ja": "クイズIKKOの500のコト",
       "talk_segments": null,
       "series": ["quiz"]
@@ -10651,10 +10651,10 @@
     {
       "n": 864,
       "date": "2007-07-22",
-      "title_en": "",
+      "title_en": "Sunday Night Special 6: Emergency Special!! The Terrifying Denture Storyteller Piccadilly Umeda!! Chilling Ghost Stories!!",
       "title_ja": "日曜ナイトスペシャル6 緊急特番!!　恐怖の入れ歯怪談師 ピカデリー梅田　身も凍るような怪談!!",
       "talk_segments": null,
-      "series": []
+      "series": ["piccadilly umeda"]
     },
     {
       "n": 865,
@@ -10675,15 +10675,15 @@
     {
       "n": 867,
       "date": "2007-08-19",
-      "title_en": "",
+      "title_en": "Heipo & Kaia Exciting Date!!",
       "title_ja": "ヘイポー＆カイヤときめきデート!!",
       "talk_segments": null,
-      "series": []
+      "series": ["heipo"]
     },
     {
       "n": 868,
       "date": "2007-08-26",
-      "title_en": "",
+      "title_en": "Waraimeshi's Kamishibai: The Monkey and the Crab",
       "title_ja": "笑い飯の紙芝居「さるかに合戦」",
       "talk_segments": ["沖縄での後輩のおにぎりの話"],
       "series": []
@@ -10691,7 +10691,7 @@
     {
       "n": 869,
       "date": "2007-09-02",
-      "title_en": "",
+      "title_en": "Classroom Series 4: Shoji Murakami's Pilot Classroom",
       "title_ja": "教室シリーズ 第4弾　村上ショージのパイロット教室",
       "talk_segments": [
         "[ハガキ]カーナビの案内を無視しつづけるとカーナビはどうなりますか？"
@@ -10701,7 +10701,7 @@
     {
       "n": 870,
       "date": "2007-09-09",
-      "title_en": "",
+      "title_en": "The Amazing Snoring of Entertainer Onigiri Investigated",
       "title_ja": "芸人おにぎりの凄いイビキを検証",
       "talk_segments": ["ゴルフバー", "夜中に素麺つゆをこぼしてしまう"],
       "series": []
@@ -10709,10 +10709,10 @@
     {
       "n": 871,
       "date": "2007-09-16",
-      "title_en": "",
+      "title_en": "Technician Showdown Part 4: Speed Kiss Match!!",
       "title_ja": "テクニシャン対決 第4弾　スピードキスマッチ!!",
       "talk_segments": null,
-      "series": []
+      "series": ["technician"]
     },
     {
       "n": 872,
@@ -10725,7 +10725,7 @@
     {
       "n": 873,
       "date": "2007-10-07",
-      "title_en": "",
+      "title_en": "Vacuum Fujiwara's Big Eater Illusion",
       "title_ja": "バキューム藤原大喰いイリュージョン",
       "talk_segments": [
         "[ハガキ]ライオンとゴリラの喧嘩を見たことがあるそうですが、どんな風に始まりどんな風に決着が付いたのか詳しく教えて下さい",
@@ -10736,7 +10736,7 @@
     {
       "n": 874,
       "date": "2007-10-14",
-      "title_en": "",
+      "title_en": "Quiz: Aya Yamasaki's 500 Things",
       "title_ja": "クイズ山崎あやの500のコト",
       "talk_segments": null,
       "series": ["quiz"]
@@ -10752,23 +10752,23 @@
     {
       "n": 876,
       "date": "2007-10-28",
-      "title_en": "",
+      "title_en": "Yamasaki vs. Moriman: The Miracle Super Final Retirement Revenge Match (Part 1)",
       "title_ja": "山崎VSモリマン奇跡のスーパーファイナル引退リベンジマッチ（前編）",
       "talk_segments": null,
-      "series": []
+      "series": ["yamasaki vs moriman"]
     },
     {
       "n": 877,
       "date": "2007-11-04",
-      "title_en": "",
+      "title_en": "Yamasaki vs. Moriman: The Miracle Super Final Retirement Revenge Match (Part 2)",
       "title_ja": "山崎VSモリマン奇跡のスーパーファイナル引退リベンジマッチ（後編）",
       "talk_segments": null,
-      "series": []
+      "series": ["yamasaki vs moriman"]
     },
     {
       "n": 878,
       "date": "2007-11-11",
-      "title_en": "",
+      "title_en": "Vacuum Fujiwara: Shumai Hell Sentence",
       "title_ja": "バキューム藤原 シューマイ地獄の刑",
       "talk_segments": [
         "コンビニ店内で電話してる人は邪魔",
@@ -10779,10 +10779,10 @@
     {
       "n": 879,
       "date": "2007-11-18",
-      "title_en": "",
+      "title_en": "The 2nd Shouhei Showtime",
       "title_ja": "第2回 ショウヘイショータイム",
       "talk_segments": null,
-      "series": []
+      "series": ["shouhei"]
     },
     {
       "n": 880,
@@ -10795,7 +10795,7 @@
     {
       "n": 881,
       "date": "2007-12-02",
-      "title_en": "",
+      "title_en": "The 3rd Gaki no Tsukai Team vs Former Natural Material Team Showdown!! (Part 1)",
       "title_ja": "第3回 ガキ使チームVS元天然素材チームで対決しまっしょい～!!（前編）",
       "talk_segments": null,
       "series": []
@@ -10803,7 +10803,7 @@
     {
       "n": 882,
       "date": "2007-12-09",
-      "title_en": "",
+      "title_en": "The 3rd Gaki no Tsukai Team vs Former Natural Material Team Showdown!! (Part 1)",
       "title_ja": "第3回 ガキ使チームVS元天然素材チームで対決しまっしょい～!!（後編）",
       "talk_segments": null,
       "series": []
@@ -10819,7 +10819,7 @@
     {
       "n": 884,
       "date": "2007-12-23",
-      "title_en": "",
+      "title_en": "The 10th New Year's Special Plan: 2007 Gaki no Tsukai Funny VTR Top 10!!",
       "title_ja": "第10回 年末特別企画 2007年 ガキの使いおもしろVTRベスト10!!",
       "talk_segments": null,
       "series": ["vtr top 10"]
@@ -10827,14 +10827,14 @@
     {
       "n": 885,
       "date": "2007-12-30",
-      "title_en": "",
+      "title_en": "No Laughing Hospital 24 Hours: The Nest of Laughter Thoroughly Investigated!!",
       "title_ja": "笑ってはいけない病院24時笑いの巣窟徹底解明!!",
       "talk_segments": [
         "アリガトウゴザイマシタと何度もいう店の話",
         "[ハガキ]勝利の女神に会ったことがあるそうですが、本性は一体どんな方なのですか？",
         "アリガトウゴザイマシタ緊急検証!!"
       ],
-      "series": []
+      "series": ["batsu"]
     },
     {
       "n": null,
@@ -10847,15 +10847,15 @@
     {
       "n": 886,
       "date": "2008-01-06",
-      "title_en": "",
+      "title_en": "No Laughing Hospital Unaired Scenes",
       "title_ja": "笑ってはいけない病院未公開シーン一挙放送!!",
       "talk_segments": null,
-      "series": []
+      "series": ["batsu"]
     },
     {
       "n": 887,
       "date": "2008-01-13",
-      "title_en": "",
+      "title_en": "Black Mayonnaise's Kosugi 7 Transformations!!",
       "title_ja": "ブラックマヨネーズ小杉七変化!!",
       "talk_segments": null,
       "series": ["shichi henge"]
@@ -10871,19 +10871,19 @@
     {
       "n": 889,
       "date": "2008-01-27",
-      "title_en": "",
+      "title_en": "Matsumoto's Cold Unaired Talk & Scenes All at Once!!",
       "title_ja": "松本風邪で未公開トーク＆シーン一挙公開!!",
       "talk_segments": [
         "(※未公開)[ハガキ]絶対に噛まないでしゃべる方法を教えて下さい",
         "ハワイといえばカメハメハ大王ですが、具体的に何をした大王なのですか？",
         "原始人が初めて火を使ったときのことをちゃんと教えて下さい"
       ],
-      "series": []
+      "series": ["talk"]
     },
     {
       "n": 890,
       "date": "2008-02-03",
-      "title_en": "",
+      "title_en": "Quiz: Kazuo Umezu's 500 Things",
       "title_ja": "クイズ楳図かずおの500のコト",
       "talk_segments": null,
       "series": ["quiz"]
@@ -10891,15 +10891,15 @@
     {
       "n": 891,
       "date": "2008-02-10",
-      "title_en": "",
+      "title_en": "Eat Rice with Side Dishes Starting with \"A\"!!",
       "title_ja": "「あ」で始まるおかずでゴハンを一升食べつくせ～!!",
       "talk_segments": null,
-      "series": []
+      "series": ["eat all rice"]
     },
     {
       "n": 892,
       "date": "2008-02-17",
-      "title_en": "",
+      "title_en": "Classroom Series 5: Shoji Murakami's Clown Classroom",
       "title_ja": "教室シリーズ 第5弾 村上ショージのピエロ教室",
       "talk_segments": null,
       "series": ["classroom"]
@@ -10907,7 +10907,7 @@
     {
       "n": 893,
       "date": "2008-02-24",
-      "title_en": "",
+      "title_en": "Housei Yamasaki's Petty Thief Trial (Part 1)",
       "title_ja": "山崎邦正コソ泥裁判（前編）",
       "talk_segments": null,
       "series": ["trial"]
@@ -10915,7 +10915,7 @@
     {
       "n": 894,
       "date": "2008-03-02",
-      "title_en": "",
+      "title_en": "Housei Yamasaki's Petty Thief Trial (Part 2)",
       "title_ja": "山崎邦正コソ泥裁判（後編）",
       "talk_segments": ["先週のトークがなくなった話", "座薬の話"],
       "series": ["trial"]
@@ -10923,7 +10923,7 @@
     {
       "n": 895,
       "date": "2008-03-09",
-      "title_en": "",
+      "title_en": "Save the Homesick Foreigner!!",
       "title_ja": "ホームシックの外国人を救え!!",
       "talk_segments": null,
       "series": []
@@ -10931,7 +10931,7 @@
     {
       "n": 896,
       "date": "2008-03-16",
-      "title_en": "",
+      "title_en": "Yoshimoto Combi Entertainers Paper Sumo No. 1 Decision Match",
       "title_ja": "吉本コンビ芸人 紙相撲No.1決定戦",
       "talk_segments": null,
       "series": []
@@ -10939,10 +10939,10 @@
     {
       "n": 897,
       "date": "2008-03-23",
-      "title_en": "",
+      "title_en": "Vacuum Fujiwara & Heipo Shumai Witch Project!!",
       "title_ja": "バキューム藤原&ヘイポー シューマイ・ウィッチ・プロジェクト!!",
       "talk_segments": null,
-      "series": []
+      "series": ["heipo"]
     },
     {
       "n": 898,
@@ -10955,7 +10955,7 @@
     {
       "n": 899,
       "date": "2008-04-13",
-      "title_en": "",
+      "title_en": "Gaki no Tsukai Graduation: Goodbye Housei Yamasaki",
       "title_ja": "ガキの使い卒業 さようなら山崎邦正",
       "talk_segments": ["なし ※この回よりレギュラー放送もハイビジョン化"],
       "series": ["goodbye yamasaki"]
@@ -10963,10 +10963,10 @@
     {
       "n": 900,
       "date": "2008-04-20",
-      "title_en": "",
+      "title_en": "Broadcast 900th Episode Commemorative Project: Who is the Victim of Shouhei Shofukutei!?",
       "title_ja": "放送900回記念企画 笑福亭笑瓶の被害者は誰だ!?",
       "talk_segments": null,
-      "series": []
+      "series": ["shouhei"]
     },
     {
       "n": 901,
@@ -18504,6 +18504,13 @@
       "name_en": "Cocorico Tanaka Unheard-of Series",
       "abbr_ja": "田中破天荒",
       "abbr_en": "Tanaka Unheard-of"
+    },
+    {
+      "key": "technician",
+      "name_ja": "テクニシャン対決",
+      "name_en": "Technician Showdown",
+      "abbr_ja": "テクニシャン",
+      "abbr_en": "Technician"
     },
     {
       "key": "tkj grand prix",
