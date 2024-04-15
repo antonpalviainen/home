@@ -3,8 +3,8 @@ import { Suspense } from 'react'
 
 import { fetchEpisodesPages } from '@/lib/gaki/data'
 import { resolveLanguage } from '@/lib/gaki/utils'
-import Pagination from '@/ui/gaki/episodes/pagination'
 import EpisodeTable from '@/ui/gaki/episodes/table'
+import Pagination from '@/ui/gaki/pagination'
 import Search from '@/ui/gaki/search'
 import { EpisodeTableSkeleton } from '@/ui/gaki/skeletons'
 
