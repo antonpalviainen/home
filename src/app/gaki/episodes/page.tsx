@@ -23,11 +23,11 @@ export default async function Page({
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="mb-4 flex justify-center">
-        <Search placeholder="Search episodes..." />
+      <div className=" w-80 mb-4 flex justify-center">
+        <Search placeholder="Search episodes" />
       </div>
       <div className="mb-4 flex justify-center">
-        <Pagination totalPages={totalPages} />
+        <Pagination totalPages={totalPages} positionOnPage="top" />
       </div>
       <Suspense
         key={language + currentPage}
@@ -40,7 +40,7 @@ export default async function Page({
         />
       </Suspense>
       <div className="mt-4 flex justify-center">
-        <Pagination totalPages={totalPages} />
+        <Pagination totalPages={totalPages} positionOnPage="bottom" />
       </div>
     </div>
   )

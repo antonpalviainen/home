@@ -7,7 +7,13 @@ import { usePathname, useSearchParams } from 'next/navigation'
 
 import { generatePagination } from '@/lib/gaki/utils'
 
-export default function Pagination({ totalPages }: { totalPages: number }) {
+export default function Pagination({
+  totalPages,
+  positionOnPage,
+}: {
+  totalPages: number
+  positionOnPage: 'top' | 'bottom'
+}) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const currentPage = Number(searchParams.get('page')) || 1
@@ -27,6 +33,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           direction="left"
           href={createPageURL(currentPage - 1)}
           isDisabled={currentPage <= 1}
+          positionOnPage={positionOnPage}
         />
 
         <div className="flex -space-x-px">
@@ -45,6 +52,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
                 page={page}
                 position={position}
                 isActive={currentPage === page}
+                positionOnPage={positionOnPage}
               />
             )
           })}
@@ -54,6 +62,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           direction="right"
           href={createPageURL(currentPage + 1)}
           isDisabled={currentPage >= totalPages}
+          positionOnPage={positionOnPage}
         />
       </div>
     </>
@@ -65,21 +74,26 @@ function PaginationNumber({
   href,
   isActive,
   position,
+  positionOnPage,
 }: {
   page: number | string
   href: string
   position?: 'first' | 'last' | 'middle' | 'single'
   isActive: boolean
+  positionOnPage: 'top' | 'bottom'
 }) {
   const className = clsx(
-    'flex h-10 w-10 items-center justify-center text-sm border dark:border-white/10',
+    'flex h-10 w-10 items-center justify-center text-sm border',
     {
       'rounded-l-md': position === 'first' || position === 'single',
       'rounded-r-md': position === 'last' || position === 'single',
-      'z-10 bg-blue-600 border-blue-600 text-white dark:bg-blue-900 dark:border-blue-900': isActive,
+      'z-10 bg-blue-600 border-blue-600 text-white dark:bg-blue-900 dark:border-blue-900':
+        isActive,
       'hover:bg-neutral-100 dark:hover:bg-white/5':
         !isActive && position !== 'middle',
       'text-gray-300': position === 'middle',
+      'dark:border-[#2b3962]': !isActive && positionOnPage === 'top',
+      'dark:border-[#2c3c6a]': !isActive && positionOnPage === 'bottom',
     }
   )
 
@@ -96,18 +110,22 @@ function PaginationArrow({
   href,
   direction,
   isDisabled,
+  positionOnPage,
 }: {
   href: string
   direction: 'left' | 'right'
   isDisabled?: boolean
+  positionOnPage: 'top' | 'bottom'
 }) {
   const className = clsx(
-    'flex h-10 w-10 items-center justify-center rounded-md border dark:border-white/10',
+    'flex h-10 w-10 items-center justify-center rounded-md border',
     {
       'pointer-events-none text-neutral-300 dark:text-slate-500': isDisabled,
       'hover:bg-neutral-100 dark:hover:bg-white/5': !isDisabled,
       'mr-2 md:mr-4': direction === 'left',
       'ml-2 md:ml-4': direction === 'right',
+      'dark:border-[#2b3962]': positionOnPage === 'top',
+      'dark:border-[#2c3c6a]': positionOnPage === 'bottom',
     }
   )
 
