@@ -50,7 +50,7 @@ test.describe('japanese toggle', () => {
     await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?lang=ja')
   })
 
-  test('episode titles are in Japanese', async ({ page }) => {
+  test('episode titles are in japanese', async ({ page }) => {
     await page.getByRole('link', { name: 'JA' }).click()
 
     await expect(page.getByRole('rowgroup')).toContainText('1')
@@ -58,5 +58,29 @@ test.describe('japanese toggle', () => {
       '偉いさん・医者・クイズ'
     )
     await expect(page.getByRole('rowgroup')).toContainText('1989-10-03')
+  })
+})
+
+test.describe('search', () => {
+  test('filters episodes by a query in english', async ({ page }) => {
+    await page.goto('http://localhost:3000/gaki/episodes?lang=en')
+    await page
+      .getByPlaceholder('Search episodes')
+      .fill('The 5th Heipo Shallowness Trial')
+    await page.waitForURL(
+      'http://localhost:3000/gaki/episodes?lang=en&page=1&query=The+5th+Heipo+Shallowness+Trial'
+    )
+    await expect(page.getByRole('row')).toContainText('769')
+  })
+
+  test('filters episodes by a query in japanese', async ({ page }) => {
+    await page.goto('http://localhost:3000/gaki/episodes?lang=ja')
+    await page
+      .getByPlaceholder('Search episodes')
+      .fill('第5回 ヘイポーうすっぺら裁判')
+    await page.waitForURL(
+      'http://localhost:3000/gaki/episodes?lang=ja&page=1&query=第5回+ヘイポーうすっぺら裁判'
+    )
+    await expect(page.getByRole('row')).toContainText('769')
   })
 })
