@@ -32,7 +32,9 @@ model EpisodeTitle {
   Episode   Episode @relation(fields: [episodeId], references: [id])
   episodeId Int
 
-  // Covering index for search by language
+  // Index for searching by title
+  @@index([title])
+  // Covering index for fetching by language
   @@index([language, title])
 }
 

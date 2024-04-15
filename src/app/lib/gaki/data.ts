@@ -3,7 +3,11 @@ import prisma from '@/lib/prisma'
 
 const ITEMS_PER_PAGE = 100
 
-export async function fetchEpisodes(language: Language, currentPage: number) {
+export async function fetchFilteredEpisodes(
+  language: Language,
+  query: string,
+  currentPage: number
+) {
   const languageOrder = language === 'en' ? 'asc' : 'desc'
   const offset = (currentPage - 1) * ITEMS_PER_PAGE
 
@@ -24,6 +28,9 @@ export async function fetchEpisodes(language: Language, currentPage: number) {
             },
           },
         },
+      },
+      where: {
+        text: { some: { title: { contains: query } } },
       },
       skip: offset,
       take: ITEMS_PER_PAGE,
@@ -48,9 +55,11 @@ export async function fetchEpisodes(language: Language, currentPage: number) {
   }
 }
 
-export async function fetchEpisodesPages() {
+export async function fetchEpisodesPages(query: string) {
   try {
-    const data = await prisma.episode.count()
+    const data = await prisma.episode.count({
+      where: { text: { some: { title: { contains: query } } } },
+    })
     const totalPages = Math.ceil(data / ITEMS_PER_PAGE)
 
     return totalPages
