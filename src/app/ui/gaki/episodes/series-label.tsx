@@ -27,7 +27,7 @@ export function SeriesLabel({
       >
         {series.abbreviation}
         {hovered ? (
-          <span className="absolute text-base -top-9 end-0 z-10 px-1 py-0.5 text-center bg-white text-black border rounded whitespace-nowrap dark:border-white/10 dark:bg-blue-900 dark:text-white">
+          <span className="absolute text-base -top-9 end-0 z-10 px-1 py-0.5 text-center bg-white text-black border rounded whitespace-nowrap dark:border-white/10 dark:bg-[#172d69] dark:text-white">
             {series.name}
           </span>
         ) : null}
