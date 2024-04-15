@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${noto.className} antialiased bg-fixed border-red-500 dark:bg-gradient-to-b dark:from-[#0e1734] dark:to-[#172d69] dark:text-white`}
+        className={`${noto.className} antialiased h-screen bg-fixed border-red-500 dark:bg-gradient-to-b dark:from-[#0e1734] dark:to-[#172d69] dark:text-white`}
       >
         {children}
       </body>

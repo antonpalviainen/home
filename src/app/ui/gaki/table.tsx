@@ -18,7 +18,7 @@ export default function Table({
             <tr key={ep.id}>
               <td className="px-2 py-1.5 ">{ep.number ?? '-'}</td>
               <td className="py-1.5 w-full">
-                <div className="flex flex-col justify-between items-start sm:flex-row sm:items-center sm:space-x-2">
+                <div className="flex flex-col justify-between items-start md:flex-row md:items-center md:space-x-2">
                   <span>{ep.title || '-'}</span>
                   <span className="space-x-1">
                     {ep.series.map((series) => (
