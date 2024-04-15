@@ -1,10 +1,16 @@
+import { unstable_cache as cache } from 'next/cache'
 import Link from 'next/link'
 
 import { fetchSeries } from '@/lib/gaki/data'
 import type { Language } from '@/lib/gaki/definitions'
 
+const getCachedSeries = cache(
+  async (language: Language) => await fetchSeries(language),
+  ['home-gaki-series']
+)
+
 export async function SeriesList({ language }: { language: Language }) {
-  const series = await fetchSeries(language)
+  const series = await getCachedSeries(language)
 
   return series.length ? (
     <ul className="w-full border rounded-lg divide-y dark:border-slate-700 dark:divide-slate-700">
