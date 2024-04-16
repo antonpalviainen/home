@@ -144,3 +144,19 @@ export async function fetchSeries(language: Language) {
     throw new Error('Failed to fetch series')
   }
 }
+
+export async function fetchSeriesName(id: number, language: Language) {
+  try {
+    const data = await prisma.series.findFirst({
+      where: { id },
+      include: {
+        text: { select: { name: true }, where: { language } },
+      },
+    })
+
+    return data?.text[0].name
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch series name')
+  }
+}
