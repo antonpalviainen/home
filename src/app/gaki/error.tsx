@@ -14,7 +14,7 @@ export default function Error({
   }, [error])
 
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col items-center justify-center mt-10">
       <h2 className="text-center">Something went wrong!</h2>
       <button
         className="mt-4 rounded-lg border border-white/10 px-4 py-2 text-sm text-white hover:bg-white/5"
