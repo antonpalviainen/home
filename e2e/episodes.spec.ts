@@ -9,9 +9,10 @@ test.describe('pagination', () => {
     await expect(page.locator('.inline-flex').first()).toBeVisible()
   })
 
-  test('is working', async ({ page }) => {
+  test('changes the page', async ({ page }) => {
     await page.locator('.inline-flex > a').first().click()
     await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?page=2')
+    await expect(page.getByRole('rowgroup')).toContainText('101');
   })
 })
 
@@ -30,7 +31,7 @@ test.describe('episode table', () => {
 })
 
 test.describe('english toggle', () => {
-  test('is working', async ({ page }) => {
+  test('changes the query', async ({ page }) => {
     await page.getByRole('link', { name: 'EN' }).click()
     await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?lang=en')
   })
@@ -45,7 +46,7 @@ test.describe('english toggle', () => {
 })
 
 test.describe('japanese toggle', () => {
-  test('is working', async ({ page }) => {
+  test('changes the query', async ({ page }) => {
     await page.getByRole('link', { name: 'JA' }).click()
     await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?lang=ja')
   })

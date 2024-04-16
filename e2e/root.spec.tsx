@@ -5,7 +5,7 @@ test.describe('gaki no tsukai routes', () => {
     await page.goto('/gaki')
   })
 
-  test('navigation', async ({ page }) => {
+  test('navigation from header', async ({ page }) => {
     // Click on the "episodes" link
     await page.click('text="Episodes"')
 

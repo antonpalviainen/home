@@ -21,7 +21,7 @@ test.describe('english toggle', () => {
     await page.getByRole('link', { name: 'EN', exact: true }).click()
   })
 
-  test('is working', async ({ page }) => {
+  test('changes the query', async ({ page }) => {
     await expect(page).toHaveURL('http://localhost:3000/gaki/series?lang=en')
   })
 
@@ -35,11 +35,11 @@ test.describe('japanese toggle', () => {
     await page.getByRole('link', { name: 'JA', exact: true }).click()
   })
 
-  test('is working', async ({ page }) => {
+  test('changes the query', async ({ page }) => {
     await expect(page).toHaveURL('http://localhost:3000/gaki/series?lang=ja')
   })
 
-  test('series names are in Japanese', async ({ page }) => {
+  test('series names are in japanese', async ({ page }) => {
     await expect(page.getByRole('list')).toContainText('罰ゲーム')
   })
 })
