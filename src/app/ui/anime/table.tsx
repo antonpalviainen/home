@@ -5,10 +5,11 @@ import { fetchFilteredAnime } from '@/lib/anime/data'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'
+import { ProgressCell } from '@/ui/anime/progress-cell'
 
-type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
+export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
 
-function Cell({
+export function Cell({
   children,
   className: customClassName,
 }: {
@@ -20,18 +21,9 @@ function Cell({
   return <td className={className}>{children}</td>
 }
 
-function ProgressCell({ anime }: { anime: Anime }) {
-  const completed = isCompleted(anime.status)
-  const progress = completed ? '' : (anime.progress ?? '-') + '/'
-
-  return (
-    <Cell className="text-center">
-      {`${progress}${anime.episodes}`} {!completed && '+'}
-    </Cell>
-  )
-}
-
 function Row({ anime }: { anime: Anime }) {
+  const completed = isCompleted(anime.status)
+
   const studios = anime.studios.map((studio, i) => [
     i > 0 && ', ',
     <Link key={studio.id} href={`/studio/${studio.id}`}>
@@ -43,11 +35,19 @@ function Row({ anime }: { anime: Anime }) {
     <tr key={anime.id} className="border border-black">
       <Cell className={getStatusColor(anime.status)}></Cell>
       <Cell>{anime.title}</Cell>
-      <ProgressCell anime={anime} />
+      {completed || !anime.episodes ? (
+        <Cell className="text-center">{anime.episodes}</Cell>
+      ) : (
+        <ProgressCell
+          id={anime.id}
+          progress={anime.progress}
+          episodes={anime.episodes}
+        />
+      )}
       <Cell className="text-center">{anime.runtime}</Cell>
       <Cell className="text-center">{formatType(anime.type)}</Cell>
       <Cell>{`${anime.year} ${capitalize(anime.season)}`}</Cell>
-      <Cell className="text-center">{anime.rating}</Cell>
+      <Cell className="text-center">{anime.rating ?? '-'}</Cell>
       <Cell>{studios}</Cell>
     </tr>
   )
