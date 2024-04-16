@@ -5,7 +5,7 @@ import { fetchFilteredAnime } from '@/lib/anime/data'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'
-import { ProgressCell } from '@/ui/anime/progress-cell'
+import { ProgressCell, RatingCell } from '@/ui/anime/cells'
 
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
 
@@ -47,7 +47,7 @@ function Row({ anime }: { anime: Anime }) {
       <Cell className="text-center">{anime.runtime}</Cell>
       <Cell className="text-center">{formatType(anime.type)}</Cell>
       <Cell>{`${anime.year} ${capitalize(anime.season)}`}</Cell>
-      <Cell className="text-center">{anime.rating ?? '-'}</Cell>
+      <RatingCell id={anime.id} rating={anime.rating} />
       <Cell>{studios}</Cell>
     </tr>
   )

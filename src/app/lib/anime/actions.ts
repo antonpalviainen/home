@@ -31,3 +31,18 @@ export async function updateProgress(id: number, progress: number) {
     throw new Error('Failed to update progress')
   }
 }
+
+export async function updateRating(id: number, rating: number) {
+  try {
+    const data = await prisma.anime.update({
+      where: { id },
+      data: { rating },
+      select: { rating: true },
+    })
+
+    return data.rating
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to update rating')
+  }
+}
