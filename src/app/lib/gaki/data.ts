@@ -12,7 +12,7 @@ export async function fetchFilteredEpisodes(
   const offset = (currentPage - 1) * ITEMS_PER_PAGE
 
   try {
-    const data = await prisma.episode.findMany({
+    const data = await prisma.gakiEpisode.findMany({
       include: {
         text: {
           select: { title: true },
@@ -57,7 +57,7 @@ export async function fetchFilteredEpisodes(
 
 export async function fetchEpisodesPages(query: string) {
   try {
-    const data = await prisma.episode.count({
+    const data = await prisma.gakiEpisode.count({
       where: { text: { some: { title: { contains: query } } } },
     })
     const totalPages = Math.ceil(data / ITEMS_PER_PAGE)
@@ -73,7 +73,7 @@ export async function fetchSeriesEpisodes(id: number, language: Language) {
   const languageOrder = language === 'en' ? 'asc' : 'desc'
 
   try {
-    const data = await prisma.series.findFirst({
+    const data = await prisma.gakiSeries.findFirst({
       where: { id },
       include: {
         episodes: {
@@ -120,7 +120,7 @@ export async function fetchSeriesEpisodes(id: number, language: Language) {
 
 export async function fetchSeries(language: Language) {
   try {
-    const data = await prisma.series.findMany({
+    const data = await prisma.gakiSeries.findMany({
       include: {
         text: {
           select: { name: true },
@@ -147,7 +147,7 @@ export async function fetchSeries(language: Language) {
 
 export async function fetchSeriesName(id: number, language: Language) {
   try {
-    const data = await prisma.series.findFirst({
+    const data = await prisma.gakiSeries.findFirst({
       where: { id },
       include: {
         text: { select: { name: true }, where: { language } },

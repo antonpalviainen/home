@@ -1,0 +1,5620 @@
+{
+  "series": [
+    {
+      "title": "\"Oshi no Ko\"",
+      "episodes": 11,
+      "runtime": 30,
+      "type": "tv",
+      "year": 2023,
+      "season": "spring",
+      "rating": null,
+      "status": "dropped",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/52034"
+      }
+    },
+    {
+      "title": "3-gatsu no Lion",
+      "episodes": 22,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2016,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1507064400, 1571950800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31646/"
+      }
+    },
+    {
+      "title": "3-gatsu no Lion 2nd Season",
+      "episodes": 22,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2017,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1572213600],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35180/"
+      }
+    },
+    {
+      "title": "A-Channel",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2011,
+      "season": "spring",
+      "rating": 5,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Studio Gokumi"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9776/"
+      }
+    },
+    {
+      "title": "Aho Girl",
+      "episodes": 12,
+      "runtime": 12,
+      "type": "tv",
+      "year": 2017,
+      "season": "summer",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["Diomedea"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34881/"
+      }
+    },
+    {
+      "title": "Akebi-chan no Sailor-fuku",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "winter",
+      "rating": 8,
+      "status": "watching",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["CloverWorks"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/48553/"
+      }
+    },
+    {
+      "title": "Akiba Meido Sensou",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "fall",
+      "rating": null,
+      "status": "dropped",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/52193/"
+      }
+    },
+    {
+      "title": "Akira",
+      "episodes": 1,
+      "runtime": 124,
+      "type": "movie",
+      "year": 1988,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1506632400, 1553637600],
+      "studios": ["Tokyo Movie Shinsha"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/47/"
+      }
+    },
+    {
+      "title": "Amagi Brilliant Park",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/22147/"
+      }
+    },
+    {
+      "title": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+      "episodes": 11,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2011,
+      "season": "spring",
+      "rating": 3,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1491426000],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9989/"
+      }
+    },
+    {
+      "title": "Ansatsu Kyoushitsu",
+      "episodes": 22,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Lerche"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24833/"
+      }
+    },
+    {
+      "title": "Aoi Bungaku Series",
+      "episodes": 12,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2009,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7193/"
+      }
+    },
+    {
+      "title": "Arakawa Under the Bridge",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7647/"
+      }
+    },
+    {
+      "title": "Aria the Animation",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2005,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 8,
+      "finishDates": [],
+      "studios": ["Hal Film Maker"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/477/"
+      }
+    },
+    {
+      "title": "Asobi Asobase",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1566853200, 1634072400],
+      "studios": ["Lerche"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37171/"
+      }
+    },
+    {
+      "title": "Azumanga Daioh",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2002,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1551736800],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/66/"
+      }
+    },
+    {
+      "title": "Azur Lane",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2019,
+      "season": "fall",
+      "rating": 5,
+      "status": "on_hold",
+      "progress": 7,
+      "finishDates": [],
+      "studios": ["Bibury Animation Studios"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38328/"
+      }
+    },
+    {
+      "title": "Baccano!",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1514325600, 1586206800],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2251/"
+      }
+    },
+    {
+      "title": "Baccano! Specials",
+      "episodes": 3,
+      "runtime": 29,
+      "type": "ova",
+      "year": 2008,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1482962400],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3901/"
+      }
+    },
+    {
+      "title": "Bakemonogatari",
+      "episodes": 15,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2009,
+      "season": "summer",
+      "rating": 9,
+      "status": "rewatching",
+      "progress": 4,
+      "finishDates": [1470776400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/5081/"
+      }
+    },
+    {
+      "title": "Bakuman.",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1581112800],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7674/"
+      }
+    },
+    {
+      "title": "Bakuman. 2nd Season",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1581372000],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10030/"
+      }
+    },
+    {
+      "title": "Bakuman. 3rd Season",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1582063200],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/12365/"
+      }
+    },
+    {
+      "title": "Bakuon!!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 11,
+      "finishDates": [],
+      "studios": ["TMS Entertainment"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30795/"
+      }
+    },
+    {
+      "title": "Blend S",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1514498400],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34618/"
+      }
+    },
+    {
+      "title": "Bocchi the Rock!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1671919200],
+      "studios": ["CloverWorks"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/47917/"
+      }
+    },
+    {
+      "title": "Boku dake ga Inai Machi",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1483653600],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31043/"
+      }
+    },
+    {
+      "title": "Bungou Stray Dogs",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31478/"
+      }
+    },
+    {
+      "title": "Carnival Phantasm",
+      "episodes": 12,
+      "runtime": 14,
+      "type": "ova",
+      "year": 2011,
+      "season": "summer",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1551045600],
+      "studios": ["Lerche"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10012/"
+      }
+    },
+    {
+      "title": "Chainsaw Man",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2022,
+      "season": "fall",
+      "rating": null,
+      "status": "watching",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["MAPPA"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/44511/"
+      }
+    },
+    {
+      "title": "Charlotte",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "summer",
+      "rating": 2,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1486504800],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28999/"
+      }
+    },
+    {
+      "title": "Chuunibyou demo Koi ga Shitai!",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470085200],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14741/"
+      }
+    },
+    {
+      "title": "Chuunibyou demo Koi ga Shitai! Lite",
+      "episodes": 6,
+      "runtime": 6,
+      "type": "ona",
+      "year": 2012,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470085200],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15687/"
+      }
+    },
+    {
+      "title": "Chuunibyou demo Koi ga Shitai! Ren",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470171600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/18671/"
+      }
+    },
+    {
+      "title": "Chuunibyou demo Koi ga Shitai! Ren Specials",
+      "episodes": 7,
+      "runtime": 3,
+      "type": "ova",
+      "year": 2014,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470171600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23237/"
+      }
+    },
+    {
+      "title": "Chuunibyou demo Koi ga Shitai! Ren: The Rikka Wars",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2014,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470171600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/27601/"
+      }
+    },
+    {
+      "title": "Chuunibyou demo Koi ga Shitai!: Kirameki no... Slapstick Noel",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2013,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470085200],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16934/"
+      }
+    },
+    {
+      "title": "Comic Girls",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1572732000],
+      "studios": ["Nexus"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35756/"
+      }
+    },
+    {
+      "title": "Cowboy Bebop",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 1998,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/1/"
+      }
+    },
+    {
+      "title": "Cyberpunk: Edgerunners",
+      "episodes": 10,
+      "runtime": 25,
+      "type": "ona",
+      "year": 2022,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1665090000],
+      "studios": ["Trigger"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/42310/"
+      }
+    },
+    {
+      "title": "Danshi Koukousei no Nichijou",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1507323600],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11843/"
+      }
+    },
+    {
+      "title": "Darker than Black: Kuro no Keiyakusha",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 5,
+      "finishDates": [],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2025/"
+      }
+    },
+    {
+      "title": "Darker than Black: Kuro no Keiyakusha Gaiden",
+      "episodes": 4,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2010,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1477256400],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7338/"
+      }
+    },
+    {
+      "title": "Darling in the FranXX",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "winter",
+      "rating": null,
+      "status": "dropped",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["A-1 Pictures", "CloverWorks", "Trigger"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35849/"
+      }
+    },
+    {
+      "title": "Demi-chan wa Kataritai",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 7,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33988/"
+      }
+    },
+    {
+      "title": "Detroit Metal City",
+      "episodes": 12,
+      "runtime": 13,
+      "type": "ova",
+      "year": 2008,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1551218400],
+      "studios": ["Studio 4°C"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3702/"
+      }
+    },
+    {
+      "title": "Do It Yourself!!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "fall",
+      "rating": 6,
+      "status": "watching",
+      "progress": 10,
+      "finishDates": [],
+      "studios": ["Pine Jam"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/48542/"
+      }
+    },
+    {
+      "title": "Dumbbell Nan Kilo Moteru?",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2019,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569445200],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/39026/"
+      }
+    },
+    {
+      "title": "Durarara!!",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 17,
+      "finishDates": [],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6746/"
+      }
+    },
+    {
+      "title": "Eizouken ni wa Te wo Dasu na!",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2020,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1585087200],
+      "studios": ["Science SARU"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/39792/"
+      }
+    },
+    {
+      "title": "Endro~!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2019,
+      "season": "winter",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1575928800],
+      "studios": ["Studio Gokumi"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38062/"
+      }
+    },
+    {
+      "title": "Eromanga-sensei",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 5,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32901/"
+      }
+    },
+    {
+      "title": "Evangelion: 1.0 You Are (Not) Alone",
+      "episodes": 1,
+      "runtime": 100,
+      "type": "movie",
+      "year": 2007,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1522875600],
+      "studios": ["Khara"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2759/"
+      }
+    },
+    {
+      "title": "Evangelion: 2.0 You Can (Not) Advance",
+      "episodes": 1,
+      "runtime": 112,
+      "type": "movie",
+      "year": 2009,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1522875600],
+      "studios": ["Khara"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3784/"
+      }
+    },
+    {
+      "title": "Evangelion: 3.0 You Can (Not) Redo",
+      "episodes": 1,
+      "runtime": 96,
+      "type": "movie",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1522875600],
+      "studios": ["Khara"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3785/"
+      }
+    },
+    {
+      "title": "Fate/kaleid liner Prisma☆Illya",
+      "episodes": 10,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1510610400],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14829/"
+      }
+    },
+    {
+      "title": "Fate/kaleid liner Prisma☆Illya 2wei Herz!",
+      "episodes": 10,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "summer",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/27525/"
+      }
+    },
+    {
+      "title": "Fate/kaleid liner Prisma☆Illya 2wei!",
+      "episodes": 10,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1510696800],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/20509/"
+      }
+    },
+    {
+      "title": "Fate/stay night: Unlimited Blade Works",
+      "episodes": 12,
+      "runtime": 28,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": 4,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1502139600],
+      "studios": ["ufotable"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/22297/"
+      }
+    },
+    {
+      "title": "Fate/stay night: Unlimited Blade Works 2nd Season",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": 4,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1502398800],
+      "studios": ["ufotable"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28701/"
+      }
+    },
+    {
+      "title": "Fate/stay night: Unlimited Blade Works Prologue",
+      "episodes": 1,
+      "runtime": 51,
+      "type": "ova",
+      "year": 2014,
+      "season": "fall",
+      "rating": 4,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1502139600],
+      "studios": ["ufotable"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/27821/"
+      }
+    },
+    {
+      "title": "Flying Witch",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1595797200],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31376/"
+      }
+    },
+    {
+      "title": "GJ-bu",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2013,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14811/"
+      }
+    },
+    {
+      "title": "Gabriel DropOut",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": null,
+      "status": "dropped",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33731/"
+      }
+    },
+    {
+      "title": "Gake no Ue no Ponyo",
+      "episodes": 1,
+      "runtime": 101,
+      "type": "movie",
+      "year": 2008,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1230760800],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2890/"
+      }
+    },
+    {
+      "title": "Gakkougurashi!",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "summer",
+      "rating": null,
+      "status": "dropped",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Lerche"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24765/"
+      }
+    },
+    {
+      "title": "Gankutsuou",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2004,
+      "season": "fall",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1519336800],
+      "studios": ["Gonzo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/239/"
+      }
+    },
+    {
+      "title": "Gekkan Shoujo Nozaki-kun",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475010000],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23289/"
+      }
+    },
+    {
+      "title": "Gi(a)rlish Number",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2016,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1582754400],
+      "studios": ["Diomedea"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32607/"
+      }
+    },
+    {
+      "title": "Ginga Eiyuu Densetsu",
+      "episodes": 110,
+      "runtime": 26,
+      "type": "ova",
+      "year": 1988,
+      "season": "winter",
+      "rating": null,
+      "status": "dropped",
+      "progress": 16,
+      "finishDates": [],
+      "studios": ["K-Factory", "Kitty Film Mitaka Studio"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/820/"
+      }
+    },
+    {
+      "title": "Gintama",
+      "episodes": 201,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2006,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 7,
+      "finishDates": [],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/918/"
+      }
+    },
+    {
+      "title": "Gochuumon wa Usagi Desu ka?",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1484604000],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21273/"
+      }
+    },
+    {
+      "title": "Gochuumon wa Usagi Desu ka??",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Kinema Citrus", "White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/29787/"
+      }
+    },
+    {
+      "title": "Goku Sayonara Zetsubou Sensei",
+      "episodes": 3,
+      "runtime": 25,
+      "type": "ova",
+      "year": 2008,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1514584800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/4872/"
+      }
+    },
+    {
+      "title": "Grand Blue",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "summer",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Zero-G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37105/"
+      }
+    },
+    {
+      "title": "Great Teacher Onizuka",
+      "episodes": 43,
+      "runtime": 25,
+      "type": "tv",
+      "year": 1999,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1584136800],
+      "studios": ["Studio Pierrot"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/245/"
+      }
+    },
+    {
+      "title": "Guilty Crown",
+      "episodes": 22,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "fall",
+      "rating": null,
+      "status": "dropped",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10793/"
+      }
+    },
+    {
+      "title": "Gyakkyou Burai Kaiji: Ultimate Survivor",
+      "episodes": 26,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2007,
+      "season": "fall",
+      "rating": 3,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1507237200],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3002/"
+      }
+    },
+    {
+      "title": "Haibane Renmei",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2002,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1517522400],
+      "studios": ["Radix"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/387/"
+      }
+    },
+    {
+      "title": "Haiyore! Nyaruko-san",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Xebec"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11785/"
+      }
+    },
+    {
+      "title": "Hanamonogatari",
+      "episodes": 5,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2014,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1473109200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21855/"
+      }
+    },
+    {
+      "title": "Hanasaku Iroha",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 22,
+      "finishDates": [],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9289/"
+      }
+    },
+    {
+      "title": "Harukana Receive",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "summer",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1585515600],
+      "studios": ["C2C"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35983/"
+      }
+    },
+    {
+      "title": "Hataraku Maou-sama!",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1485036000],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15809/"
+      }
+    },
+    {
+      "title": "Hentai Ouji to Warawanai Neko.",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15225/"
+      }
+    },
+    {
+      "title": "Heya Camp△",
+      "episodes": 12,
+      "runtime": 3,
+      "type": "tv",
+      "year": 2020,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["C-Station"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38476/"
+      }
+    },
+    {
+      "title": "Hibike! Euphonium",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1501275600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/27989/"
+      }
+    },
+    {
+      "title": "Hibike! Euphonium 2",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1507842000],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31988/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1552600800, 1573423200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/1852/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch Specials",
+      "episodes": 2,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2007,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1552600800, 1573423200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3165/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch x 365",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2008,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1557867600],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3604/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch x 365 Specials",
+      "episodes": 3,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2009,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1557954000],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6984/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch x Honeycomb",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1559077200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11239/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch x SP",
+      "episodes": 2,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2011,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1558472400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11237/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch x ☆☆☆",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1558386000],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7062/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch x ☆☆☆ Specials",
+      "episodes": 2,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2010,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1558472400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9563/"
+      }
+    },
+    {
+      "title": "Hidamari Sketch: Sae Hiro Sotsugyou-hen",
+      "episodes": 2,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2013,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1559077200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/17739/"
+      }
+    },
+    {
+      "title": "Higashi no Eden",
+      "episodes": 11,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2009,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476219600],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/5630/"
+      }
+    },
+    {
+      "title": "Higashi no Eden Movie I: The King of Eden",
+      "episodes": 1,
+      "runtime": 82,
+      "type": "movie",
+      "year": 2009,
+      "season": "fall",
+      "rating": 5,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476306000],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6372/"
+      }
+    },
+    {
+      "title": "Higashi no Eden Movie II: Paradise Lost",
+      "episodes": 1,
+      "runtime": 92,
+      "type": "movie",
+      "year": 2010,
+      "season": "winter",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476306000],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6637/"
+      }
+    },
+    {
+      "title": "High School DxD",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "winter",
+      "rating": null,
+      "status": "dropped",
+      "progress": 5,
+      "finishDates": [],
+      "studios": ["TNK"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11617/"
+      }
+    },
+    {
+      "title": "High School Fleet",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2016,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1495227600],
+      "studios": ["Production IMS"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31500/"
+      }
+    },
+    {
+      "title": "High School Fleet OVA",
+      "episodes": 2,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2017,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1499374800],
+      "studios": ["Production IMS"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34125/"
+      }
+    },
+    {
+      "title": "Highschool of the Dead",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "summer",
+      "rating": 4,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1481320800],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/8074/"
+      }
+    },
+    {
+      "title": "Higurashi no Naku Koro ni",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2006,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 15,
+      "finishDates": [],
+      "studios": ["Studio Deen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/934/"
+      }
+    },
+    {
+      "title": "Hinako Note",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Passione"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33948/"
+      }
+    },
+    {
+      "title": "Hinamatsuri",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "spring",
+      "rating": 6,
+      "status": "on_hold",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["feel."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/36296/"
+      }
+    },
+    {
+      "title": "Hitoribocchi no Marumaru Seikatsu",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2019,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1565211600],
+      "studios": ["C2C"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37614/"
+      }
+    },
+    {
+      "title": "Hitsugi no Chaika",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464901200],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/20853/"
+      }
+    },
+    {
+      "title": "Hitsugi no Chaika: Avenging Battle",
+      "episodes": 10,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464901200],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24231/"
+      }
+    },
+    {
+      "title": "Hitsugi no Chaika: Nerawareta Hitsugi/Yomigaeru Iseki",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2015,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464901200],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24261/"
+      }
+    },
+    {
+      "title": "Houkago Teibou Nisshi",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2020,
+      "season": "spring",
+      "rating": 6,
+      "status": "watching",
+      "progress": 11,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/39730/"
+      }
+    },
+    {
+      "title": "Howl no Ugoku Shiro",
+      "episodes": 1,
+      "runtime": 119,
+      "type": "movie",
+      "year": 2004,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/431/"
+      }
+    },
+    {
+      "title": "Hyouge Mono",
+      "episodes": 39,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2011,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1590008400],
+      "studios": ["Bee Train"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9996/"
+      }
+    },
+    {
+      "title": "Hyouka",
+      "episodes": 22,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2012,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475182800],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/12189/"
+      }
+    },
+    {
+      "title": "Hyouka: Motsubeki Mono wa",
+      "episodes": 1,
+      "runtime": 25,
+      "type": "ova",
+      "year": 2012,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475096400],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/13469/"
+      }
+    },
+    {
+      "title": "Ijiranaide, Nagatoro-san",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2021,
+      "season": "spring",
+      "rating": null,
+      "status": "watching",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Telecom Animation Film"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/42361/Ijiranaide_Nagatoro-san"
+      }
+    },
+    {
+      "title": "Imouto sae Ireba Ii.",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35413/"
+      }
+    },
+    {
+      "title": "Inferno Cop",
+      "episodes": 13,
+      "runtime": 3,
+      "type": "ona",
+      "year": 2012,
+      "season": "fall",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1499806800],
+      "studios": ["Trigger"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16774/"
+      }
+    },
+    {
+      "title": "Initial D First Stage",
+      "episodes": 26,
+      "runtime": 25,
+      "type": "tv",
+      "year": 1998,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 11,
+      "finishDates": [],
+      "studios": ["Gallop", "Studio Comet"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/185/"
+      }
+    },
+    {
+      "title": "Ishuzoku Reviewers",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2020,
+      "season": "winter",
+      "rating": 6,
+      "status": "on_hold",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["Passione"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/40010/"
+      }
+    },
+    {
+      "title": "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu.",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2020,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38790/"
+      }
+    },
+    {
+      "title": "Jinrui wa Suitai Shimashita",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2012,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1528232400],
+      "studios": ["AIC A.S.T.A."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10357/"
+      }
+    },
+    {
+      "title": "JoJo no Kimyou na Bouken",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["David Production"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14719/"
+      }
+    },
+    {
+      "title": "Joshikousei no Mudazukai",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2019,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569099600, 1575064800, 1581112800],
+      "studios": ["Passione"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38619/"
+      }
+    },
+    {
+      "title": "Joshiraku",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1517781600, 1551045600],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/12679/"
+      }
+    },
+    {
+      "title": "Joshiraku OVA",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2013,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1517781600, 1551045600],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15591/"
+      }
+    },
+    {
+      "title": "K-On!",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2009,
+      "season": "spring",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464728400, 1476219600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/5680/"
+      }
+    },
+    {
+      "title": "K-On! Movie",
+      "episodes": 1,
+      "runtime": 110,
+      "type": "movie",
+      "year": 2011,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476219600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9617/"
+      }
+    },
+    {
+      "title": "K-On!!",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464728400, 1476219600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7791/"
+      }
+    },
+    {
+      "title": "K-On!!: Keikaku!",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2011,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464728400, 1476219600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9734/"
+      }
+    },
+    {
+      "title": "K-On!!: Ura-On!!",
+      "episodes": 9,
+      "runtime": 3,
+      "type": "ova",
+      "year": 2010,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1478815200],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9203/"
+      }
+    },
+    {
+      "title": "K-On!: Live House!",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2010,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464728400, 1476219600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6862/"
+      }
+    },
+    {
+      "title": "K-On!: Ura-On!",
+      "episodes": 7,
+      "runtime": 2,
+      "type": "ova",
+      "year": 2009,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464728400, 1476219600],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7017/"
+      }
+    },
+    {
+      "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2019,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1589230800],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37999/"
+      }
+    },
+    {
+      "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "spring",
+      "rating": null,
+      "status": "watching",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/43608/"
+      }
+    },
+    {
+      "title": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2020,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1596574800],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/40591/"
+      }
+    },
+    {
+      "title": "Kakushigoto",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2020,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1594242000],
+      "studios": ["Ajia-Do"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/40716/"
+      }
+    },
+    {
+      "title": "KanColle Movie",
+      "episodes": 1,
+      "runtime": 93,
+      "type": "movie",
+      "year": 2016,
+      "season": "fall",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1505163600],
+      "studios": ["Diomedea"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31418/"
+      }
+    },
+    {
+      "title": "Kantai Collection: KanColle",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "winter",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1497819600],
+      "studios": ["Diomedea"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21511/"
+      }
+    },
+    {
+      "title": "Kara no Kyoukai Movie 1: Fukan Fuukei",
+      "episodes": 1,
+      "runtime": 50,
+      "type": "movie",
+      "year": 2007,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1484344800],
+      "studios": ["ufotable"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2593/"
+      }
+    },
+    {
+      "title": "Katanagatari",
+      "episodes": 12,
+      "runtime": 50,
+      "type": "tv",
+      "year": 2010,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 8,
+      "finishDates": [],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6594/"
+      }
+    },
+    {
+      "title": "Kaze Tachinu",
+      "episodes": 1,
+      "runtime": 126,
+      "type": "movie",
+      "year": 2013,
+      "season": "summer",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1388527200],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16662/"
+      }
+    },
+    {
+      "title": "Kaze no Tani no Nausicaä",
+      "episodes": 1,
+      "runtime": 117,
+      "type": "movie",
+      "year": 1984,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1512165600],
+      "studios": ["Topcraft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/572/"
+      }
+    },
+    {
+      "title": "Kill Me Baby",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11079/"
+      }
+    },
+    {
+      "title": "Kill la Kill",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1474837200, 1560027600],
+      "studios": ["Trigger"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/18679/"
+      }
+    },
+    {
+      "title": "Kill la Kill Specials",
+      "episodes": 2,
+      "runtime": 18,
+      "type": "ova",
+      "year": 2014,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1474837200],
+      "studios": ["Trigger"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21659/"
+      }
+    },
+    {
+      "title": "Kimi no Na wa.",
+      "episodes": 1,
+      "runtime": 106,
+      "type": "movie",
+      "year": 2016,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1479592800, 1485900000, 1493154000],
+      "studios": ["CoMix Wave Films"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32281/"
+      }
+    },
+    {
+      "title": "Kiniro Mosaic",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "summer",
+      "rating": 5,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1598216400],
+      "studios": ["Studio Gokumi"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16732/"
+      }
+    },
+    {
+      "title": "Kiseijuu: Sei no Kakuritsu",
+      "episodes": 24,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1483653600],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/22535/"
+      }
+    },
+    {
+      "title": "Kizumonogatari I: Tekketsu-hen",
+      "episodes": 1,
+      "runtime": 64,
+      "type": "movie",
+      "year": 2016,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1473886800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9260/"
+      }
+    },
+    {
+      "title": "Kizumonogatari II: Nekketsu-hen",
+      "episodes": 1,
+      "runtime": 64,
+      "type": "movie",
+      "year": 2016,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1482530400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31757/"
+      }
+    },
+    {
+      "title": "Kizumonogatari III: Reiketsu-hen",
+      "episodes": 1,
+      "runtime": 83,
+      "type": "movie",
+      "year": 2017,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1499893200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31758/"
+      }
+    },
+    {
+      "title": "Kobayashi-san Chi no Maid Dragon",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1597525200],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33206/"
+      }
+    },
+    {
+      "title": "Koisuru Asteroid",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2020,
+      "season": "winter",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1585260000],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/39388/"
+      }
+    },
+    {
+      "title": "Kokoro Connect",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1474318800],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11887/"
+      }
+    },
+    {
+      "title": "Kokoro Connect: Michi Random",
+      "episodes": 4,
+      "runtime": 27,
+      "type": "ova",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1474318800],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16001/"
+      }
+    },
+    {
+      "title": "Kono Subarashii Sekai ni Shukufuku wo!",
+      "episodes": 10,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464987600],
+      "studios": ["Studio Deen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30831/"
+      }
+    },
+    {
+      "title": "Koukaku Kidoutai",
+      "episodes": 1,
+      "runtime": 82,
+      "type": "movie",
+      "year": 1995,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1525294800],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/43/"
+      }
+    },
+    {
+      "title": "Koukaku Kidoutai: Stand Alone Complex",
+      "episodes": 26,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2002,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/467/"
+      }
+    },
+    {
+      "title": "Kurenai no Buta",
+      "episodes": 1,
+      "runtime": 93,
+      "type": "movie",
+      "year": 1992,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/416/"
+      }
+    },
+    {
+      "title": "Kyoukai no Kanata",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "fall",
+      "rating": null,
+      "status": "dropped",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/18153/"
+      }
+    },
+    {
+      "title": "Little Witch Academia",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 16,
+      "finishDates": [],
+      "studios": ["Trigger"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33489/"
+      }
+    },
+    {
+      "title": "Love Lab",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "summer",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16353/"
+      }
+    },
+    {
+      "title": "Love Live! Nijigasaki Gakuen School Idol Doukoukai",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2020,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1683061200],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/40879/"
+      }
+    },
+    {
+      "title": "Love Live! Nijigasaki Gakuen School Idol Doukoukai 2nd Season",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2022,
+      "season": "spring",
+      "rating": null,
+      "status": "watching",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/48916"
+      }
+    },
+    {
+      "title": "Love Live! School Idol Project",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2013,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1467147600],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15051/"
+      }
+    },
+    {
+      "title": "Love Live! School Idol Project 2nd Season",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1467666000],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/19111/"
+      }
+    },
+    {
+      "title": "Love Live! Sunshine!!",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2016,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1486850400],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32526/"
+      }
+    },
+    {
+      "title": "Love Live! Sunshine!! 2nd Season",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34973/"
+      }
+    },
+    {
+      "title": "Love Live! Superstar!!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2021,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1684011600],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/41169"
+      }
+    },
+    {
+      "title": "Love Live! Superstar!! 2nd Season",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "summer",
+      "rating": 7,
+      "status": "watching",
+      "progress": 11,
+      "finishDates": [],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/50203"
+      }
+    },
+    {
+      "title": "Love Live! The School Idol Movie",
+      "episodes": 1,
+      "runtime": 102,
+      "type": "movie",
+      "year": 2015,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1467752400],
+      "studios": ["Sunrise"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24997/"
+      }
+    },
+    {
+      "title": "Lucky☆Star",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1517954400],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/1887/"
+      }
+    },
+    {
+      "title": "Lucky☆Star: Original na Visual to Animation",
+      "episodes": 1,
+      "runtime": 42,
+      "type": "ova",
+      "year": 2008,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1517954400],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/4472/"
+      }
+    },
+    {
+      "title": "Lycoris Recoil",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2022,
+      "season": "summer",
+      "rating": 7,
+      "status": "watching",
+      "progress": 12,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/50709/"
+      }
+    },
+    {
+      "title": "Machikado Mazoku",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2019,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1572472800],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/39071/"
+      }
+    },
+    {
+      "title": "Mahou Shoujo Madoka★Magica",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "winter",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476133200, 1476997200, 1488492000, 1574373600],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9756/"
+      }
+    },
+    {
+      "title": "Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari",
+      "episodes": 1,
+      "runtime": 116,
+      "type": "movie",
+      "year": 2013,
+      "season": "fall",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476133200, 1488492000, 1574373600],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11981/"
+      }
+    },
+    {
+      "title": "Majo no Tabitabi",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2020,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["C2C"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/40571/"
+      }
+    },
+    {
+      "title": "Majo no Takkyuubin",
+      "episodes": 1,
+      "runtime": 105,
+      "type": "movie",
+      "year": 1989,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/512/"
+      }
+    },
+    {
+      "title": "Masamune-kun no Revenge",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": null,
+      "status": "dropped",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33487/"
+      }
+    },
+    {
+      "title": "Mawaru Penguindrum",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1528491600],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10721/"
+      }
+    },
+    {
+      "title": "Mieruko-chan",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2021,
+      "season": "fall",
+      "rating": null,
+      "status": "watching",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Passione"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/48483/"
+      }
+    },
+    {
+      "title": "Minami-ke",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1484517600],
+      "studios": ["Daume"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2963/"
+      }
+    },
+    {
+      "title": "Mirai Nikki",
+      "episodes": 26,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2011,
+      "season": "fall",
+      "rating": null,
+      "status": "dropped",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Asread"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10620/"
+      }
+    },
+    {
+      "title": "Monogatari Series: Second Season",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1472590800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/17074/"
+      }
+    },
+    {
+      "title": "Mononoke Hime",
+      "episodes": 1,
+      "runtime": 135,
+      "type": "movie",
+      "year": 1997,
+      "season": "summer",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1496178000],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/164/"
+      }
+    },
+    {
+      "title": "Monster",
+      "episodes": 74,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2004,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 21,
+      "finishDates": [],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/19/"
+      }
+    },
+    {
+      "title": "Mushishi",
+      "episodes": 26,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2005,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1524430800],
+      "studios": ["Artland"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/457/"
+      }
+    },
+    {
+      "title": "Mushishi Zoku Shou",
+      "episodes": 10,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1524690000],
+      "studios": ["Artland"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21939/"
+      }
+    },
+    {
+      "title": "Mushishi Zoku Shou 2nd Season",
+      "episodes": 10,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["Artland"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24701/"
+      }
+    },
+    {
+      "title": "Mushishi Zoku Shou: Odoro no Michi",
+      "episodes": 1,
+      "runtime": 47,
+      "type": "ova",
+      "year": 2014,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1524690000],
+      "studios": ["Artland"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/24687/"
+      }
+    },
+    {
+      "title": "Mushishi: Hihamukage",
+      "episodes": 1,
+      "runtime": 45,
+      "type": "ova",
+      "year": 2014,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1524430800],
+      "studios": ["Artland"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21329/"
+      }
+    },
+    {
+      "title": "Muumindani no Suisei",
+      "episodes": 1,
+      "runtime": 72,
+      "type": "movie",
+      "year": 1992,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Visual 80"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2313/"
+      }
+    },
+    {
+      "title": "NHK ni Youkoso!",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2006,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475960400],
+      "studios": ["Gonzo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/1210/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2008,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1585688400],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/4081/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou Go",
+      "episodes": 11,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "fall",
+      "rating": 8,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Shuka"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32983/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou Movie: Utsusemi ni Musubu",
+      "episodes": 1,
+      "runtime": 104,
+      "type": "movie",
+      "year": 2018,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Shuka"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/36538/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou Roku",
+      "episodes": 11,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Shuka"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34591/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou Roku Specials",
+      "episodes": 2,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2017,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Shuka"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/36275/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou San",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1595970000],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10379/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou Shi",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1597093200],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11665/"
+      }
+    },
+    {
+      "title": "Natsume Yuujinchou: Itsuka Yuki no Hi ni",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2014,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1597179600],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/20651/"
+      }
+    },
+    {
+      "title": "Neko no Ongaeshi",
+      "episodes": 1,
+      "runtime": 75,
+      "type": "movie",
+      "year": 2002,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/597/"
+      }
+    },
+    {
+      "title": "Nekomonogatari: Kuro",
+      "episodes": 4,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470862800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15689/"
+      }
+    },
+    {
+      "title": "Neon Genesis Evangelion",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 1995,
+      "season": "fall",
+      "rating": 10,
+      "status": "rewatching",
+      "progress": 7,
+      "finishDates": [1476651600, 1532898000],
+      "studios": ["Gainax", "Tatsunoko Production"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30/"
+      }
+    },
+    {
+      "title": "Neon Genesis Evangelion: The End of Evangelion",
+      "episodes": 1,
+      "runtime": 87,
+      "type": "movie",
+      "year": 1997,
+      "season": "summer",
+      "rating": 10,
+      "status": "rewatching",
+      "progress": null,
+      "finishDates": [1499029200, 1532898000],
+      "studios": ["Gainax", "Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32/"
+      }
+    },
+    {
+      "title": "New Game!",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2016,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1501448400, 1571691600],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31953/"
+      }
+    },
+    {
+      "title": "Nichijou",
+      "episodes": 26,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2011,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1507410000],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10165/"
+      }
+    },
+    {
+      "title": "Nisekoi",
+      "episodes": 20,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "winter",
+      "rating": 3,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1474059600],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/18897/"
+      }
+    },
+    {
+      "title": "Nisekoi:",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": null,
+      "status": "dropped",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/27787/"
+      }
+    },
+    {
+      "title": "Nisemonogatari",
+      "episodes": 11,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2012,
+      "season": "winter",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470862800, 1565643600, 1599253200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11597/"
+      }
+    },
+    {
+      "title": "No Game No Life",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1479247200],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/19815/"
+      }
+    },
+    {
+      "title": "Non Non Biyori",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569531600],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/17549/"
+      }
+    },
+    {
+      "title": "Non Non Biyori Movie: Vacation",
+      "episodes": 1,
+      "runtime": 71,
+      "type": "movie",
+      "year": 2018,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569877200],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/36990/"
+      }
+    },
+    {
+      "title": "Non Non Biyori Nonstop",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2021,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1617051600],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/39808/"
+      }
+    },
+    {
+      "title": "Non Non Biyori Repeat",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569790800],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23623/"
+      }
+    },
+    {
+      "title": "Non Non Biyori Repeat: Hotaru ga Tanoshinda",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2016,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569877200],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32547/"
+      }
+    },
+    {
+      "title": "Non Non Biyori: Okinawa e Ikukoto ni Natta",
+      "episodes": 1,
+      "runtime": 20,
+      "type": "ova",
+      "year": 2014,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1569618000],
+      "studios": ["Silver Link."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21667/"
+      }
+    },
+    {
+      "title": "Noragami",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["Bones"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/20507/"
+      }
+    },
+    {
+      "title": "Oniichan wa Oshimai!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2023,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1679695200],
+      "studios": ["Studio Bind"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/51678/Oniichan_wa_Oshimai"
+      }
+    },
+    {
+      "title": "Ookami-san to Shichinin no Nakama-tachi",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "summer",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7769/"
+      }
+    },
+    {
+      "title": "Ore Monogatari!!",
+      "episodes": 24,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28297/"
+      }
+    },
+    {
+      "title": "Ore no Imouto ga Konnani Kawaii Wake ga Nai",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 7,
+      "finishDates": [],
+      "studios": ["AIC Build"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/8769/"
+      }
+    },
+    {
+      "title": "Ore no Kanojo to Osananajimi ga Shuraba Sugiru",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2013,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14749/"
+      }
+    },
+    {
+      "title": "Owarimonogatari",
+      "episodes": 12,
+      "runtime": 26,
+      "type": "tv",
+      "year": 2015,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1473800400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31181/"
+      }
+    },
+    {
+      "title": "Owarimonogatari 2nd Season",
+      "episodes": 7,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2017,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1503867600],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35247/"
+      }
+    },
+    {
+      "title": "Paprika",
+      "episodes": 1,
+      "runtime": 90,
+      "type": "movie",
+      "year": 2006,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1519164000],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/1943/"
+      }
+    },
+    {
+      "title": "Paripi Koumei",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "spring",
+      "rating": null,
+      "status": "dropped",
+      "progress": 5,
+      "finishDates": [],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/50380/"
+      }
+    },
+    {
+      "title": "Perfect Blue",
+      "episodes": 1,
+      "runtime": 80,
+      "type": "movie",
+      "year": 1998,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1484431200],
+      "studios": ["Madhouse", "ONIRO"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/437/"
+      }
+    },
+    {
+      "title": "Ping Pong the Animation",
+      "episodes": 11,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2014,
+      "season": "spring",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1493758800, 1622408400],
+      "studios": ["Tatsunoko Production"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/22135/"
+      }
+    },
+    {
+      "title": "Poputepipikku",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "winter",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1522098000],
+      "studios": ["Kamikaze Douga"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35330/"
+      }
+    },
+    {
+      "title": "Princess Principal",
+      "episodes": 12,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2017,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1573077600],
+      "studios": ["Actas", "Studio 3Hz"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35240/"
+      }
+    },
+    {
+      "title": "Psycho-Pass",
+      "episodes": 22,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "rewatching",
+      "progress": 11,
+      "finishDates": [1482184800],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/13601/"
+      }
+    },
+    {
+      "title": "Puchimas!: Petit iDOLM@STER",
+      "episodes": 64,
+      "runtime": 2,
+      "type": "ona",
+      "year": 2013,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 25,
+      "finishDates": [],
+      "studios": ["Gathering"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15649/"
+      }
+    },
+    {
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu",
+      "episodes": 25,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2016,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1506805200],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/31240/"
+      }
+    },
+    {
+      "title": "ReLIFE",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1496091600],
+      "studios": ["TMS Entertainment"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30015/"
+      }
+    },
+    {
+      "title": "Rokudenashi Majutsu Koushi to Akashic Records",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["LIDENFILMS"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32951/"
+      }
+    },
+    {
+      "title": "Saenai Heroine no Sodatekata",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1492722000],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23277/"
+      }
+    },
+    {
+      "title": "Saenai Heroine no Sodatekata ♭",
+      "episodes": 11,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30727/"
+      }
+    },
+    {
+      "title": "Saenai Heroine no Sodatekata ♭: Koi to Junjou no Service-kai",
+      "episodes": 1,
+      "runtime": 22,
+      "type": "ova",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1499115600],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35338/"
+      }
+    },
+    {
+      "title": "Saenai Heroine no Sodatekata: Ai to Seishun no Service-kai",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2015,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1492030800],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/29317/"
+      }
+    },
+    {
+      "title": "Sakamoto Desu ga?",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2016,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Studio Deen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32542/"
+      }
+    },
+    {
+      "title": "Saki",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2009,
+      "season": "spring",
+      "rating": null,
+      "status": "dropped",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["Gonzo", "Picture Magic"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/5671/"
+      }
+    },
+    {
+      "title": "Sakigake!! Cromartie Koukou",
+      "episodes": 26,
+      "runtime": 12,
+      "type": "tv",
+      "year": 2003,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Production I.G"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/114/"
+      }
+    },
+    {
+      "title": "Sakura Quest",
+      "episodes": 25,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 12,
+      "finishDates": [],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34494/"
+      }
+    },
+    {
+      "title": "Sakura Trick",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "winter",
+      "rating": 5,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1480975200],
+      "studios": ["Studio Deen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/20047/"
+      }
+    },
+    {
+      "title": "Sakura-sou no Pet na Kanojo",
+      "episodes": 24,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1464814800],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/13759/"
+      }
+    },
+    {
+      "title": "Sayonara Zetsubou Sensei",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "summer",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1489874400, 1554066000],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2605/"
+      }
+    },
+    {
+      "title": "Sayonara Zetsubou Sensei Special",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2012,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1533848400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10469/"
+      }
+    },
+    {
+      "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "fall",
+      "rating": null,
+      "status": "dropped",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["CloverWorks"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37450/"
+      }
+    },
+    {
+      "title": "Seitokai Yakuindomo",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "summer",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["GoHands"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/8675/"
+      }
+    },
+    {
+      "title": "Sen to Chihiro no Kamikakushi",
+      "episodes": 1,
+      "runtime": 125,
+      "type": "movie",
+      "year": 2001,
+      "season": "summer",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/199/"
+      }
+    },
+    {
+      "title": "Serial Experiments Lain",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 1998,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1490734800, 1541109600],
+      "studios": ["Triangle Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/339/"
+      }
+    },
+    {
+      "title": "Seto no Hanayome",
+      "episodes": 26,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 12,
+      "finishDates": [],
+      "studios": ["AIC", "Gonzo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2104/"
+      }
+    },
+    {
+      "title": "Sewayaki Kitsune no Senko-san",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2019,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38759/"
+      }
+    },
+    {
+      "title": "Shinsekai yori",
+      "episodes": 25,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2012,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1480802400],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/13125/"
+      }
+    },
+    {
+      "title": "Shirobako",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1489183200, 1520114400],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/25835/"
+      }
+    },
+    {
+      "title": "Shokugeki no Souma",
+      "episodes": 24,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1479679200],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28171/"
+      }
+    },
+    {
+      "title": "Shokugeki no Souma: Ni no Sara",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2016,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1479852000],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32282/"
+      }
+    },
+    {
+      "title": "Shokugeki no Souma: San no Sara",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 4,
+      "finishDates": [],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35788/"
+      }
+    },
+    {
+      "title": "Shoujo Kakumei Utena",
+      "episodes": 39,
+      "runtime": 23,
+      "type": "tv",
+      "year": 1997,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/440/"
+      }
+    },
+    {
+      "title": "Shoujo Shuumatsu Ryokou",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2017,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1547330400],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35838/"
+      }
+    },
+    {
+      "title": "Shoujo☆Kageki Revue Starlight",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1590354000],
+      "studios": ["Kinema Citrus"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35503/"
+      }
+    },
+    {
+      "title": "Shouwa Genroku Rakugo Shinjuu",
+      "episodes": 13,
+      "runtime": 26,
+      "type": "tv",
+      "year": 2016,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1525986000],
+      "studios": ["Studio Deen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28735/"
+      }
+    },
+    {
+      "title": "Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1541628000],
+      "studios": ["Studio Deen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33095/"
+      }
+    },
+    {
+      "title": "So Ra No Wo To",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1541023200, 1546725600, 1578175200],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6802/"
+      }
+    },
+    {
+      "title": "So Ra No Wo To Specials",
+      "episodes": 2,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2010,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1541023200, 1546725600, 1578175200],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/8197/"
+      }
+    },
+    {
+      "title": "Sonny Boy",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2021,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1642629600],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/48849/"
+      }
+    },
+    {
+      "title": "Sono Bisque Doll wa Koi wo Suru",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2022,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1663646400],
+      "studios": ["CloverWorks"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/48736/"
+      }
+    },
+    {
+      "title": "Sora yori mo Tooi Basho",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1522098000],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35839/"
+      }
+    },
+    {
+      "title": "Soredemo Machi wa Mawatteiru",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1576706400],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/8726/"
+      }
+    },
+    {
+      "title": "Sousou no Frieren",
+      "episodes": 28,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2023,
+      "season": "fall",
+      "rating": null,
+      "status": "watching",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/52991/"
+      }
+    },
+    {
+      "title": "Spy x Family",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2022,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1666558800],
+      "studios": ["CloverWorks", "Wit Studio"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/50265/"
+      }
+    },
+    {
+      "title": "Spy x Family Part 2",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2022,
+      "season": "fall",
+      "rating": null,
+      "status": "watching",
+      "progress": 2,
+      "finishDates": [],
+      "studios": ["CloverWorks", "Wit Studio"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/50602/"
+      }
+    },
+    {
+      "title": "Steins;Gate",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "spring",
+      "rating": 10,
+      "status": "rewatching",
+      "progress": 16,
+      "finishDates": [1467061200, 1475787600, 1689973200],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9253/"
+      }
+    },
+    {
+      "title": "Steins;Gate 0",
+      "episodes": 23,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 11,
+      "finishDates": [],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30484/"
+      }
+    },
+    {
+      "title": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
+      "episodes": 1,
+      "runtime": 90,
+      "type": "movie",
+      "year": 2013,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1467061200],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11577/"
+      }
+    },
+    {
+      "title": "Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2015,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1467061200],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32188/"
+      }
+    },
+    {
+      "title": "Steins;Gate: Oukoubakko no Poriomania",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2012,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1466888400, 1475787600],
+      "studios": ["White Fox"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10863/"
+      }
+    },
+    {
+      "title": "Suzumiya Haruhi no Shoushitsu",
+      "episodes": 1,
+      "runtime": 162,
+      "type": "movie",
+      "year": 2010,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475010000, 1528146000],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7311/"
+      }
+    },
+    {
+      "title": "Suzumiya Haruhi no Yuuutsu",
+      "episodes": 14,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2006,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1474923600, 1528146000],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/849/"
+      }
+    },
+    {
+      "title": "Suzumiya Haruhi no Yuuutsu (2009)",
+      "episodes": 14,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2009,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475010000, 1528146000],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/4382/"
+      }
+    },
+    {
+      "title": "Tamako Love Story",
+      "episodes": 1,
+      "runtime": 83,
+      "type": "movie",
+      "year": 2014,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1481752800],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21647/"
+      }
+    },
+    {
+      "title": "Tamako Market",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2013,
+      "season": "winter",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1481666400],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16417/"
+      }
+    },
+    {
+      "title": "Tamayura",
+      "episodes": 4,
+      "runtime": 18,
+      "type": "ova",
+      "year": 2010,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1582840800],
+      "studios": ["Hal Film Maker"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/9055/"
+      }
+    },
+    {
+      "title": "Tamayura: Hitotose",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1584396000],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10232/"
+      }
+    },
+    {
+      "title": "Tamayura: Hitotose - Attakai Kaze no Omoide, Nanode",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2012,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1584223200],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11793/"
+      }
+    },
+    {
+      "title": "Tamayura: More Aggressive",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1584828000],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15731/"
+      }
+    },
+    {
+      "title": "Tamayura: More Aggressive - Tsuitachi dake no Shuugakuryokou, Nanode",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2014,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1596142800],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21737/"
+      }
+    },
+    {
+      "title": "Tamayura: Sotsugyou Shashin Part 1 - Kizashi",
+      "episodes": 1,
+      "runtime": 52,
+      "type": "movie",
+      "year": 2015,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1596229200],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/25729/"
+      }
+    },
+    {
+      "title": "Tamayura: Sotsugyou Shashin Part 2 - Hibiki",
+      "episodes": 1,
+      "runtime": 52,
+      "type": "movie",
+      "year": 2015,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1596315600],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/29829/"
+      }
+    },
+    {
+      "title": "Tamayura: Sotsugyou Shashin Part 3 - Akogare",
+      "episodes": 1,
+      "runtime": 51,
+      "type": "movie",
+      "year": 2015,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1596402000],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/29830/"
+      }
+    },
+    {
+      "title": "Tamayura: Sotsugyou Shashin Part 4 - Ashita",
+      "episodes": 1,
+      "runtime": 57,
+      "type": "movie",
+      "year": 2016,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1596488400],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/29831/"
+      }
+    },
+    {
+      "title": "Tanoshii Muumin Ikka",
+      "episodes": 78,
+      "runtime": 24,
+      "type": "tv",
+      "year": 1990,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Telescreen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2150/"
+      }
+    },
+    {
+      "title": "Tanoshii Muumin Ikka Bouken Nikki",
+      "episodes": 26,
+      "runtime": 25,
+      "type": "tv",
+      "year": 1991,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Telescreen"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/5712/"
+      }
+    },
+    {
+      "title": "Tengen Toppa Gurren Lagann",
+      "episodes": 27,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2007,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1507582800],
+      "studios": ["Gainax"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/2001/"
+      }
+    },
+    {
+      "title": "Tenkuu no Shiro Laputa",
+      "episodes": 1,
+      "runtime": 125,
+      "type": "movie",
+      "year": 1986,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/513/"
+      }
+    },
+    {
+      "title": "The iDOLM@STER",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2011,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1518300000],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10278/"
+      }
+    },
+    {
+      "title": "The iDOLM@STER Cinderella Girls",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1518645600],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23587/"
+      }
+    },
+    {
+      "title": "The iDOLM@STER Cinderella Girls 2nd Season",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1520373600],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30344/"
+      }
+    },
+    {
+      "title": "The IDOLM@STER Cinderella Girls: U149",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2023,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1688677200],
+      "studios": ["CygamesPictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/51536"
+      }
+    },
+    {
+      "title": "The iDOLM@STER Movie: Kagayaki no Mukougawa e!",
+      "episodes": 1,
+      "runtime": 121,
+      "type": "movie",
+      "year": 2014,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1518472800],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/17437/"
+      }
+    },
+    {
+      "title": "The iDOLM@STER Shiny Festa",
+      "episodes": 3,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2012,
+      "season": "fall",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1518386400],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14835/"
+      }
+    },
+    {
+      "title": "The iDOLM@STER: 765 Pro to Iu Monogatari",
+      "episodes": 1,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2012,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1518300000],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11889/"
+      }
+    },
+    {
+      "title": "Toaru Kagaku no Railgun",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2009,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475355600],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6213/"
+      }
+    },
+    {
+      "title": "Toaru Kagaku no Railgun S",
+      "episodes": 24,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1475442000],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/16049/"
+      }
+    },
+    {
+      "title": "Toaru Majutsu no Index",
+      "episodes": 24,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2008,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/4654/"
+      }
+    },
+    {
+      "title": "Toji no Miko",
+      "episodes": 24,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 13,
+      "finishDates": [],
+      "studios": ["Studio Gokumi"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35589/"
+      }
+    },
+    {
+      "title": "Tonari no Kyuuketsuki-san",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 6,
+      "finishDates": [],
+      "studios": ["AXsiZ", "Studio Gokumi"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37579/"
+      }
+    },
+    {
+      "title": "Tonari no Totoro",
+      "episodes": 1,
+      "runtime": 86,
+      "type": "movie",
+      "year": 1988,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [],
+      "studios": ["Studio Ghibli"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/523/"
+      }
+    },
+    {
+      "title": "Toradora!",
+      "episodes": 25,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2008,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470517200],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/4224/"
+      }
+    },
+    {
+      "title": "Toradora!: Bentou no Gokui",
+      "episodes": 1,
+      "runtime": 27,
+      "type": "ova",
+      "year": 2011,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1470517200],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/11553/"
+      }
+    },
+    {
+      "title": "Tsukimonogatari",
+      "episodes": 4,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2014,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1473109200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28025/"
+      }
+    },
+    {
+      "title": "Uma Musume: Pretty Derby",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "spring",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1617483600],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35249/"
+      }
+    },
+    {
+      "title": "Uma Musume: Pretty Derby Season 2",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2021,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1640736000],
+      "studios": ["P.A. Works"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/42941/"
+      }
+    },
+    {
+      "title": "Urara Meirochou",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2017,
+      "season": "winter",
+      "rating": 6,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1597438800],
+      "studios": ["J.C.Staff"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32924/"
+      }
+    },
+    {
+      "title": "Violet Evergarden",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Kyoto Animation"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33352/"
+      }
+    },
+    {
+      "title": "Watashi ni Tenshi ga Maiorita!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2019,
+      "season": "winter",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 3,
+      "finishDates": [],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37993/"
+      }
+    },
+    {
+      "title": "Working!!",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2010,
+      "season": "spring",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["A-1 Pictures"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6956/"
+      }
+    },
+    {
+      "title": "Yagate Kimi ni Naru",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2018,
+      "season": "fall",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1571691600],
+      "studios": ["TROYCA"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37786/"
+      }
+    },
+    {
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2013,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1465074000],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14813/"
+      }
+    },
+    {
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. OVA",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2013,
+      "season": "summer",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1465074000],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/18753/"
+      }
+    },
+    {
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1466629200],
+      "studios": ["feel."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23847/"
+      }
+    },
+    {
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku OVA",
+      "episodes": 1,
+      "runtime": 23,
+      "type": "ova",
+      "year": 2016,
+      "season": "fall",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1477688400],
+      "studios": ["feel."],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33161/"
+      }
+    },
+    {
+      "title": "Yama no Susume",
+      "episodes": 12,
+      "runtime": 3,
+      "type": "tv",
+      "year": 2013,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1554670800],
+      "studios": ["8bit"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/14355/"
+      }
+    },
+    {
+      "title": "Yama no Susume Second Season",
+      "episodes": 24,
+      "runtime": 13,
+      "type": "tv",
+      "year": 2014,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1566075600],
+      "studios": ["8bit"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/21435/"
+      }
+    },
+    {
+      "title": "Yama no Susume Third Season",
+      "episodes": 13,
+      "runtime": 13,
+      "type": "tv",
+      "year": 2018,
+      "season": "summer",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1567371600],
+      "studios": ["8bit"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/35672/"
+      }
+    },
+    {
+      "title": "Yama no Susume: Kabe tte Kowakunai no?",
+      "episodes": 1,
+      "runtime": 5,
+      "type": "ova",
+      "year": 2013,
+      "season": "spring",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1554670800],
+      "studios": ["8bit"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/17341/"
+      }
+    },
+    {
+      "title": "Yamada-kun to 7-nin no Majo",
+      "episodes": 12,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2015,
+      "season": "spring",
+      "rating": null,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1483308000],
+      "studios": ["LIDENFILMS"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/28677/"
+      }
+    },
+    {
+      "title": "Yofukashi no Uta",
+      "episodes": 13,
+      "runtime": 22,
+      "type": "tv",
+      "year": 2022,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1666386000],
+      "studios": ["LIDENFILMS"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/50346/"
+      }
+    },
+    {
+      "title": "Yojouhan Shinwa Taikei",
+      "episodes": 11,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2010,
+      "season": "spring",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1483048800],
+      "studios": ["Madhouse"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7785/"
+      }
+    },
+    {
+      "title": "Yoru wa Mijikashi Arukeyo Otome",
+      "episodes": 1,
+      "runtime": 93,
+      "type": "movie",
+      "year": 2017,
+      "season": "spring",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1519164000],
+      "studios": ["Science SARU"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34537/"
+      }
+    },
+    {
+      "title": "Yozakura Quartet: Hana no Uta",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2013,
+      "season": "fall",
+      "rating": null,
+      "status": "on_hold",
+      "progress": 1,
+      "finishDates": [],
+      "studios": ["Tatsunoko Production"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/18497/"
+      }
+    },
+    {
+      "title": "Yuri!!! on Ice",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2016,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1501707600],
+      "studios": ["MAPPA"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/32995/"
+      }
+    },
+    {
+      "title": "Yuru Camp△",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "winter",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1521756000, 1576188000],
+      "studios": ["C-Station"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/34798/"
+      }
+    },
+    {
+      "title": "Yuru Camp△ Season 2",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2021,
+      "season": "winter",
+      "rating": 7,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1617224400],
+      "studios": ["C-Station"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/38474/"
+      }
+    },
+    {
+      "title": "Yuru Yuri",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2011,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1476738000],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/10495/"
+      }
+    },
+    {
+      "title": "Yuru Yuri Nachuyachumi!",
+      "episodes": 1,
+      "runtime": 63,
+      "type": "ova",
+      "year": 2015,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1486159200],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/23225/"
+      }
+    },
+    {
+      "title": "Yuru Yuri Nachuyachumi!+",
+      "episodes": 2,
+      "runtime": 24,
+      "type": "ova",
+      "year": 2015,
+      "season": "summer",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1486159200],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30902/"
+      }
+    },
+    {
+      "title": "Yuru Yuri San☆Hai!",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2015,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1484863200],
+      "studios": ["TYO Animations"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/30279/"
+      }
+    },
+    {
+      "title": "Yuru Yuri♪♪",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2012,
+      "season": "summer",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1477515600],
+      "studios": ["Doga Kobo"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/12403/"
+      }
+    },
+    {
+      "title": "Yuyushiki",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2013,
+      "season": "spring",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1570136400],
+      "studios": ["Kinema Citrus"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/15911/"
+      }
+    },
+    {
+      "title": "Yuyushiki: Komarasetari, Komarasaretari",
+      "episodes": 1,
+      "runtime": 27,
+      "type": "ova",
+      "year": 2017,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1570136400],
+      "studios": ["Kinema Citrus"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/33035/"
+      }
+    },
+    {
+      "title": "Zan Sayonara Zetsubou Sensei",
+      "episodes": 13,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2009,
+      "season": "summer",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1514757600, 1557262800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/6377/"
+      }
+    },
+    {
+      "title": "Zan Sayonara Zetsubou Sensei Bangaichi",
+      "episodes": 2,
+      "runtime": 26,
+      "type": "ova",
+      "year": 2009,
+      "season": "fall",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1514757600, 1557262800],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/7044/"
+      }
+    },
+    {
+      "title": "Zoku Natsume Yuujinchou",
+      "episodes": 13,
+      "runtime": 24,
+      "type": "tv",
+      "year": 2009,
+      "season": "winter",
+      "rating": 9,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1586034000],
+      "studios": ["Brain's Base"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/5300/"
+      }
+    },
+    {
+      "title": "Zoku Sayonara Zetsubou Sensei",
+      "episodes": 13,
+      "runtime": 25,
+      "type": "tv",
+      "year": 2008,
+      "season": "winter",
+      "rating": 10,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1514498400, 1533157200],
+      "studios": ["Shaft"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/3228/"
+      }
+    },
+    {
+      "title": "Zombieland Saga",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2018,
+      "season": "fall",
+      "rating": 8,
+      "status": "completed",
+      "progress": null,
+      "finishDates": [1576188000, 1668722400],
+      "studios": ["MAPPA"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/37976/"
+      }
+    },
+    {
+      "title": "Zombieland Saga Revenge",
+      "episodes": 12,
+      "runtime": 23,
+      "type": "tv",
+      "year": 2021,
+      "season": "spring",
+      "rating": 8,
+      "status": "watching",
+      "progress": 9,
+      "finishDates": [],
+      "studios": ["MAPPA"],
+      "urls": {
+        "mal": "https://myanimelist.net/anime/40174/"
+      }
+    }
+  ]
+}

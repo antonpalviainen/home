@@ -1,8 +1,41 @@
 import { readFile } from 'fs/promises'
 
-import { PrismaClient } from '@prisma/client'
+import {
+  AnimeStatus,
+  AnimeType,
+  Language,
+  PrismaClient,
+  Season,
+} from '@prisma/client'
 
-interface Episode {
+interface Anime {
+  title: string
+  episodes: number
+  runtime: number
+  type: 'tv' | 'ova' | 'movie' | 'ona'
+  year: number
+  season: 'winter' | 'spring' | 'summer' | 'fall'
+  rating: number | null
+  status:
+    | 'watching'
+    | 'rewatching'
+    | 'completed'
+    | 'on_hold'
+    | 'dropped'
+    | 'plan_to_watch'
+  progress: number | null
+  finishDates: number[]
+  studios: string[]
+  urls: {
+    [key: string]: string
+  }
+}
+
+interface AnimeJSON {
+  series: Anime[]
+}
+
+interface GakiEpisode {
   n: number | null
   date: string
   title_en: string
@@ -11,7 +44,7 @@ interface Episode {
   series: string[]
 }
 
-interface Series {
+interface GakiSeries {
   key: string
   name_ja: string
   name_en: string
@@ -20,24 +53,126 @@ interface Series {
 }
 
 interface GakiJSON {
-  episodes: Episode[]
-  series: Series[]
+  episodes: GakiEpisode[]
+  series: GakiSeries[]
+}
+
+function languageEnum(lang: Language) {
+  switch (lang) {
+    case 'en':
+      return Language.en
+    case 'ja':
+      return Language.ja
+    default:
+      throw new Error(`Unknown language: ${lang}`)
+  }
+}
+
+function seasonEnum(season: Season) {
+  switch (season) {
+    case 'winter':
+      return Season.winter
+    case 'spring':
+      return Season.spring
+    case 'summer':
+      return Season.summer
+    case 'fall':
+      return Season.fall
+    default:
+      throw new Error(`Unknown season: ${season}`)
+  }
+}
+
+function animeStatusEnum(status: AnimeStatus) {
+  switch (status) {
+    case 'watching':
+      return AnimeStatus.watching
+    case 'rewatching':
+      return AnimeStatus.rewatching
+    case 'completed':
+      return AnimeStatus.completed
+    case 'on_hold':
+      return AnimeStatus.on_hold
+    case 'dropped':
+      return AnimeStatus.dropped
+    case 'plan_to_watch':
+      return AnimeStatus.plan_to_watch
+    default:
+      throw new Error(`Unknown status: ${status}`)
+  }
+}
+
+function animeTypeEnum(type: string) {
+  switch (type) {
+    case 'tv':
+      return AnimeType.tv
+    case 'ova':
+      return AnimeType.ova
+    case 'movie':
+      return AnimeType.movie
+    case 'ona':
+      return AnimeType.ona
+    default:
+      throw new Error(`Unknown type: ${type}`)
+  }
 }
 
 const prisma = new PrismaClient()
 
-async function seed() {
+async function seedAnime(deleteRecords = false) {
+  const raw = await readFile('./prisma/anime.json', 'utf-8')
+  const data = JSON.parse(raw) as AnimeJSON
+
+  if (deleteRecords) {
+    await prisma.animeFinishDate.deleteMany({})
+    await prisma.animeStudio.deleteMany({})
+    await prisma.anime.deleteMany({})
+  }
+
+  await prisma.$transaction(
+    data.series.map((anime) =>
+      prisma.anime.create({
+        data: {
+          title: anime.title,
+          episodes: anime.episodes,
+          runtime: anime.runtime,
+          type: animeTypeEnum(anime.type),
+          year: anime.year,
+          season: seasonEnum(anime.season),
+          rating: anime.rating,
+          status: animeStatusEnum(anime.status),
+          progress: anime.progress,
+          studios: {
+            connectOrCreate: anime.studios.map((studio) => ({
+              where: { name: studio },
+              create: { name: studio },
+            })),
+          },
+          finishDates: {
+            create: anime.finishDates.map((date) => ({ date: new Date(date) })),
+          },
+        },
+      })
+    )
+  )
+
+  console.log('Seeded database')
+}
+
+async function seedGaki(deleteRecords = false) {
   const raw = await readFile('./prisma/gaki-no-tsukai.json', 'utf-8')
   const data = JSON.parse(raw) as GakiJSON
 
-  await prisma.episodeTitle.deleteMany({})
-  await prisma.seriesName.deleteMany({})
-  await prisma.episode.deleteMany({})
-  await prisma.series.deleteMany({})
+  if (deleteRecords) {
+    await prisma.gakiEpisodeTitle.deleteMany({})
+    await prisma.gakiSeriesName.deleteMany({})
+    await prisma.gakiEpisode.deleteMany({})
+    await prisma.gakiSeries.deleteMany({})
+  }
 
   const seriesIds = await prisma.$transaction(
     data.series.map((series) =>
-      prisma.series.create({
+      prisma.gakiSeries.create({
         data: {
           text: {
             create: [
@@ -66,7 +201,7 @@ async function seed() {
 
   await prisma.$transaction(
     data.episodes.map((episode) =>
-      prisma.episode.create({
+      prisma.gakiEpisode.create({
         data: {
           number: episode.n,
           text: {
@@ -74,10 +209,10 @@ async function seed() {
               // Only create titles if they exist
               // If there is no title, an empty array will get expanded instead of the object
               ...(episode.title_ja
-                ? [{ language: 'ja', title: episode.title_ja }]
+                ? [{ language: languageEnum('ja'), title: episode.title_ja }]
                 : []),
               ...(episode.title_en
-                ? [{ language: 'en', title: episode.title_en }]
+                ? [{ language: languageEnum('en'), title: episode.title_en }]
                 : []),
             ],
           },
@@ -93,13 +228,13 @@ async function seed() {
   console.log('Seeded database')
 }
 
-seed()
-  .catch((e) => {
-    console.error(e)
-    process.exit(1)
-  })
-  .finally(
-    void (async () => {
-      await prisma.$disconnect()
-    })()
-  )
+async function main() {
+  await seedAnime(true)
+  // await seedGaki(true)
+
+  await prisma.$disconnect()
+}
+
+main().catch((err) => {
+  console.error('An error occurred while attempting to seed the database:', err)
+})

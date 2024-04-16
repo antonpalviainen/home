@@ -1,6 +1,8 @@
+import { Language as GeneratedLanguage } from '@prisma/client'
+
 import { fetchSeries, fetchSeriesEpisodes } from './data'
 
-export type Language = 'en' | 'ja'
+export type Language = GeneratedLanguage
 
 export type Episodes = Awaited<ReturnType<typeof fetchSeriesEpisodes>>
 

@@ -8,45 +8,119 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model Episode {
+// Anime models
+
+model Anime {
+  id       Int         @id @default(autoincrement())
+  title    String      @unique
+  episodes Int?
+  runtime  Int? // Minutes
+  type     AnimeType
+  year     Int
+  season   Season
+  rating   Int? // 1-10
+  progress Int?
+  status   AnimeStatus
+
+  studios     AnimeStudio[]
+  finishDates AnimeFinishDate[]
+}
+
+model AnimeStudio {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  Anime Anime[]
+
+  @@index([name])
+}
+
+model AnimeFinishDate {
+  id   Int      @id @default(autoincrement())
+  date DateTime @default(now())
+
+  Anime   Anime? @relation(fields: [animeId], references: [id])
+  animeId Int?
+
+  // Non-unique foreign key
+  @@index([animeId])
+}
+
+enum AnimeType {
+  tv
+  ova
+  ona
+  movie
+}
+
+enum AnimeStatus {
+  watching
+  rewatching
+  completed
+  dropped
+  on_hold
+  plan_to_watch
+}
+
+// Gaki models
+
+model GakiEpisode {
   id     Int      @id @default(autoincrement())
   number Int?
   date   DateTime
 
-  text   EpisodeTitle[]
-  series Series[]
+  text   GakiEpisodeTitle[]
+  series GakiSeries[]
 }
 
-model Series {
+model GakiSeries {
   id Int @id @default(autoincrement())
 
-  text     SeriesName[]
-  episodes Episode[]
+  text     GakiSeriesName[]
+  episodes GakiEpisode[]
 }
 
-model EpisodeTitle {
-  id       Int    @id @default(autoincrement())
+model GakiEpisodeTitle {
+  id       Int      @id @default(autoincrement())
   title    String
-  language String
+  language Language
 
-  Episode   Episode @relation(fields: [episodeId], references: [id])
+  Episode   GakiEpisode @relation(fields: [episodeId], references: [id])
   episodeId Int
 
+  // Non-unique foreign key
+  @@index([episodeId])
   // Index for searching by title
   @@index([title])
   // Covering index for fetching by language
   @@index([language, title])
 }
 
-model SeriesName {
-  id           Int    @id @default(autoincrement())
+model GakiSeriesName {
+  id           Int      @id @default(autoincrement())
   name         String
   abbreviation String
-  language     String
+  language     Language
 
-  Series   Series @relation(fields: [seriesId], references: [id])
+  Series   GakiSeries @relation(fields: [seriesId], references: [id])
   seriesId Int
 
+  // Non-unique foreign key
+  @@index([seriesId])
   // Covering index for search by language
   @@index([language, name, abbreviation])
+}
+
+// Universal models
+
+enum Language {
+  en
+  ja
+}
+
+enum Season {
+  winter
+  spring
+  summer
+  fall
 }
