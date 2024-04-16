@@ -1,51 +1,37 @@
-import { AnimeStatus, AnimeType } from '@prisma/client'
+import { clsx } from 'clsx'
 import Link from 'next/link'
 
 import { fetchFilteredAnime } from '@/lib/anime/data'
+import { getStatusColor, isCompleted } from '@/lib/anime/utils'
+import { formatType } from '@/lib/anime/utils'
+import { capitalize } from '@/lib/utils'
 
 type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
 
-function capitalize(string: string) {
-  return string.charAt(0).toUpperCase() + string.slice(1)
+function Cell({
+  children,
+  className: customClassName,
+}: {
+  children?: React.ReactNode
+  className?: string
+}) {
+  const className = clsx('px-1.5 py-1', customClassName)
+
+  return <td className={className}>{children}</td>
 }
 
-function formatType(type: AnimeType) {
-  switch (type) {
-    case AnimeType.tv:
-    case AnimeType.ova:
-    case AnimeType.ona:
-      // tv, ova, and ona have the same format
-      return type.toUpperCase()
-    case AnimeType.movie:
-      return capitalize(type)
-    default:
-      throw new Error('Invalid type')
-  }
-}
+function ProgressCell({ anime }: { anime: Anime }) {
+  const completed = isCompleted(anime.status)
+  const progress = completed ? '' : (anime.progress ?? '-') + '/'
 
-function getStatusColor(status: AnimeStatus) {
-  switch (status) {
-    case AnimeStatus.watching:
-      return 'bg-[#2db039]'
-    case AnimeStatus.rewatching:
-    case AnimeStatus.completed:
-      // rewatching and completed have the same color
-      return 'bg-[#26448f]'
-    case AnimeStatus.on_hold:
-      return 'bg-[#f1c83e]'
-    case AnimeStatus.dropped:
-      return 'bg-[#a12f31]'
-    case AnimeStatus.plan_to_watch:
-      return 'bg-[#c3c3c3]'
-    default:
-      throw new Error('Invalid status')
-  }
+  return (
+    <Cell className="text-center">
+      {`${progress}${anime.episodes}`} {!completed && '+'}
+    </Cell>
+  )
 }
 
 function Row({ anime }: { anime: Anime }) {
-  const statusColor = getStatusColor(anime.status)
-  const progress =
-    anime.status === AnimeStatus.completed ? '' : (anime.progress ?? '-') + '/'
   const studios = anime.studios.map((studio, i) => [
     i > 0 && ', ',
     <Link key={studio.id} href={`/studio/${studio.id}`}>
@@ -55,16 +41,28 @@ function Row({ anime }: { anime: Anime }) {
 
   return (
     <tr key={anime.id} className="border border-black">
-      <td className={`p-1 ${statusColor}`}></td>
-      <td className="p-1">{anime.title}</td>
-      <td className="p-1 text-center">{`${progress}${anime.episodes}`}</td>
-      <td className="p-1 text-center">{anime.runtime}</td>
-      <td className="p-1 text-center">{formatType(anime.type)}</td>
-      <td className="p-1">{`${anime.year} ${capitalize(anime.season)}`}</td>
-      <td className="p-1 text-center">{anime.rating}</td>
-      <td className="p-1">{studios}</td>
+      <Cell className={getStatusColor(anime.status)}></Cell>
+      <Cell>{anime.title}</Cell>
+      <ProgressCell anime={anime} />
+      <Cell className="text-center">{anime.runtime}</Cell>
+      <Cell className="text-center">{formatType(anime.type)}</Cell>
+      <Cell>{`${anime.year} ${capitalize(anime.season)}`}</Cell>
+      <Cell className="text-center">{anime.rating}</Cell>
+      <Cell>{studios}</Cell>
     </tr>
   )
+}
+
+function Header({
+  children,
+  className: customClassName,
+}: {
+  children?: React.ReactNode
+  className?: string
+}) {
+  const className = clsx('p-1', customClassName)
+
+  return <th className={className}>{children}</th>
 }
 
 export default async function Table() {
@@ -74,14 +72,14 @@ export default async function Table() {
     <table className="border border-black">
       <thead>
         <tr className="border border-black">
-          <th className="w-3">{}</th>
-          <th className="p-1">Title</th>
-          <th className="p-1">Progress</th>
-          <th className="p-1">Runtime</th>
-          <th className="p-1">Type</th>
-          <th className="p-1">Premiered</th>
-          <th className="p-1">Rating</th>
-          <th className="p-1">Studios</th>
+          <Header className="w-3"></Header>
+          <Header>Title</Header>
+          <Header>Progress</Header>
+          <Header>Runtime</Header>
+          <Header>Type</Header>
+          <Header>Premiered</Header>
+          <Header>Rating</Header>
+          <Header>Studios</Header>
         </tr>
       </thead>
       <tbody>
