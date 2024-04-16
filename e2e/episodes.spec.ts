@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:3000/gaki/episodes')
+  await page.goto('/gaki/episodes')
 })
 
 test.describe('pagination', () => {
@@ -11,7 +11,7 @@ test.describe('pagination', () => {
 
   test('changes the page', async ({ page }) => {
     await page.locator('.inline-flex > a').first().click()
-    await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?page=2')
+    await expect(page).toHaveURL('/gaki/episodes?page=2')
     await expect(page.getByRole('rowgroup')).toContainText('101');
   })
 })
@@ -33,7 +33,7 @@ test.describe('episode table', () => {
 test.describe('english toggle', () => {
   test('changes the query', async ({ page }) => {
     await page.getByRole('link', { name: 'EN' }).click()
-    await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?lang=en')
+    await expect(page).toHaveURL('/gaki/episodes?lang=en')
   })
 
   test('episode titles are in english', async ({ page }) => {
@@ -48,7 +48,7 @@ test.describe('english toggle', () => {
 test.describe('japanese toggle', () => {
   test('changes the query', async ({ page }) => {
     await page.getByRole('link', { name: 'JA' }).click()
-    await expect(page).toHaveURL('http://localhost:3000/gaki/episodes?lang=ja')
+    await expect(page).toHaveURL('/gaki/episodes?lang=ja')
   })
 
   test('episode titles are in japanese', async ({ page }) => {
@@ -64,23 +64,23 @@ test.describe('japanese toggle', () => {
 
 test.describe('search', () => {
   test('filters episodes by a query in english', async ({ page }) => {
-    await page.goto('http://localhost:3000/gaki/episodes?lang=en')
+    await page.goto('/gaki/episodes?lang=en')
     await page
       .getByPlaceholder('Search episodes')
       .fill('The 5th Heipo Shallowness Trial')
     await page.waitForURL(
-      'http://localhost:3000/gaki/episodes?lang=en&page=1&query=The+5th+Heipo+Shallowness+Trial'
+      '/gaki/episodes?lang=en&page=1&query=The+5th+Heipo+Shallowness+Trial'
     )
     await expect(page.getByRole('row')).toContainText('769')
   })
 
   test('filters episodes by a query in japanese', async ({ page }) => {
-    await page.goto('http://localhost:3000/gaki/episodes?lang=ja')
+    await page.goto('/gaki/episodes?lang=ja')
     await page
       .getByPlaceholder('Search episodes')
       .fill('第5回 ヘイポーうすっぺら裁判')
     await page.waitForURL(
-      'http://localhost:3000/gaki/episodes?lang=ja&page=1&query=第5回+ヘイポーうすっぺら裁判'
+      '/gaki/episodes?lang=ja&page=1&query=第5回+ヘイポーうすっぺら裁判'
     )
     await expect(page.getByRole('row')).toContainText('769')
   })

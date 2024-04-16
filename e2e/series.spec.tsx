@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:3000/gaki/series')
+  await page.goto('/gaki/series')
 })
 
 test.describe('episode list', () => {
@@ -22,7 +22,7 @@ test.describe('english toggle', () => {
   })
 
   test('changes the query', async ({ page }) => {
-    await expect(page).toHaveURL('http://localhost:3000/gaki/series?lang=en')
+    await expect(page).toHaveURL('/gaki/series?lang=en')
   })
 
   test('series names are in english', async ({ page }) => {
@@ -36,7 +36,7 @@ test.describe('japanese toggle', () => {
   })
 
   test('changes the query', async ({ page }) => {
-    await expect(page).toHaveURL('http://localhost:3000/gaki/series?lang=ja')
+    await expect(page).toHaveURL('/gaki/series?lang=ja')
   })
 
   test('series names are in japanese', async ({ page }) => {
