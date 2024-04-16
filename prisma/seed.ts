@@ -229,7 +229,7 @@ async function seedGaki(deleteRecords = false) {
 }
 
 async function main() {
-  await seedAnime(true)
+  // await seedAnime(true)
   // await seedGaki(true)
 
   await prisma.$disconnect()
