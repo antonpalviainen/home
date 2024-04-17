@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 
-import { useClickOutside } from '@/lib/useClickOutside'
+import useClickOutside from '@/lib/use-click-outside'
 
 export function Select({
   current,

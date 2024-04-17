@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Language as GeneratedLanguage } from '@prisma/client'
 
 import { fetchSeries, fetchSeriesEpisodes } from './data'

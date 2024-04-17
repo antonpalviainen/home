@@ -1,5 +1,4 @@
 import { clsx } from 'clsx'
-import Link from 'next/link'
 
 import { fetchFilteredAnime } from '@/lib/anime/data'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'

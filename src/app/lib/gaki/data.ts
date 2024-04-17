@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { Language } from '@/lib/gaki/definitions'
 import prisma from '@/lib/prisma'
 
