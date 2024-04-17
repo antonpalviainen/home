@@ -43,8 +43,10 @@ export function generateSortOrder(
     case 'progress':
       fields.push({ progress: sortOrder })
       break
+    // Default "case" sorts only by title
   }
 
+  // Always add sorting by title
   fields.push({ title: sortOrder })
 
   return fields
