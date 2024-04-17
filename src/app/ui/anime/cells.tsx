@@ -44,7 +44,7 @@ export function ProgressCell({
       {`/${episodes}`}
       <button
         onClick={handleIncrement}
-        className="w-5 h-5 ml-1 flex justify-center items-center border rounded-full hover:bg-neutral-100 hover:text-blue-600 dark:hover:text-blue-500"
+        className="w-5 h-5 ml-0.5 flex justify-center items-center border rounded-full hover:bg-neutral-100 hover:text-blue-600 dark:hover:text-blue-500"
       >
         +
       </button>

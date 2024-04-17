@@ -24,12 +24,13 @@ export function Cell({
 function Row({ anime }: { anime: Anime }) {
   const completed = isCompleted(anime.status)
 
-  const studios = anime.studios.map((studio, i) => [
-    i > 0 && ', ',
-    <Link key={studio.id} href={`/studio/${studio.id}`}>
-      {studio.name}
-    </Link>,
-  ])
+  // const studios = anime.studios.map((studio, i) => [
+  //   i > 0 && ', ',
+  //   <Link key={studio.id} href={`/studio/${studio.id}`}>
+  //     {studio.name}
+  //   </Link>,
+  // ])
+  const studios = anime.studios.map((studio) => studio.name).join(', ')
 
   return (
     <tr key={anime.id} className="border border-black">
