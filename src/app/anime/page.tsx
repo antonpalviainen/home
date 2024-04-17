@@ -1,9 +1,11 @@
+import { Suspense } from 'react'
+
 import Table from '@/ui/anime/table'
 
 export default function Page() {
   return (
-    <main className="flex justify-center p-10">
+    <Suspense fallback={<p>Loading...</p>}>
       <Table />
-    </main>
+    </Suspense>
   )
 }
