@@ -5,6 +5,7 @@ import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'
 import { ProgressCell, RatingCell } from '@/ui/anime/cells'
+import { TableHead } from '@/ui/anime/table-head'
 
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
 
@@ -46,35 +47,18 @@ function Row({ anime }: { anime: Anime }) {
   )
 }
 
-function Header({
-  children,
-  className: customClassName,
+export default async function Table({
+  order,
+  direction,
 }: {
-  children?: React.ReactNode
-  className?: string
+  order: string
+  direction: string
 }) {
-  const className = clsx('p-1', customClassName)
-
-  return <th className={className}>{children}</th>
-}
-
-export default async function Table() {
-  const data = await fetchFilteredAnime()
+  const data = await fetchFilteredAnime(order, direction)
 
   return (
     <table className="border border-black">
-      <thead>
-        <tr className="border border-black">
-          <Header className="w-3"></Header>
-          <Header>Title</Header>
-          <Header>Progress</Header>
-          <Header>Runtime</Header>
-          <Header>Type</Header>
-          <Header>Premiered</Header>
-          <Header>Rating</Header>
-          <Header>Studios</Header>
-        </tr>
-      </thead>
+      <TableHead />
       <tbody>
         {data.map((anime) => (
           <Row anime={anime} key={anime.id} />

@@ -1,55 +1,11 @@
 import 'server-only'
 
-import { Prisma } from '@prisma/client'
-
+import { generateSortOrder } from '@/lib/anime/utils'
 import prisma from '@/lib/prisma'
 
-type OrderField =
-  | 'title'
-  | 'runtime'
-  | 'type'
-  | 'premiered'
-  | 'rating'
-  | 'progress'
-  | 'status'
-
-function generateSortOrder(
-  field: OrderField = 'status',
-  order: Prisma.SortOrder = 'asc'
-) {
-  const sortOrder =
-    order === 'asc' ? Prisma.SortOrder.asc : Prisma.SortOrder.desc
-  const fields = []
-
-  switch (field) {
-    case 'status':
-      fields.push({ status: sortOrder })
-      break
-    case 'runtime':
-      fields.push({ runtime: sortOrder })
-      break
-    case 'type':
-      fields.push({ type: sortOrder })
-      break
-    case 'premiered':
-      fields.push({ year: sortOrder }, { season: sortOrder })
-      break
-    case 'rating':
-      fields.push({ rating: sortOrder })
-      break
-    case 'progress':
-      fields.push({ progress: sortOrder })
-      break
-  }
-
-  fields.push({ title: sortOrder })
-
-  return fields
-}
-
 export async function fetchFilteredAnime(
-  orderField: OrderField = 'status',
-  orderDirection: Prisma.SortOrder = 'asc'
+  orderField: string,
+  orderDirection: string
 ) {
   const orderBy = generateSortOrder(orderField, orderDirection)
 

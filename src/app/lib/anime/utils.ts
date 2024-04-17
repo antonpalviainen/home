@@ -1,4 +1,4 @@
-import { AnimeStatus, AnimeType } from '@prisma/client'
+import { AnimeStatus, AnimeType, Prisma } from '@prisma/client'
 
 import { capitalize } from '@/lib/utils'
 
@@ -12,6 +12,42 @@ export function formatType(type: AnimeType) {
     case AnimeType.movie:
       return capitalize(type)
   }
+}
+
+export function generateSortOrder(
+  field: string = 'status',
+  order: string = 'asc'
+) {
+  const sortOrder =
+    order === 'desc' ? Prisma.SortOrder.desc : Prisma.SortOrder.asc
+  const fields = []
+
+  switch (field) {
+    case 'status':
+      fields.push({ status: sortOrder })
+      break
+    case 'runtime':
+      fields.push({ runtime: sortOrder })
+      break
+    case 'type':
+      fields.push({ type: sortOrder })
+      break
+    case 'premiered':
+      fields.push({ year: sortOrder }, { season: sortOrder })
+      break
+    case 'rating':
+      fields.push({
+        rating: { sort: sortOrder, nulls: Prisma.NullsOrder.last },
+      })
+      break
+    case 'progress':
+      fields.push({ progress: sortOrder })
+      break
+  }
+
+  fields.push({ title: sortOrder })
+
+  return fields
 }
 
 export function getStatusColor(status: AnimeStatus): string {
