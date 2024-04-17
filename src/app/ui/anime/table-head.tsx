@@ -2,34 +2,29 @@
 
 import { ReactNode, useState } from 'react'
 
-function Select({ options }: { options: string[] }) {
-  const [selected, setSelected] = useState(options.map(() => true))
-
-  function handleSelect(i: number) {
-    const newSelected = selected.map((s, j) => (i === j ? !s : s))
-    setSelected(newSelected)
-  }
-
-  function handleSelectAll() {
-    setSelected(selected.map(() => true))
-  }
-
-  function handleClearAll() {
-    setSelected(selected.map(() => false))
-  }
-
+function Select({
+  options,
+  handleSelect,
+  handleSelectAll,
+  handleClearAll,
+}: {
+  options: Options
+  handleSelect: (n: number) => void
+  handleSelectAll: () => void
+  handleClearAll: () => void
+}) {
   return (
     <div className="my-2 space-y-2">
       <div className="space-x-3">
         <button
           onClick={handleSelectAll}
-          className="border px-1 rounded-md hover:bg-slate-100 hover:text-blue-600"
+          className="border px-1 rounded-md hover:bg-slate-100"
         >
           All
         </button>
         <button
           onClick={handleClearAll}
-          className="border px-1 rounded-md hover:bg-slate-100 hover:text-blue-600"
+          className="border px-1 rounded-md hover:bg-slate-100"
         >
           Clear
         </button>
@@ -37,17 +32,17 @@ function Select({ options }: { options: string[] }) {
       <div className="text-left max-h-80 min-w-32 overflow-y-auto">
         {options.map((option, i) => (
           <div
-            key={option}
-            className="flex px-3 py-0.5 overscroll-contain hover:bg-slate-100 hover:text-blue-600"
+            key={option[0]}
+            className="flex px-3 py-0.5 overscroll-contain hover:bg-slate-100"
           >
             <input
               type="checkbox"
-              id={option}
+              id={option[0]}
               className=" accent-slate-500 cursor-pointer"
-              checked={selected[i]}
+              checked={option[1]}
               onChange={() => handleSelect(i)}
             />
-            <label htmlFor={option} className="w-full pl-2 cursor-pointer ">
+            <label htmlFor={option[0]} className="w-full pl-2 cursor-pointer ">
               {option}
             </label>
           </div>
@@ -57,23 +52,7 @@ function Select({ options }: { options: string[] }) {
   )
 }
 
-function Dropdown({ options }: { options?: string[] }) {
-  return (
-    <div className="relative flex justify-center cursor-default">
-      <div className="absolute top-2 font-normal bg-white whitespace-nowrap shadow-lg shadow-neutral-300">
-        <div>
-          <button className="block w-full px-3 py-1 hover:bg-slate-100">
-            Sort A-Z
-          </button>
-          <button className="block w-full px-3 py-1 hover:bg-slate-100">
-            Sort Z-A
-          </button>
-          {options ? <Select options={options} /> : null}
-        </div>
-      </div>
-    </div>
-  )
-}
+type Options = [string, boolean][]
 
 function Header({
   children,
@@ -81,15 +60,52 @@ function Header({
   filterOptions,
   onClick,
 }: {
-  children?: ReactNode
+  children: ReactNode
   isActive: boolean
   filterOptions?: string[]
   onClick: () => void
 }) {
+  const [options, setOptions] = useState<Options | undefined>(
+    filterOptions?.map((o) => [o, true])
+  )
+
+  function handleSelect(n: number) {
+    setOptions(options?.map((o, i) => (i === n ? [o[0], !o[1]] : o)))
+  }
+
+  function handleSelectAll() {
+    setOptions(options?.map((o) => [o[0], true]))
+  }
+
+  function handleClearAll() {
+    setOptions(options?.map((o) => [o[0], false]))
+  }
+
   return (
     <th onClick={onClick} className="p-1 cursor-pointer hover:bg-slate-100">
       {children}
-      {isActive ? <Dropdown options={filterOptions} /> : null}
+      {isActive ? (
+        <div className="relative flex justify-center cursor-default">
+          <div className="absolute top-2 font-normal bg-white whitespace-nowrap shadow-lg shadow-neutral-300">
+            <div>
+              <button className="block w-full px-3 py-1 hover:bg-slate-100">
+                Sort A-Z
+              </button>
+              <button className="block w-full px-3 py-1 hover:bg-slate-100">
+                Sort Z-A
+              </button>
+              {options ? (
+                <Select
+                  options={options}
+                  handleSelect={handleSelect}
+                  handleSelectAll={handleSelectAll}
+                  handleClearAll={handleClearAll}
+                />
+              ) : null}
+            </div>
+          </div>
+        </div>
+      ) : null}
     </th>
   )
 }
@@ -116,7 +132,7 @@ export function TableHead({
   //   replace(`${pathname}?${params.toString()}`)
   // }
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(1)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
     <thead>
