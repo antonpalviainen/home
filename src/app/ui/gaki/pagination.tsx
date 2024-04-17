@@ -91,7 +91,7 @@ function PaginationNumber({
         isActive,
       'hover:bg-neutral-100 dark:hover:bg-white/5':
         !isActive && position !== 'middle',
-      'text-gray-300': position === 'middle',
+      'text-slate-300': position === 'middle',
       'dark:border-[#2b3962]': !isActive && positionOnPage === 'top',
       'dark:border-[#2c3c6a]': !isActive && positionOnPage === 'bottom',
     }

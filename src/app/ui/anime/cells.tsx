@@ -45,7 +45,7 @@ export function ProgressCell({
       {`/${episodes}`}
       <button
         onClick={handleIncrement}
-        className="flex justify-center items-center text-gray-500 hover:text-blue-600 dark:hover:text-gray-700"
+        className="flex justify-center items-center text-slate-500 hover:text-blue-600 dark:hover:text-slate-700"
       >
         <PlusCircleIcon className="w-4 ml-0.5 pt-0.5" />
       </button>

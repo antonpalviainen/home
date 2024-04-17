@@ -7,6 +7,13 @@ import { capitalize } from '@/lib/utils'
 import { ProgressCell, RatingCell } from '@/ui/anime/cells'
 import { TableHead } from '@/ui/anime/table-head'
 
+const filterOptions = {
+  status: ['Watching', 'Completed', 'On Hold', 'Dropped', 'Plan to Watch'],
+  type: ['TV', 'OVA', 'Movie', 'ONA'],
+  season: ['Winter', 'Spring', 'Summer', 'Fall'],
+  rating: ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+}
+
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
 
 export function Cell({
@@ -26,7 +33,7 @@ function Row({ anime }: { anime: Anime }) {
   const studios = anime.studios.map((studio) => studio.name).join(', ')
 
   return (
-    <tr key={anime.id} className="hover:bg-gray-100">
+    <tr key={anime.id} className="hover:bg-slate-100">
       <Cell className={getStatusColor(anime.status)}></Cell>
       <Cell>{anime.title}</Cell>
       {completed || !anime.episodes ? (
@@ -58,7 +65,7 @@ export default async function Table({
 
   return (
     <table className="w-full max-w-7xl shadow-2xl shadow-neutral-500">
-      <TableHead />
+      <TableHead filterOptions={filterOptions} />
       <tbody>
         {data.map((anime) => (
           <Row anime={anime} key={anime.id} />

@@ -21,7 +21,7 @@ export function SeriesLabel({
           pathname: `/gaki/series/${series.id}`,
           query: { lang: language },
         }}
-        className="relative text-xs p-0.5 border rounded break-keep whitespace-nowrap dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5"
+        className="relative text-xs p-0.5 border rounded break-keep whitespace-nowrap dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5"
         onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
       >
