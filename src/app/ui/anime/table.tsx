@@ -26,7 +26,7 @@ function Row({ anime }: { anime: Anime }) {
   const studios = anime.studios.map((studio) => studio.name).join(', ')
 
   return (
-    <tr key={anime.id} className="border border-black">
+    <tr key={anime.id} className="hover:bg-gray-100">
       <Cell className={getStatusColor(anime.status)}></Cell>
       <Cell>{anime.title}</Cell>
       {completed || !anime.episodes ? (
@@ -57,7 +57,7 @@ export default async function Table({
   const data = await fetchFilteredAnime(order, direction)
 
   return (
-    <table className="border border-black">
+    <table className="w-full max-w-7xl shadow-2xl shadow-neutral-500">
       <TableHead />
       <tbody>
         {data.map((anime) => (

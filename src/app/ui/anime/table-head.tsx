@@ -24,44 +24,44 @@ export function TableHead() {
 
   return (
     <thead>
-      <tr className="border border-black">
+      <tr>
         <th
           onClick={() => handleSort('status')}
-          className="w-3 p-1 cursor-pointer hover:bg-neutral-100"
+          className="w-3 p-1 cursor-pointer hover:bg-gray-100"
         ></th>
         <th
           onClick={() => handleSort('title')}
-          className="p-1 cursor-pointer hover:bg-neutral-100"
+          className="p-1 cursor-pointer hover:bg-gray-100"
         >
           Title
         </th>
         <th
           onClick={() => handleSort('progress')}
-          className="p-1 cursor-pointer hover:bg-neutral-100"
+          className="p-1 cursor-pointer hover:bg-gray-100"
         >
           Progress
         </th>
         <th
           onClick={() => handleSort('runtime')}
-          className="p-1 cursor-pointer hover:bg-neutral-100"
+          className="p-1 cursor-pointer hover:bg-gray-100"
         >
           Runtime
         </th>
         <th
           onClick={() => handleSort('type')}
-          className="p-1 cursor-pointer hover:bg-neutral-100"
+          className="p-1 cursor-pointer hover:bg-gray-100"
         >
           Type
         </th>
         <th
           onClick={() => handleSort('premiered')}
-          className="p-1 cursor-pointer hover:bg-neutral-100"
+          className="p-1 cursor-pointer hover:bg-gray-100"
         >
           Premiered
         </th>
         <th
           onClick={() => handleSort('rating')}
-          className="p-1 cursor-pointer hover:bg-neutral-100"
+          className="p-1 cursor-pointer hover:bg-gray-100"
         >
           Rating
         </th>

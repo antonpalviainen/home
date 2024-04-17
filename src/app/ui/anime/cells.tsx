@@ -1,5 +1,6 @@
 'use client'
 
+import { PlusCircleIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react'
 
 import {
@@ -44,9 +45,9 @@ export function ProgressCell({
       {`/${episodes}`}
       <button
         onClick={handleIncrement}
-        className="w-5 h-5 ml-0.5 flex justify-center items-center border rounded-full hover:bg-neutral-100 hover:text-blue-600 dark:hover:text-blue-500"
+        className="flex justify-center items-center text-gray-500 hover:text-blue-600 dark:hover:text-gray-700"
       >
-        +
+        <PlusCircleIcon className="w-4 ml-0.5 pt-0.5" />
       </button>
     </td>
   )
