@@ -23,6 +23,7 @@ export async function fetchFilteredAnime() {
           select: { date: true },
         },
       },
+      orderBy: [{ status: 'asc' }, { title: 'asc' }],
     })
 
     return data

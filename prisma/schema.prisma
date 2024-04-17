@@ -47,10 +47,10 @@ model AnimeFinishDate {
 }
 
 enum AnimeType {
-  tv
-  ova
-  ona
   movie
+  ona
+  ova
+  tv
 }
 
 enum AnimeStatus {

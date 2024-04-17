@@ -12,7 +12,7 @@ interface Anime {
   title: string
   episodes: number
   runtime: number
-  type: 'tv' | 'ova' | 'movie' | 'ona'
+  type: 'movie' | 'ona' | 'ova' | 'tv'
   year: number
   season: 'winter' | 'spring' | 'summer' | 'fall'
   rating: number | null
@@ -104,14 +104,14 @@ function animeStatusEnum(status: AnimeStatus) {
 
 function animeTypeEnum(type: string) {
   switch (type) {
-    case 'tv':
-      return AnimeType.tv
-    case 'ova':
-      return AnimeType.ova
     case 'movie':
       return AnimeType.movie
     case 'ona':
       return AnimeType.ona
+    case 'ova':
+      return AnimeType.ova
+    case 'tv':
+      return AnimeType.tv
     default:
       throw new Error(`Unknown type: ${type}`)
   }
@@ -229,12 +229,16 @@ async function seedGaki(deleteRecords = false) {
 }
 
 async function main() {
-  // await seedAnime(true)
-  // await seedGaki(true)
-
-  await prisma.$disconnect()
+  await seedAnime(true)
+  await seedGaki(true)
 }
 
-main().catch((err) => {
-  console.error('An error occurred while attempting to seed the database:', err)
-})
+main()
+  .then(async () => {
+    await prisma.$disconnect()
+  })
+  .catch(async (e) => {
+    console.error(e)
+    await prisma.$disconnect()
+    process.exit(1)
+  })
