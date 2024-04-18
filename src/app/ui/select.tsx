@@ -13,7 +13,7 @@ export function Select({
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLSelectElement>(null)
-  useClickOutside(ref, async () => setOpen(false))
+  useClickOutside(ref, () => setOpen(false))
 
   function handleChange() {
     if (ref.current) {

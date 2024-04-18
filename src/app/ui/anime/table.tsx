@@ -64,7 +64,7 @@ export default async function Table({
   const data = await fetchFilteredAnime(order, direction)
 
   return (
-    <table className="w-full max-w-7xl shadow-2xl shadow-neutral-500">
+    <table className="w-full max-w-7xl shadow-2xl shadow-black/50">
       <TableHead filterOptions={filterOptions} />
       <tbody>
         {data.map((anime) => (
