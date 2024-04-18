@@ -62,20 +62,32 @@ function Dropdown({
   handleSelect,
   handleSelectAll,
   handleClearAll,
+  onClickOutside,
 }: {
   options?: Options
   handleSelect: (n: number) => void
   handleSelectAll: () => void
   handleClearAll: () => void
+  onClickOutside: () => void
 }) {
+  const ref = useRef<HTMLTableCellElement>(null)
+  useClickOutside(ref, onClickOutside)
+
   return (
     <div className="relative flex justify-center cursor-default">
-      <div className="absolute top-2 font-normal bg-white whitespace-nowrap rounded-md shadow-lg shadow-black/20">
+      <div
+        ref={ref}
+        className="absolute top-2 font-normal bg-white whitespace-nowrap rounded-md shadow-lg shadow-black/20"
+      >
         <div>
           <button className="block w-full px-3 py-1 rounded-t-md hover:bg-slate-100">
             Sort A-Z
           </button>
-          <button className={`${options ?? 'rounded-b-md'} block w-full px-3 py-1 hover:bg-slate-100`}>
+          <button
+            className={`${
+              options ?? 'rounded-b-md'
+            } block w-full px-3 py-1 hover:bg-slate-100`}
+          >
             Sort Z-A
           </button>
           {options ? (
@@ -108,8 +120,6 @@ function Header({
   const [options, setOptions] = useState<Options | undefined>(
     filterOptions?.map((o) => [o, true])
   )
-  const ref = useRef<HTMLTableCellElement>(null)
-  useClickOutside(ref, onClickOutside)
 
   function handleSelect(n: number) {
     setOptions(options?.map((o, i) => (i === n ? [o[0], !o[1]] : o)))
@@ -124,9 +134,14 @@ function Header({
   }
 
   return (
-    <th ref={ref} className="p-1 whitespace-nowrap">
+    <th className="p-1 whitespace-nowrap">
       {children ?? <wbr />}
-      <button onClick={onClick} className={`${children && 'ml-1'} p-0.5 border rounded-md hover:bg-slate-100`}>
+      <button
+        onClick={onClick}
+        className={`${
+          children && 'ml-1'
+        } p-0.5 border rounded-md hover:bg-slate-100`}
+      >
         <FunnelIcon className="w-4" />
       </button>
       {isActive ? (
@@ -135,6 +150,7 @@ function Header({
           handleSelect={handleSelect}
           handleSelectAll={handleSelectAll}
           handleClearAll={handleClearAll}
+          onClickOutside={onClickOutside}
         />
       ) : null}
     </th>
