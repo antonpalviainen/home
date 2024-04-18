@@ -8,10 +8,38 @@ import { ProgressCell, RatingCell } from '@/ui/anime/cells'
 import { TableHead } from '@/ui/anime/table-head'
 
 const filterOptions = {
-  status: ['Watching', 'Completed', 'On Hold', 'Dropped', 'Plan to Watch'],
-  type: ['TV', 'OVA', 'Movie', 'ONA'],
-  season: ['Winter', 'Spring', 'Summer', 'Fall'],
-  rating: ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+  status: [
+    { label: 'Watching', value: 'watching' },
+    { label: 'Completed', value: 'completed' },
+    { label: 'On Hold', value: 'on-hold' },
+    { label: 'Dropped', value: 'dropped' },
+    { label: 'Plan to Watch', value: 'plan-to-watch' },
+  ],
+  type: [
+    { label: 'TV', value: 'tv' },
+    { label: 'OVA', value: 'ova' },
+    { label: 'Movie', value: 'movie' },
+    { label: 'ONA', value: 'ona' },
+  ],
+  season: [
+    { label: 'Winter', value: 'winter' },
+    { label: 'Spring', value: 'spring' },
+    { label: 'Summer', value: 'summer' },
+    { label: 'Fall', value: 'fall' },
+  ],
+  rating: [
+    { label: '10', value: '10' },
+    { label: '9', value: '9' },
+    { label: '8', value: '8' },
+    { label: '7', value: '7' },
+    { label: '6', value: '6' },
+    { label: '5', value: '5' },
+    { label: '4', value: '4' },
+    { label: '3', value: '3' },
+    { label: '2', value: '2' },
+    { label: '1', value: '1' },
+    { label: '-', value: '0' },
+  ]
 }
 
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]

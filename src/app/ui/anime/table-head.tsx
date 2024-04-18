@@ -5,7 +5,14 @@ import { ReactNode, useRef, useState } from 'react'
 
 import useClickOutside from '@/lib/use-click-outside'
 
-type Options = [string, boolean][]
+interface Option {
+  label: string
+  value: string
+}
+
+interface FilterOptions {
+  [key: string]: Option[]
+}
 
 function Select({
   options,
@@ -13,7 +20,7 @@ function Select({
   handleSelectAll,
   handleClearAll,
 }: {
-  options: Options
+  options: Array<Option & { selected: boolean }>
   handleSelect: (n: number) => void
   handleSelectAll: () => void
   handleClearAll: () => void
@@ -37,18 +44,21 @@ function Select({
       <div className="text-left max-h-80 min-w-32 overflow-y-auto">
         {options.map((option, i) => (
           <div
-            key={option[0]}
+            key={option.value}
             className="flex px-3 py-0.5 overscroll-contain hover:bg-slate-100"
           >
             <input
               type="checkbox"
-              id={option[0]}
+              id={option.value}
               className=" accent-slate-500 cursor-pointer"
-              checked={option[1]}
+              checked={option.selected}
               onChange={() => handleSelect(i)}
             />
-            <label htmlFor={option[0]} className="w-full pl-2 cursor-pointer ">
-              {option}
+            <label
+              htmlFor={option.value}
+              className="w-full pl-2 cursor-pointer "
+            >
+              {option.label}
             </label>
           </div>
         ))}
@@ -64,7 +74,7 @@ function Dropdown({
   handleClearAll,
   onClickOutside,
 }: {
-  options?: Options
+  options?: Array<Option & { selected: boolean }>
   handleSelect: (n: number) => void
   handleSelectAll: () => void
   handleClearAll: () => void
@@ -113,24 +123,26 @@ function Header({
 }: {
   children?: ReactNode
   isActive: boolean
-  filterOptions?: string[]
+  filterOptions?: Option[]
   onClick: () => void
   onClickOutside: () => void
 }) {
-  const [options, setOptions] = useState<Options | undefined>(
-    filterOptions?.map((o) => [o, true])
+  const [options, setOptions] = useState(
+    filterOptions?.map((o) => ({ ...o, selected: true }))
   )
 
   function handleSelect(n: number) {
-    setOptions(options?.map((o, i) => (i === n ? [o[0], !o[1]] : o)))
+    setOptions(
+      options?.map((o, i) => (i === n ? { ...o, selected: !o.selected } : o))
+    )
   }
 
   function handleSelectAll() {
-    setOptions(options?.map((o) => [o[0], true]))
+    setOptions(options?.map((o) => ({ ...o, selected: true })))
   }
 
   function handleClearAll() {
-    setOptions(options?.map((o) => [o[0], false]))
+    setOptions(options?.map((o) => ({ ...o, selected: false })))
   }
 
   return (
@@ -157,11 +169,7 @@ function Header({
   )
 }
 
-export function TableHead({
-  filterOptions,
-}: {
-  filterOptions: { [key: string]: string[] }
-}) {
+export function TableHead({ filterOptions }: { filterOptions: FilterOptions }) {
   // const searchParams = useSearchParams()
   // const pathname = usePathname()
   // const { replace } = useRouter()
