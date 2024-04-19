@@ -36,9 +36,7 @@ export function generateFilter(options: FilterOptions) {
   }
   if (options.rating) {
     // Filter out null values
-    const ratingNumbers: number[] = options.rating.flatMap((r) =>
-      r !== null ? r : []
-    )
+    const ratingNumbers = options.rating.flatMap((r) => (r !== null ? r : []))
 
     if (options.rating.includes(null)) {
       if (options.rating.length === 1) {
