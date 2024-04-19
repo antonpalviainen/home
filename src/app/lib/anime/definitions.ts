@@ -13,25 +13,23 @@ export type SortField =
 // Sorting direction
 export type SortDirection = Prisma.SortOrder
 
-export interface Options {
+export interface SortOptions {
+  sort?: SortField
+  direction?: SortDirection
+}
+
+export interface FilterOptions {
   status?: AnimeStatus[]
   type?: AnimeType[]
   year?: number[]
   season?: Season[]
   rating?: Anime['rating'][]
   studios?: string[]
-  sort?: SortField
-  direction?: SortDirection
 }
+
+export type Options = SortOptions & FilterOptions
 
 export type SearchParams = { [K in keyof Options]: string }
-
-export interface SortOptions {
-  sort: Options['sort']
-  direction: Options['direction']
-}
-
-export type FilterOptions = Omit<Options, 'sort' | 'direction'>
 
 export interface GeneratedFilters {
   status?: { in: Options['status'] }
