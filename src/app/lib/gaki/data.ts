@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { Language } from '@/lib/gaki/definitions'
+import type { Language } from '@/lib/gaki/definitions'
 import prisma from '@/lib/prisma'
 
 const ITEMS_PER_PAGE = 100

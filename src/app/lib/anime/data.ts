@@ -1,6 +1,6 @@
 // import 'server-only'
 
-import { Options } from '@/lib/anime/definitions'
+import type { Options } from '@/lib/anime/definitions'
 import { generateFilter, generateSortOrder } from '@/lib/anime/utils'
 import prisma from '@/lib/prisma'
 

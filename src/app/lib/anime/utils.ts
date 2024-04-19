@@ -1,6 +1,6 @@
 import { AnimeStatus, AnimeType, Prisma } from '@prisma/client'
 
-import {
+import type {
   FilterOptions,
   GeneratedFilters,
   SortOptions,

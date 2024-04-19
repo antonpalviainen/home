@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 
-import { Language } from '@/lib/gaki/definitions'
+import type { Language } from '@/lib/gaki/definitions'
 
 export default function LanguageSwitcher() {
   const pathName = usePathname()

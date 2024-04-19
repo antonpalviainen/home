@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
 
 import { fetchFilteredAnime } from '@/lib/anime/data'
-import { Options, SortDirection, SortField } from '@/lib/anime/definitions'
+import type { Options } from '@/lib/anime/definitions'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'

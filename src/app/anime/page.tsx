@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { z } from 'zod'
 
-import { Options, SearchParams } from '@/lib/anime/definitions'
+import type { Options, SearchParams } from '@/lib/anime/definitions'
 import Table from '@/ui/anime/table'
 
 const SortOptionsSchema: z.ZodType<Options> = z.object({
