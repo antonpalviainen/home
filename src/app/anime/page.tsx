@@ -4,7 +4,7 @@ import { z } from 'zod'
 import type { Options, SearchParams } from '@/lib/anime/definitions'
 import Table from '@/ui/anime/table'
 
-const SortOptionsSchema: z.ZodType<Options> = z.object({
+const SortOptionsSchema = z.object({
   status: z
     .array(
       z.enum([
@@ -18,9 +18,16 @@ const SortOptionsSchema: z.ZodType<Options> = z.object({
     )
     .optional(),
   type: z.array(z.enum(['movie', 'ona', 'ova', 'tv'])).optional(),
-  year: z.array(z.number()).optional(),
+  year: z.array(z.coerce.number()).optional(),
   season: z.array(z.enum(['winter', 'spring', 'summer', 'fall'])).optional(),
-  rating: z.array(z.number().min(0).max(10)).optional(),
+  rating: z
+    .array(
+      z.union([
+        z.coerce.number().min(1).max(10),
+        z.literal('null').transform(() => null),
+      ])
+    )
+    .optional(),
   studios: z.array(z.string()).optional(),
   sort: z
     .enum([
@@ -36,6 +43,8 @@ const SortOptionsSchema: z.ZodType<Options> = z.object({
   direction: z.enum(['asc', 'desc']).default('asc'),
 })
 
+type T = z.infer<typeof SortOptionsSchema>['rating']
+
 function parseParam(param?: string) {
   return param ? decodeURIComponent(param).split(',') : undefined
 }
@@ -48,9 +57,9 @@ export default function Page({
   const parsedOptions = SortOptionsSchema.safeParse({
     status: parseParam(searchParams?.status),
     type: parseParam(searchParams?.type),
-    year: parseParam(searchParams?.year)?.map(Number),
+    year: parseParam(searchParams?.year),
     season: parseParam(searchParams?.season),
-    rating: parseParam(searchParams?.rating)?.map(Number),
+    rating: parseParam(searchParams?.rating),
     studios: parseParam(searchParams?.studios),
     sort: searchParams?.sort,
     direction: searchParams?.direction,

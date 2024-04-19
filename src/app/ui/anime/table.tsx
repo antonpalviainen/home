@@ -87,13 +87,15 @@ export default async function Table({ options }: { options: Options }) {
   const data = await fetchFilteredAnime(options)
 
   return (
-    <table className="w-full max-w-7xl shadow-2xl shadow-black/50">
-      <TableHead filterOptions={filterOptions} />
-      <tbody>
-        {data.map((anime) => (
-          <Row anime={anime} key={anime.id} />
-        ))}
-      </tbody>
-    </table>
+    <div className="w-full max-w-7xl">
+      <table className="w-full shadow-2xl shadow-black/50">
+        <TableHead filterOptions={filterOptions} />
+        <tbody>
+          {data.map((anime) => (
+            <Row anime={anime} key={anime.id} />
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }

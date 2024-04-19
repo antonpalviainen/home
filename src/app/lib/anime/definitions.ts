@@ -34,6 +34,7 @@ export interface GeneratedFilters {
   type?: { in: Options['type'] }
   year?: { in: Options['year'] }
   season?: { in: Options['season'] }
-  rating?: { in: number[] }
+  rating?: { in: number[] } | null
   studios?: { some: { name: { in: Options['studios'] } } }
+  OR?: ({ rating: null } | { rating: { in: number[] } })[]
 }

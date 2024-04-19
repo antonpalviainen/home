@@ -35,7 +35,20 @@ export function generateFilter(options: FilterOptions) {
     filters.season = { in: options.season }
   }
   if (options.rating) {
-    filters.rating = { in: options.rating.map(Number) }
+    // Filter out null values
+    const ratingNumbers: number[] = options.rating.flatMap((r) =>
+      r !== null ? r : []
+    )
+
+    if (options.rating.includes(null)) {
+      if (options.rating.length === 1) {
+        filters.rating = null
+      } else {
+        filters.OR = [{ rating: null }, { rating: { in: ratingNumbers } }]
+      }
+    } else {
+      filters.rating = { in: ratingNumbers }
+    }
   }
   if (options.studios) {
     filters.studios = { some: { name: { in: options.studios } } }
