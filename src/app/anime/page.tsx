@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { z } from 'zod'
 
-import { Options } from '@/lib/anime/definitions'
+import { Options, SearchParams } from '@/lib/anime/definitions'
 import Table from '@/ui/anime/table'
 
 const SortOptionsSchema: z.ZodType<Options> = z.object({
@@ -36,18 +36,22 @@ const SortOptionsSchema: z.ZodType<Options> = z.object({
   direction: z.enum(['asc', 'desc']).default('asc'),
 })
 
+function parseParam(param?: string) {
+  return param ? decodeURIComponent(param).split(',') : undefined
+}
+
 export default function Page({
   searchParams,
 }: {
-  searchParams?: Options
+  searchParams?: SearchParams
 }) {
   const parsedOptions = SortOptionsSchema.safeParse({
-    status: searchParams?.status && searchParams?.status.split(','),
-    type: searchParams?.type && searchParams?.type.split(','),
-    year: searchParams?.year && searchParams?.year.split(',').map(Number),
-    season: searchParams?.season && searchParams?.season.split(','),
-    rating: searchParams?.rating && searchParams?.rating.split(',').map(Number),
-    studios: searchParams?.studios && searchParams?.studios.split(','),
+    status: parseParam(searchParams?.status),
+    type: parseParam(searchParams?.type),
+    year: parseParam(searchParams?.year)?.map(Number),
+    season: parseParam(searchParams?.season),
+    rating: parseParam(searchParams?.rating)?.map(Number),
+    studios: parseParam(searchParams?.studios),
     sort: searchParams?.sort,
     direction: searchParams?.direction,
   })
