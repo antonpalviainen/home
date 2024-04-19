@@ -74,19 +74,3 @@ export async function fetchDistinctValues(
     throw new Error('Failed to fetch distinct values')
   }
 }
-
-export async function fetchAnimeStatuses() {
-  try {
-    const data = await prisma.anime.findMany({
-      select: {
-        status: true,
-      },
-      distinct: ['status'],
-    })
-
-    return data
-  } catch (error) {
-    console.error('Database Error:', error)
-    throw new Error('Failed to fetch anime statuses')
-  }
-}

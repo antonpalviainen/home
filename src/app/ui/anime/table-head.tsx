@@ -1,34 +1,109 @@
 'use client'
 
 import { FunnelIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { ReactNode, useRef, useState } from 'react'
+import { z } from 'zod'
 
+import { SortDirection } from '@/lib/anime/definitions'
+import { parseParam } from '@/lib/anime/utils'
 import useClickOutside from '@/lib/use-click-outside'
 
 interface Option {
   label: string
   value: string
-  selected: boolean
 }
 
 interface FilterOptions {
   status: Option[]
   type: Option[]
+  year: Option[]
   season: Option[]
   rating: Option[]
 }
 
-function Select({
-  options,
-  handleSelect,
-  handleSelectAll,
-  handleClearAll,
-}: {
+interface Filter {
+  field: keyof FilterOptions
   options: Option[]
-  handleSelect: (n: number) => void
-  handleSelectAll: () => void
-  handleClearAll: () => void
-}) {
+}
+
+const optionsSchema = z.object({
+  status: z
+    .array(
+      z.enum([
+        'watching',
+        'rewatching',
+        'completed',
+        'on_hold',
+        'dropped',
+        'plan_to_watch',
+      ])
+    )
+    .optional(),
+  type: z.array(z.enum(['movie', 'ona', 'ova', 'tv'])).optional(),
+  year: z.array(z.string()).optional(),
+  season: z.array(z.enum(['winter', 'spring', 'summer', 'fall'])).optional(),
+  rating: z
+    .array(z.enum(['null', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']))
+    .optional(),
+  studios: z.array(z.string()).optional(),
+})
+
+function parseParams(param: string | null, options: Filter) {
+  if (!param) return Array(options.options.length).fill(true)
+
+  const schema = optionsSchema.pick({ [options.field]: true })
+  const res = schema.safeParse({
+    [options.field]: parseParam(param),
+  })
+
+  const parsedFilters = res.success ? res.data[options.field] ?? [] : []
+
+  return options.options.map(
+    (option) => parsedFilters.includes(option.value) ?? false
+  )
+}
+
+function createParamString(selected: boolean[], options: Option[]) {
+  if (selected.every((s) => s)) return null
+
+  const selectedOptions = []
+  for (let i = 0; i < selected.length; i++) {
+    if (selected[i]) selectedOptions.push(options[i].value)
+  }
+
+  return selectedOptions.join(',')
+}
+
+function Select({ filter }: { filter: Filter }) {
+  const searchParams = useSearchParams()
+  const paramFilter = searchParams.get(filter.field)
+
+  const [selected, setSelected] = useState(parseParams(paramFilter, filter))
+
+  const pathname = usePathname()
+
+  function handleSelect(n: number) {
+    setSelected(selected.map((s, i) => (i === n ? !s : s)))
+  }
+
+  function handleSelectAll() {
+    setSelected(Array(selected.length).fill(true))
+  }
+
+  function handleClearAll() {
+    setSelected(Array(selected.length).fill(false))
+  }
+
+  function createPageURL() {
+    const params = new URLSearchParams(searchParams)
+    const value = createParamString(selected, filter.options)
+    if (value) params.set(filter.field, value)
+
+    return `${pathname}?${params.toString()}`
+  }
+
   return (
     <div className="my-2 space-y-2">
       <div className="space-x-3">
@@ -46,7 +121,7 @@ function Select({
         </button>
       </div>
       <div className="text-left max-h-80 min-w-32 overflow-y-auto">
-        {options.map((option, i) => (
+        {filter.options.map((option, i) => (
           <div
             key={option.value}
             className="flex px-3 py-0.5 overscroll-contain hover:bg-slate-100"
@@ -55,7 +130,7 @@ function Select({
               type="checkbox"
               id={option.value}
               className=" accent-slate-500 cursor-pointer"
-              checked={option.selected}
+              checked={selected[i]}
               onChange={() => handleSelect(i)}
             />
             <label
@@ -67,25 +142,32 @@ function Select({
           </div>
         ))}
       </div>
+      <Link href={createPageURL()}>Apply</Link>
     </div>
   )
 }
 
 function Dropdown({
-  options,
+  field,
+  filter,
   onClickOutside,
-  handleSelect,
-  handleSelectAll,
-  handleClearAll,
 }: {
-  options?: Option[]
-  handleSelectAll: () => void
-  handleClearAll: () => void
+  field: string
+  filter?: Filter
   onClickOutside: () => void
-  handleSelect: (n: number) => void
 }) {
   const ref = useRef<HTMLTableCellElement>(null)
   useClickOutside(ref, onClickOutside)
+
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
+
+  function createPageURL(sortDirection: SortDirection) {
+    const params = new URLSearchParams(searchParams)
+    params.set('sort', field)
+    params.set('direction', sortDirection)
+    return `${pathname}?${params.toString()}`
+  }
 
   return (
     <div className="relative flex justify-center cursor-default">
@@ -94,24 +176,21 @@ function Dropdown({
         className="absolute top-2 font-normal bg-white whitespace-nowrap rounded-md shadow-lg shadow-black/20"
       >
         <div>
-          <button className="block w-full px-3 py-1 rounded-t-md hover:bg-slate-100">
+          <Link
+            href={createPageURL('asc')}
+            className="block w-full px-3 py-1 rounded-t-md hover:bg-slate-100"
+          >
             Sort A-Z
-          </button>
-          <button
+          </Link>
+          <Link
+            href={createPageURL('desc')}
             className={`${
-              options ?? 'rounded-b-md'
+              filter ?? 'rounded-b-md'
             } block w-full px-3 py-1 hover:bg-slate-100`}
           >
             Sort Z-A
-          </button>
-          {options ? (
-            <Select
-              options={options}
-              handleSelect={handleSelect}
-              handleSelectAll={handleSelectAll}
-              handleClearAll={handleClearAll}
-            />
-          ) : null}
+          </Link>
+          {filter ? <Select filter={filter} /> : null}
         </div>
       </div>
     </div>
@@ -121,21 +200,17 @@ function Dropdown({
 function HeaderCell({
   children,
   isActive,
-  options,
+  field,
+  filter,
   onClick,
   onClickOutside,
-  handleSelect,
-  handleSelectAll,
-  handleClearAll,
 }: {
   children?: ReactNode
   isActive: boolean
-  options?: Option[]
+  field: string
+  filter?: Filter
   onClick: () => void
   onClickOutside: () => void
-  handleSelect: (n: number) => void
-  handleSelectAll: () => void
-  handleClearAll: () => void
 }) {
   return (
     <th className="p-1 whitespace-nowrap">
@@ -150,10 +225,8 @@ function HeaderCell({
       </button>
       {isActive ? (
         <Dropdown
-          options={options}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
+          field={field}
+          filter={filter}
           onClickOutside={onClickOutside}
         />
       ) : null}
@@ -161,7 +234,11 @@ function HeaderCell({
   )
 }
 
-export function TableHead({ filterOptions }: { filterOptions: FilterOptions }) {
+export function TableHead({
+  filterOptions: options,
+}: {
+  filterOptions: FilterOptions
+}) {
   // const searchParams = useSearchParams()
   // const pathname = usePathname()
   // const { replace } = useRouter()
@@ -180,21 +257,6 @@ export function TableHead({ filterOptions }: { filterOptions: FilterOptions }) {
   // }
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
-  const [options, setOptions] = useState<FilterOptions>(filterOptions)
-
-  function handleSelect(n: number) {
-    // setOptions(
-    //   options?.map((o, i) => (i === n ? { ...o, selected: !o.selected } : o))
-    // )
-  }
-
-  function handleSelectAll() {
-    // setOptions({})
-  }
-
-  function handleClearAll() {
-    // setOptions(options?.map((o) => ({ ...o, selected: false })))
-  }
 
   function handleClickOutside() {
     setActiveIndex(null)
@@ -205,83 +267,67 @@ export function TableHead({ filterOptions }: { filterOptions: FilterOptions }) {
       <tr>
         <HeaderCell
           isActive={activeIndex === 0}
-          options={options.status}
+          field="status"
+          filter={{ field: 'status', options: options.status }}
           onClick={() => setActiveIndex(0)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         ></HeaderCell>
         <HeaderCell
           isActive={activeIndex === 1}
+          field="title"
           onClick={() => setActiveIndex(1)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Title
         </HeaderCell>
         <HeaderCell
           isActive={activeIndex === 2}
+          field="progress"
           onClick={() => setActiveIndex(2)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Progress
         </HeaderCell>
         <HeaderCell
           isActive={activeIndex === 3}
+          field="runtime"
           onClick={() => setActiveIndex(3)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Runtime
         </HeaderCell>
         <HeaderCell
           isActive={activeIndex === 4}
-          options={options.type}
+          field="type"
+          filter={{ field: 'type', options: options.type }}
           onClick={() => setActiveIndex(4)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Type
         </HeaderCell>
         <HeaderCell
           isActive={activeIndex === 5}
-          options={options.season}
+          field="year"
+          filter={{ field: 'season', options: options.season }}
           onClick={() => setActiveIndex(5)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Premiered
         </HeaderCell>
         <HeaderCell
           isActive={activeIndex === 6}
-          options={options.rating}
+          field="rating"
+          filter={{ field: 'rating', options: options.rating }}
           onClick={() => setActiveIndex(6)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Rating
         </HeaderCell>
         <HeaderCell
           isActive={activeIndex === 7}
+          field="studios"
           onClick={() => setActiveIndex(7)}
           onClickOutside={handleClickOutside}
-          handleSelect={handleSelect}
-          handleSelectAll={handleSelectAll}
-          handleClearAll={handleClearAll}
         >
           Studios
         </HeaderCell>

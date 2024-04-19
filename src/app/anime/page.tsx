@@ -1,60 +1,15 @@
 import { Suspense } from 'react'
-import { z } from 'zod'
 
-import type { Options, SearchParams } from '@/lib/anime/definitions'
+import type { SearchParams } from '@/lib/anime/definitions'
+import { optionsSchema, parseParam } from '@/lib/anime/utils'
 import Table from '@/ui/anime/table'
-
-const SortOptionsSchema = z.object({
-  status: z
-    .array(
-      z.enum([
-        'watching',
-        'rewatching',
-        'completed',
-        'on_hold',
-        'dropped',
-        'plan_to_watch',
-      ])
-    )
-    .optional(),
-  type: z.array(z.enum(['movie', 'ona', 'ova', 'tv'])).optional(),
-  year: z.array(z.coerce.number()).optional(),
-  season: z.array(z.enum(['winter', 'spring', 'summer', 'fall'])).optional(),
-  rating: z
-    .array(
-      z.union([
-        z.coerce.number().min(1).max(10),
-        z.literal('null').transform(() => null),
-      ])
-    )
-    .optional(),
-  studios: z.array(z.string()).optional(),
-  sort: z
-    .enum([
-      'status',
-      'title',
-      'runtime',
-      'type',
-      'premiered',
-      'rating',
-      'progress',
-    ])
-    .default('status'),
-  direction: z.enum(['asc', 'desc']).default('asc'),
-})
-
-type T = z.infer<typeof SortOptionsSchema>['rating']
-
-function parseParam(param?: string) {
-  return param ? decodeURIComponent(param).split(',') : undefined
-}
 
 export default function Page({
   searchParams,
 }: {
   searchParams?: SearchParams
 }) {
-  const parsedOptions = SortOptionsSchema.safeParse({
+  const parsedOptions = optionsSchema.safeParse({
     status: parseParam(searchParams?.status),
     type: parseParam(searchParams?.type),
     year: parseParam(searchParams?.year),

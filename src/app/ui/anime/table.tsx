@@ -39,8 +39,9 @@ const filterOptions = {
     { label: '3', value: '3', selected: true },
     { label: '2', value: '2', selected: true },
     { label: '1', value: '1', selected: true },
-    { label: '-', value: '0', selected: true },
+    { label: '-', value: 'null', selected: true },
   ],
+  year: []
 }
 
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
