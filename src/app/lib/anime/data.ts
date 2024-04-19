@@ -1,13 +1,15 @@
 // import 'server-only'
 
-import { generateSortOrder } from '@/lib/anime/utils'
+import { Options } from '@/lib/anime/definitions'
+import { generateFilter, generateSortOrder } from '@/lib/anime/utils'
 import prisma from '@/lib/prisma'
 
-export async function fetchFilteredAnime(
-  orderField: string,
-  orderDirection: string
-) {
-  const orderBy = generateSortOrder(orderField, orderDirection)
+export async function fetchFilteredAnime(options: Options) {
+  const orderBy = generateSortOrder({
+    sort: options.sort,
+    direction: options.direction,
+  })
+  const where = generateFilter(options)
 
   try {
     const data = await prisma.anime.findMany({
@@ -29,6 +31,7 @@ export async function fetchFilteredAnime(
           select: { date: true },
         },
       },
+      where,
       orderBy,
     })
 

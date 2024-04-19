@@ -1,6 +1,7 @@
 import { clsx } from 'clsx'
 
 import { fetchFilteredAnime } from '@/lib/anime/data'
+import { Options, SortDirection, SortField } from '@/lib/anime/definitions'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'
@@ -9,37 +10,37 @@ import { TableHead } from '@/ui/anime/table-head'
 
 const filterOptions = {
   status: [
-    { label: 'Watching', value: 'watching' },
-    { label: 'Completed', value: 'completed' },
-    { label: 'On Hold', value: 'on-hold' },
-    { label: 'Dropped', value: 'dropped' },
-    { label: 'Plan to Watch', value: 'plan-to-watch' },
+    { label: 'Watching', value: 'watching', selected: true },
+    { label: 'Completed', value: 'completed', selected: true },
+    { label: 'On Hold', value: 'on-hold', selected: true },
+    { label: 'Dropped', value: 'dropped', selected: true },
+    { label: 'Plan to Watch', value: 'plan-to-watch', selected: true },
   ],
   type: [
-    { label: 'TV', value: 'tv' },
-    { label: 'OVA', value: 'ova' },
-    { label: 'Movie', value: 'movie' },
-    { label: 'ONA', value: 'ona' },
+    { label: 'TV', value: 'tv', selected: true },
+    { label: 'OVA', value: 'ova', selected: true },
+    { label: 'Movie', value: 'movie', selected: true },
+    { label: 'ONA', value: 'ona', selected: true },
   ],
   season: [
-    { label: 'Winter', value: 'winter' },
-    { label: 'Spring', value: 'spring' },
-    { label: 'Summer', value: 'summer' },
-    { label: 'Fall', value: 'fall' },
+    { label: 'Winter', value: 'winter', selected: true },
+    { label: 'Spring', value: 'spring', selected: true },
+    { label: 'Summer', value: 'summer', selected: true },
+    { label: 'Fall', value: 'fall', selected: true },
   ],
   rating: [
-    { label: '10', value: '10' },
-    { label: '9', value: '9' },
-    { label: '8', value: '8' },
-    { label: '7', value: '7' },
-    { label: '6', value: '6' },
-    { label: '5', value: '5' },
-    { label: '4', value: '4' },
-    { label: '3', value: '3' },
-    { label: '2', value: '2' },
-    { label: '1', value: '1' },
-    { label: '-', value: '0' },
-  ]
+    { label: '10', value: '10', selected: true },
+    { label: '9', value: '9', selected: true },
+    { label: '8', value: '8', selected: true },
+    { label: '7', value: '7', selected: true },
+    { label: '6', value: '6', selected: true },
+    { label: '5', value: '5', selected: true },
+    { label: '4', value: '4', selected: true },
+    { label: '3', value: '3', selected: true },
+    { label: '2', value: '2', selected: true },
+    { label: '1', value: '1', selected: true },
+    { label: '-', value: '0', selected: true },
+  ],
 }
 
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
@@ -82,14 +83,8 @@ function Row({ anime }: { anime: Anime }) {
   )
 }
 
-export default async function Table({
-  order,
-  direction,
-}: {
-  order: string
-  direction: string
-}) {
-  const data = await fetchFilteredAnime(order, direction)
+export default async function Table({ options }: { options: Options }) {
+  const data = await fetchFilteredAnime(options)
 
   return (
     <table className="w-full max-w-7xl shadow-2xl shadow-black/50">

@@ -8,10 +8,14 @@ import useClickOutside from '@/lib/use-click-outside'
 interface Option {
   label: string
   value: string
+  selected: boolean
 }
 
 interface FilterOptions {
-  [key: string]: Option[]
+  status: Option[]
+  type: Option[]
+  season: Option[]
+  rating: Option[]
 }
 
 function Select({
@@ -20,7 +24,7 @@ function Select({
   handleSelectAll,
   handleClearAll,
 }: {
-  options: Array<Option & { selected: boolean }>
+  options: Option[]
   handleSelect: (n: number) => void
   handleSelectAll: () => void
   handleClearAll: () => void
@@ -69,16 +73,16 @@ function Select({
 
 function Dropdown({
   options,
+  onClickOutside,
   handleSelect,
   handleSelectAll,
   handleClearAll,
-  onClickOutside,
 }: {
-  options?: Array<Option & { selected: boolean }>
-  handleSelect: (n: number) => void
+  options?: Option[]
   handleSelectAll: () => void
   handleClearAll: () => void
   onClickOutside: () => void
+  handleSelect: (n: number) => void
 }) {
   const ref = useRef<HTMLTableCellElement>(null)
   useClickOutside(ref, onClickOutside)
@@ -114,37 +118,25 @@ function Dropdown({
   )
 }
 
-function Header({
+function HeaderCell({
   children,
   isActive,
-  filterOptions,
+  options,
   onClick,
   onClickOutside,
+  handleSelect,
+  handleSelectAll,
+  handleClearAll,
 }: {
   children?: ReactNode
   isActive: boolean
-  filterOptions?: Option[]
+  options?: Option[]
   onClick: () => void
   onClickOutside: () => void
+  handleSelect: (n: number) => void
+  handleSelectAll: () => void
+  handleClearAll: () => void
 }) {
-  const [options, setOptions] = useState(
-    filterOptions?.map((o) => ({ ...o, selected: true }))
-  )
-
-  function handleSelect(n: number) {
-    setOptions(
-      options?.map((o, i) => (i === n ? { ...o, selected: !o.selected } : o))
-    )
-  }
-
-  function handleSelectAll() {
-    setOptions(options?.map((o) => ({ ...o, selected: true })))
-  }
-
-  function handleClearAll() {
-    setOptions(options?.map((o) => ({ ...o, selected: false })))
-  }
-
   return (
     <th className="p-1 whitespace-nowrap">
       {children ?? <wbr />}
@@ -188,6 +180,21 @@ export function TableHead({ filterOptions }: { filterOptions: FilterOptions }) {
   // }
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const [options, setOptions] = useState<FilterOptions>(filterOptions)
+
+  function handleSelect(n: number) {
+    // setOptions(
+    //   options?.map((o, i) => (i === n ? { ...o, selected: !o.selected } : o))
+    // )
+  }
+
+  function handleSelectAll() {
+    // setOptions({})
+  }
+
+  function handleClearAll() {
+    // setOptions(options?.map((o) => ({ ...o, selected: false })))
+  }
 
   function handleClickOutside() {
     setActiveIndex(null)
@@ -196,64 +203,88 @@ export function TableHead({ filterOptions }: { filterOptions: FilterOptions }) {
   return (
     <thead>
       <tr>
-        <Header
+        <HeaderCell
           isActive={activeIndex === 0}
-          filterOptions={filterOptions.status}
+          options={options.status}
           onClick={() => setActiveIndex(0)}
           onClickOutside={handleClickOutside}
-        ></Header>
-        <Header
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
+        ></HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 1}
           onClick={() => setActiveIndex(1)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Title
-        </Header>
-        <Header
+        </HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 2}
           onClick={() => setActiveIndex(2)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Progress
-        </Header>
-        <Header
+        </HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 3}
           onClick={() => setActiveIndex(3)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Runtime
-        </Header>
-        <Header
+        </HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 4}
-          filterOptions={filterOptions.type}
+          options={options.type}
           onClick={() => setActiveIndex(4)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Type
-        </Header>
-        <Header
+        </HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 5}
-          filterOptions={filterOptions.season}
+          options={options.season}
           onClick={() => setActiveIndex(5)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Premiered
-        </Header>
-        <Header
+        </HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 6}
-          filterOptions={filterOptions.rating}
+          options={options.rating}
           onClick={() => setActiveIndex(6)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Rating
-        </Header>
-        <Header
+        </HeaderCell>
+        <HeaderCell
           isActive={activeIndex === 7}
           onClick={() => setActiveIndex(7)}
           onClickOutside={handleClickOutside}
+          handleSelect={handleSelect}
+          handleSelectAll={handleSelectAll}
+          handleClearAll={handleClearAll}
         >
           Studios
-        </Header>
+        </HeaderCell>
       </tr>
     </thead>
   )

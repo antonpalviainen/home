@@ -1,5 +1,10 @@
 import { AnimeStatus, AnimeType, Prisma } from '@prisma/client'
 
+import {
+  FilterOptions,
+  GeneratedFilters,
+  SortOptions,
+} from '@/lib/anime/definitions'
 import { capitalize } from '@/lib/utils'
 
 export function formatType(type: AnimeType) {
@@ -14,15 +19,37 @@ export function formatType(type: AnimeType) {
   }
 }
 
-export function generateSortOrder(
-  field: string = 'status',
-  order: string = 'asc'
-) {
+export function generateFilter(options: FilterOptions) {
+  const filters: GeneratedFilters = {}
+
+  if (options.status) {
+    filters.status = { in: options.status }
+  }
+  if (options.type) {
+    filters.type = { in: options.type }
+  }
+  if (options.year) {
+    filters.year = { in: options.year }
+  }
+  if (options.season) {
+    filters.season = { in: options.season }
+  }
+  if (options.rating) {
+    filters.rating = { in: options.rating.map(Number) }
+  }
+  if (options.studios) {
+    filters.studios = { some: { name: { in: options.studios } } }
+  }
+
+  return filters
+}
+
+export function generateSortOrder({ sort, direction }: SortOptions) {
   const sortOrder =
-    order === 'desc' ? Prisma.SortOrder.desc : Prisma.SortOrder.asc
+    direction === 'desc' ? Prisma.SortOrder.desc : Prisma.SortOrder.asc
   const fields = []
 
-  switch (field) {
+  switch (sort) {
     case 'status':
       fields.push({ status: sortOrder })
       break
