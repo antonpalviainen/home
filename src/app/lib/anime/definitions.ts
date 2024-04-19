@@ -1,6 +1,5 @@
 import { Anime, AnimeStatus, AnimeType, Prisma, Season } from '@prisma/client'
 
-// Fields the table can be sorted by
 export type SortField =
   | 'status'
   | 'title'
@@ -10,7 +9,6 @@ export type SortField =
   | 'rating'
   | 'progress'
 
-// Sorting direction
 export type SortDirection = Prisma.SortOrder
 
 export interface SortOptions {
