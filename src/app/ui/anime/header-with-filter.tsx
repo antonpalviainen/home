@@ -65,34 +65,67 @@ export function HeaderWithFilter({
   }
 
   return (
-    <th onClick={onActivate}>
-      {data.label}
+    <th onClick={onActivate} className="py-1 cursor-pointer rounded-md hover:bg-white/5">
+      {data.label || <wbr />}
       {isActive ? (
         <div className="relative flex justify-center">
           <div
             ref={ref}
-            className="absolute top-2 flex flex-col font-normal bg-white whitespace-nowrap border border-red-500"
+            className="absolute top-3 flex flex-col items-center pb-2 space-y-2 font-normal bg-white/10 backdrop-blur-md whitespace-nowrap cursor-default rounded-md"
           >
-            <Link href={createSortURL(data.key, 'asc')}>Sort A-Z</Link>
-            <Link href={createSortURL(data.key, 'desc')}>Sort Z-A</Link>
-            <div>
-              <button onClick={handleSelectAll}>All</button>
-              <button onClick={handleSelectClear}>Clear</button>
+            <div className="w-full flex flex-col">
+              <Link
+                href={createSortURL(data.key, 'asc')}
+                className="py-1 rounded-t-md hover:bg-white/10"
+              >
+                Sort A-Z
+              </Link>
+              <Link
+                href={createSortURL(data.key, 'desc')}
+                className="py-1 hover:bg-white/10"
+              >
+                Sort Z-A
+              </Link>
             </div>
-            <div>
+            <div className="space-x-2">
+              <button
+                onClick={handleSelectAll}
+                className="px-2 py-0.5 bg-white/20 rounded-md hover:bg-white/30"
+              >
+                All
+              </button>
+              <button
+                onClick={handleSelectClear}
+                className="px-2 py-0.5 bg-white/20 rounded-md hover:bg-white/30"
+              >
+                Clear
+              </button>
+            </div>
+            <div className="max-h-80 min-w-32 overflow-y-auto text-left">
               {data.filterOptions.map((option, i) => (
-                <div key={option.value}>
+                <div key={option.value} className="flex px-3 py-0.5 hover:bg-white/10">
                   <input
                     type="checkbox"
                     id={option.value}
                     checked={selected[i]}
                     onChange={() => handleSelect(i)}
+                    className="accent-white cursor-pointer"
                   />
-                  <label htmlFor={option.value}>{option.label}</label>
+                  <label
+                    htmlFor={option.value}
+                    className="w-full flex ml-2 cursor-pointer"
+                  >
+                    {option.label}
+                  </label>
                 </div>
               ))}
             </div>
-            <Link href={createFilterURL()}>Apply</Link>
+            <Link
+              href={createFilterURL()}
+              className="px-5 py-0.5 bg-white/20 rounded-md hover:bg-white/30"
+            >
+              Apply
+            </Link>
           </div>
         </div>
       ) : null}

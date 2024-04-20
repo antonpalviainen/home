@@ -94,17 +94,17 @@ export function generateSortOrder({ sort, direction }: SortOptions) {
 export function getStatusColor(status: AnimeStatus): string {
   switch (status) {
     case AnimeStatus.watching:
-      return 'bg-[#2db039]'
+      return 'bg-[#2db039]/65'
     case AnimeStatus.rewatching:
     case AnimeStatus.completed:
       // rewatching and completed have the same color
-      return 'bg-[#26448f]'
+      return 'bg-[#26448f]/65'
     case AnimeStatus.on_hold:
-      return 'bg-[#f1c83e]'
+      return 'bg-[#f1c83e]/65'
     case AnimeStatus.dropped:
-      return 'bg-[#a12f31]'
+      return 'bg-[#a12f31]/65'
     case AnimeStatus.plan_to_watch:
-      return 'bg-[#c3c3c3]'
+      return 'bg-[#c3c3c3]/65'
   }
 }
 

@@ -4,6 +4,8 @@ import { ReactNode, Suspense } from 'react'
 import Header from '@/ui/gaki/header'
 import { HeaderSkeleton } from '@/ui/gaki/skeletons'
 
+import './style.css'
+
 export const metadata: Metadata = {
   title: {
     template: 'Gaki no Tsukai - %s',

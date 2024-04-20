@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    // dark:bg-gradient-to-b dark:from-[#0e1734] dark:to-[#172d69] dark:text-white
-    <main className="h-full min-h-screen flex justify-center p-10 bg-fixed ">
+    <main className="h-full min-h-screen flex justify-center p-10 bg-fixed bg-gradient-to-b from-[#2d3655] to-[#5b6686] text-white">
       {children}
     </main>
   )

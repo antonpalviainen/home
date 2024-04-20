@@ -17,7 +17,7 @@ export function Cell({
   children?: React.ReactNode
   className?: string
 }) {
-  const className = clsx('px-1.5 py-1', customClassName)
+  const className = clsx('px-3 py-1 whitespace-nowrap', customClassName)
 
   return <td className={className}>{children}</td>
 }
@@ -27,8 +27,8 @@ function Row({ anime }: { anime: Anime }) {
   const studios = anime.studios.map((studio) => studio.name).join(', ')
 
   return (
-    <tr key={anime.id} className="hover:bg-slate-100">
-      <Cell className={getStatusColor(anime.status)}></Cell>
+    <tr key={anime.id} className="hover:bg-white/5">
+      <td className={`${getStatusColor(anime.status)} w-3`}></td>
       <Cell>{anime.title}</Cell>
       {completed || !anime.episodes ? (
         <Cell className="text-center">{anime.episodes}</Cell>
@@ -56,8 +56,8 @@ export default async function Table({ options }: { options: Options }) {
   ])
 
   return (
-    <div className="w-full max-w-7xl">
-      <table className="w-full shadow-2xl shadow-black/50">
+    <div className="w-[90rem] px-3 py-2 bg-white/10 rounded-md">
+      <table className="w-full">
         <TableHead studios={studios} years={years} />
         <tbody>
           {rows.map((anime) => (

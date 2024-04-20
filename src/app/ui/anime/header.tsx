@@ -29,16 +29,26 @@ export function Header({
   }
 
   return (
-    <th onClick={onActivate}>
+    <th onClick={onActivate} className="py-1 cursor-pointer rounded-md hover:bg-white/5">
       {data.label}
       {isActive ? (
         <div className="relative flex justify-center">
           <div
             ref={ref}
-            className="absolute top-2 flex flex-col font-normal bg-white whitespace-nowrap border border-red-500"
+            className="absolute top-3 flex flex-col font-normal bg-white/10 backdrop-blur-md whitespace-nowrap rounded-md"
           >
-            <Link href={createSortURL(data.key, 'asc')}>Sort A-Z</Link>
-            <Link href={createSortURL(data.key, 'desc')}>Sort Z-A</Link>
+            <Link
+              href={createSortURL(data.key, 'asc')}
+              className="flex px-5 py-1 rounded-t-md hover:bg-white/10"
+            >
+              Sort A-Z
+            </Link>
+            <Link
+              href={createSortURL(data.key, 'desc')}
+              className="flex px-5 py-1 rounded-b-md hover:bg-white/10"
+            >
+              Sort Z-A
+            </Link>
           </div>
         </div>
       ) : null}

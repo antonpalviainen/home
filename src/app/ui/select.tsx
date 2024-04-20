@@ -24,7 +24,12 @@ export function Select({
   return (
     <>
       {open ? (
-        <select ref={ref} defaultValue={current ?? 0} onChange={handleChange}>
+        <select
+          ref={ref}
+          defaultValue={current ?? 0}
+          onChange={handleChange}
+          className="text-black"
+        >
           {Array.from({ length: options + 1 }, (_, i) => (
             <option key={i} value={i}>
               {i || '-'}
@@ -32,10 +37,7 @@ export function Select({
           ))}
         </select>
       ) : (
-        <button
-          onClick={() => setOpen(true)}
-          className="hover:text-blue-600 dark:hover:text-blue-500"
-        >
+        <button onClick={() => setOpen(true)} className="hover:text-white/50">
           {current || '-'}
         </button>
       )}

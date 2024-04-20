@@ -1,0 +1,7 @@
+@tailwind base;
+
+@layer base {
+  a:hover {
+    @apply text-blue-600 dark:text-blue-500;
+  }
+}
