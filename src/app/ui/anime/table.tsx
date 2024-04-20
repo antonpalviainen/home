@@ -1,6 +1,7 @@
 import { clsx } from 'clsx'
+import { Suspense } from 'react'
 
-import { fetchFilteredAnime, fetchStudios, fetchYears } from '@/lib/anime/data'
+import { fetchFilteredAnime } from '@/lib/anime/data'
 import type { Options } from '@/lib/anime/definitions'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
@@ -49,16 +50,14 @@ function Row({ anime }: { anime: Anime }) {
 }
 
 export default async function Table({ options }: { options: Options }) {
-  const [rows, studios, years] = await Promise.all([
-    fetchFilteredAnime(options),
-    fetchStudios(),
-    fetchYears(),
-  ])
+  const rows = await fetchFilteredAnime(options)
 
   return (
     <div className="w-[90rem] px-3 py-2 bg-white/10 rounded-md">
       <table className="w-full">
-        <TableHead studios={studios} years={years} />
+        <Suspense>
+          <TableHead />
+        </Suspense>
         <tbody>
           {rows.map((anime) => (
             <Row anime={anime} key={anime.id} />

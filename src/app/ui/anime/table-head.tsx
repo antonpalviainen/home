@@ -1,14 +1,10 @@
+import { fetchStudios, fetchYears } from '@/lib/anime/data'
 import { HeaderDataWithFilter, HeaderData } from '@/lib/anime/definitions'
-import { Header } from '@/ui/anime/header'
-import { HeaderWithFilter } from '@/ui/anime/header-with-filter'
+import { Header, HeaderWithFilter } from '@/ui/anime/headers'
 
-export default function TableHead({
-  years,
-  studios,
-}: {
-  years: string[]
-  studios: string[]
-}) {
+export default async function TableHead() {
+  const [studios, years] = await Promise.all([fetchStudios(), fetchYears()])
+
   const headers: (HeaderData | HeaderDataWithFilter)[] = [
     {
       label: '',
