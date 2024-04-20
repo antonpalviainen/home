@@ -1,30 +1,20 @@
+'use client'
+
 import Link from 'next/link'
 import { useSearchParams, usePathname } from 'next/navigation'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 
 import {
   HeaderDataWithFilter,
   SortKey,
   SortDirection,
 } from '@/lib/anime/definitions'
-import useClickOutside from '@/lib/use-click-outside'
 
-export function HeaderWithFilter({
-  data,
-  isActive,
-  onActivate,
-  onDeactivate,
-}: {
-  data: HeaderDataWithFilter
-  isActive: boolean
-  onActivate: () => void
-  onDeactivate: () => void
-}) {
+export function HeaderWithFilter({ data }: { data: HeaderDataWithFilter }) {
+  const [isActive, setIsActive] = useState(false)
   const [selected, setSelected] = useState<boolean[]>(
     Array(data.filterOptions.length).fill(true)
   )
-  const ref = useRef<HTMLTableCellElement>(null)
-  useClickOutside(ref, onDeactivate)
   const searchParams = useSearchParams()
   const pathname = usePathname()
 
@@ -65,24 +55,26 @@ export function HeaderWithFilter({
   }
 
   return (
-    <th onClick={onActivate} className="py-1 cursor-pointer rounded-md hover:bg-white/5">
+    <th
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+      className="py-1 cursor-pointer rounded-md hover:bg-white/5"
+    >
       {data.label || <wbr />}
       {isActive ? (
         <div className="relative flex justify-center">
-          <div
-            ref={ref}
-            className="absolute top-3 flex flex-col items-center pb-2 space-y-2 font-normal bg-white/10 backdrop-blur-md whitespace-nowrap cursor-default rounded-md"
-          >
+          <div className="absolute inset-x-0 h-20"></div>
+          <div className="absolute top-3 flex flex-col items-center p-1 space-y-2 font-normal bg-white/10 backdrop-blur-md whitespace-nowrap cursor-default rounded-md">
             <div className="w-full flex flex-col">
               <Link
                 href={createSortURL(data.key, 'asc')}
-                className="py-1 rounded-t-md hover:bg-white/10"
+                className="py-1 rounded-md hover:bg-white/10"
               >
                 Sort A-Z
               </Link>
               <Link
                 href={createSortURL(data.key, 'desc')}
-                className="py-1 hover:bg-white/10"
+                className="py-1 rounded-md hover:bg-white/10"
               >
                 Sort Z-A
               </Link>
@@ -103,7 +95,10 @@ export function HeaderWithFilter({
             </div>
             <div className="max-h-80 min-w-32 overflow-y-auto text-left">
               {data.filterOptions.map((option, i) => (
-                <div key={option.value} className="flex px-3 py-0.5 hover:bg-white/10">
+                <div
+                  key={option.value}
+                  className="flex px-3 py-0.5 rounded-md hover:bg-white/10"
+                >
                   <input
                     type="checkbox"
                     id={option.value}

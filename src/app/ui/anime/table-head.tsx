@@ -1,7 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-
 import { HeaderDataWithFilter, HeaderData } from '@/lib/anime/definitions'
 import { Header } from '@/ui/anime/header'
 import { HeaderWithFilter } from '@/ui/anime/header-with-filter'
@@ -73,32 +69,14 @@ export default function TableHead({
       })),
     },
   ]
-  const [activeIndex, setActiveIndex] = useState<number | null>(null)
-
-  function handleDeactivate() {
-    setActiveIndex(null)
-  }
-
   return (
     <thead>
       <tr>
         {headers.map((header, i) =>
           'filterOptions' in header ? (
-            <HeaderWithFilter
-              data={header}
-              isActive={i === activeIndex}
-              onActivate={() => setActiveIndex(i)}
-              onDeactivate={handleDeactivate}
-              key={header.key}
-            />
+            <HeaderWithFilter data={header} key={header.key} />
           ) : (
-            <Header
-              data={header}
-              isActive={i === activeIndex}
-              onActivate={() => setActiveIndex(i)}
-              onDeactivate={handleDeactivate}
-              key={header.key}
-            />
+            <Header data={header} key={header.key} />
           )
         )}
       </tr>
