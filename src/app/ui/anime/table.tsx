@@ -43,7 +43,7 @@ function Row({ anime }: { anime: Anime }) {
       <Cell className="text-center">{formatType(anime.type)}</Cell>
       <Cell>{`${anime.year} ${capitalize(anime.season)}`}</Cell>
       <RatingCell id={anime.id} rating={anime.rating} />
-      <Cell>{studios}</Cell>
+      <Cell className="rounded-r-md">{studios}</Cell>
     </tr>
   )
 }

@@ -27,7 +27,7 @@ export function Header({ data }: { data: HeaderData }) {
       {data.label}
       {isActive ? (
         <div className="relative flex justify-center">
-          <div className="absolute inset-x-0 h-20"></div>
+          <div className="absolute min-w-28 w-1/2 h-20 border border-red-400"></div>
           <div className="absolute top-3 flex flex-col p-1 font-normal bg-white/10 backdrop-blur-md whitespace-nowrap rounded-md">
             <Link
               href={createSortURL(data.key, 'asc')}

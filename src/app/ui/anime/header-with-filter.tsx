@@ -63,7 +63,7 @@ export function HeaderWithFilter({ data }: { data: HeaderDataWithFilter }) {
       {data.label || <wbr />}
       {isActive ? (
         <div className="relative flex justify-center">
-          <div className="absolute inset-x-0 h-20"></div>
+          <div className="absolute min-w-36 w-full h-20 border border-red-400"></div>
           <div className="absolute top-3 flex flex-col items-center p-1 space-y-2 font-normal bg-white/10 backdrop-blur-md whitespace-nowrap cursor-default rounded-md">
             <div className="w-full flex flex-col">
               <Link
