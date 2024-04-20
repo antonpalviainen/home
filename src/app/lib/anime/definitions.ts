@@ -1,6 +1,6 @@
 import { Anime, AnimeStatus, AnimeType, Prisma, Season } from '@prisma/client'
 
-export type SortField =
+export type SortableField =
   | 'status'
   | 'title'
   | 'runtime'
@@ -9,10 +9,11 @@ export type SortField =
   | 'rating'
   | 'progress'
 
+ 
 export type SortDirection = Prisma.SortOrder
 
 export interface SortOptions {
-  sort?: SortField
+  sort?: SortableField
   direction?: SortDirection
 }
 
@@ -25,6 +26,7 @@ export interface FilterOptions {
   studios?: string[]
 }
 
+export type FilterableField = keyof FilterOptions
 export type Options = SortOptions & FilterOptions
 
 export type SearchParams = { [K in keyof Options]: string }
