@@ -48,29 +48,29 @@ export async function fetchStudios() {
       select: {
         name: true,
       },
+      orderBy: { name: 'asc' },
     })
 
-    return data
+    return data.map((studio) => studio.name)
   } catch (error) {
     console.error('Database Error:', error)
     throw new Error('Failed to fetch studios')
   }
 }
 
-export async function fetchDistinctValues(
-  field: 'status' | 'type' | 'year' | 'season' | 'rating'
-) {
+export async function fetchYears() {
   try {
     const data = await prisma.anime.findMany({
       select: {
-        [field]: true,
+        year: true,
       },
-      distinct: [field],
+      distinct: ['year'],
+      orderBy: { year: 'desc' },
     })
 
-    return data
+    return data.map((item) => item.year.toString())
   } catch (error) {
     console.error('Database Error:', error)
-    throw new Error('Failed to fetch distinct values')
+    throw new Error('Failed to fetch years')
   }
 }

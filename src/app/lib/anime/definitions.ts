@@ -9,9 +9,6 @@ export type SortableField =
   | 'rating'
   | 'progress'
 
- 
-export type SortDirection = Prisma.SortOrder
-
 export interface SortOptions {
   sort?: SortableField
   direction?: SortDirection
@@ -26,7 +23,6 @@ export interface FilterOptions {
   studios?: string[]
 }
 
-export type FilterableField = keyof FilterOptions
 export type Options = SortOptions & FilterOptions
 
 export type SearchParams = { [K in keyof Options]: string }
@@ -39,4 +35,30 @@ export interface GeneratedFilters {
   rating?: { in: number[] } | null
   studios?: { some: { name: { in: Options['studios'] } } }
   OR?: ({ rating: null } | { rating: { in: number[] } })[]
+}
+
+export type SortKey =
+  | 'status'
+  | 'title'
+  | 'progress'
+  | 'runtime'
+  | 'type'
+  | 'premiered'
+  | 'rating'
+  | 'studios'
+
+export type SortDirection = 'asc' | 'desc'
+
+interface FilterOption {
+  label: string
+  value: string
+}
+
+export interface HeaderData {
+  label: string
+  key: SortKey
+}
+
+export interface HeaderDataWithFilter extends HeaderData {
+  filterOptions: FilterOption[]
 }
