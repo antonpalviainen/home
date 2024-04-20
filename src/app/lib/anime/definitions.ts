@@ -57,6 +57,7 @@ interface FilterOption {
 export interface HeaderData {
   label: string
   key: SortKey
+  width?: string
 }
 
 export interface HeaderDataWithFilter extends HeaderData {

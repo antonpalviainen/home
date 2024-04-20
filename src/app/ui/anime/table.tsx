@@ -7,6 +7,7 @@ import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'
 import { ProgressCell, RatingCell } from '@/ui/anime/cells'
+import { HeaderSkeleton } from '@/ui/anime/skeletons'
 import TableHead from '@/ui/anime/table-head'
 
 export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
@@ -54,8 +55,8 @@ export default async function Table({ options }: { options: Options }) {
 
   return (
     <div className="w-[90rem] px-3 py-2 bg-white/10 rounded-md">
-      <table className="w-full">
-        <Suspense>
+      <table className="w-full table-fixed">
+        <Suspense fallback={<HeaderSkeleton />}>
           <TableHead />
         </Suspense>
         <tbody>

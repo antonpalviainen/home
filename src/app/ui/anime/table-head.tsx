@@ -9,6 +9,7 @@ export default async function TableHead() {
     {
       label: '',
       key: 'status',
+      width: 'w-3',
       filterOptions: [
         { label: 'Watching', value: 'watching' },
         { label: 'Rewatching', value: 'rewatching' },
@@ -18,12 +19,13 @@ export default async function TableHead() {
         { label: 'Plan to Watch', value: 'plan-to-watch' },
       ],
     },
-    { label: 'Title', key: 'title' },
-    { label: 'Progress', key: 'progress' },
-    { label: 'Runtime', key: 'runtime' },
+    { label: 'Title', key: 'title', width: 'w-full' },
+    { label: 'Progress', key: 'progress', width: 'w-[5rem]' },
+    { label: 'Runtime', key: 'runtime', width: 'w-[5rem]' },
     {
       label: 'Type',
       key: 'type',
+      width: 'w-[5rem]',
       filterOptions: [
         { label: 'TV', value: 'tv' },
         { label: 'OVA', value: 'ova' },
@@ -34,6 +36,7 @@ export default async function TableHead() {
     {
       label: 'Premiered',
       key: 'premiered',
+      width: 'w-[8rem]',
       filterOptions: years.map((year) => ({
         label: year,
         value: year,
@@ -42,6 +45,7 @@ export default async function TableHead() {
     {
       label: 'Rating',
       key: 'rating',
+      width: 'w-[5rem]',
       filterOptions: [
         { label: '10', value: '10' },
         { label: '9', value: '9' },
@@ -59,6 +63,7 @@ export default async function TableHead() {
     {
       label: 'Studios',
       key: 'studios',
+      width: 'w-[18rem]',
       filterOptions: studios.map((studio) => ({
         label: studio,
         value: studio,
@@ -68,7 +73,7 @@ export default async function TableHead() {
   return (
     <thead>
       <tr>
-        {headers.map((header, i) =>
+        {headers.map((header) =>
           'filterOptions' in header ? (
             <HeaderWithFilter data={header} key={header.key} />
           ) : (

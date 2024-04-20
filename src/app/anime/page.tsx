@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 
 import type { SearchParams } from '@/lib/anime/definitions'
 import { optionsSchema, parseParam } from '@/lib/anime/utils'
+import { TableSkeleton } from '@/ui/anime/skeletons'
 import Table from '@/ui/anime/table'
 
 export default function Page({
@@ -28,7 +29,7 @@ export default function Page({
   }
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<TableSkeleton />}>
       <Table options={options} />
     </Suspense>
   )

@@ -49,7 +49,7 @@ export function Header({
     <th
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
-      className="py-1 cursor-pointer rounded-md hover:bg-white/5"
+      className={`${data.width} y-1 cursor-pointer rounded-md hover:bg-white/5`}
     >
       {data.label || <wbr />}
       {isActive ? (
