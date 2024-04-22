@@ -1,4 +1,5 @@
 import { clsx } from 'clsx'
+import Link from 'next/link'
 import { Suspense } from 'react'
 
 import { fetchFilteredAnime } from '@/lib/anime/data'
@@ -31,7 +32,9 @@ function Row({ anime }: { anime: Anime }) {
   return (
     <tr key={anime.id} className="hover:bg-white/5">
       <td className={`${getStatusColor(anime.status)} w-3`}></td>
-      <Cell>{anime.title}</Cell>
+      <Cell>
+        {anime.title} <Link href={`/anime/${anime.id}/edit`}>Edit</Link>
+      </Cell>
       {completed || !anime.episodes ? (
         <Cell className="text-center">{anime.episodes}</Cell>
       ) : (

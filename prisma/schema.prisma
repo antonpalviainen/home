@@ -14,7 +14,7 @@ model Anime {
   id       Int         @id @default(autoincrement())
   title    String      @unique
   episodes Int?
-  runtime  Int? // Minutes
+  runtime  Int // Minutes
   type     AnimeType
   year     Int
   season   Season

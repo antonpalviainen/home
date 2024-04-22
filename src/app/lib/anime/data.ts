@@ -42,16 +42,48 @@ export async function fetchFilteredAnime(options: Options) {
   }
 }
 
+export async function fetchAnimeById(id: number) {
+  try {
+    const data = await prisma.anime.findFirst({
+      select: {
+        id: true,
+        title: true,
+        episodes: true,
+        runtime: true,
+        type: true,
+        year: true,
+        season: true,
+        rating: true,
+        progress: true,
+        status: true,
+        studios: {
+          select: { name: true },
+        },
+        finishDates: {
+          select: { date: true },
+        },
+      },
+      where: { id },
+    })
+
+    return data
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch anime')
+  }
+}
+
 export async function fetchStudios() {
   try {
     const data = await prisma.animeStudio.findMany({
       select: {
+        id: true,
         name: true,
       },
       orderBy: { name: 'asc' },
     })
 
-    return data.map((studio) => studio.name)
+    return data
   } catch (error) {
     console.error('Database Error:', error)
     throw new Error('Failed to fetch studios')

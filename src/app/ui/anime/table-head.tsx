@@ -65,8 +65,8 @@ export default async function TableHead() {
       key: 'studios',
       width: 'w-[18rem]',
       filterOptions: studios.map((studio) => ({
-        label: studio,
-        value: studio,
+        label: studio.name,
+        value: studio.name,
       })),
     },
   ]
