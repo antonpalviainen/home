@@ -61,9 +61,9 @@ function StudioSelect({ studios }: { studios: Studio[] }) {
 
   return (
     <div className="space-y-2">
-      <div className="min-h-12 p-2 flex justify-start items-center gap-2 flex-wrap rounded-md bg-white/10">
-        {selected.length ? (
-          selected.map((studio, i) => (
+      {selected.length ? (
+        <div className="min-h-12 p-2 flex justify-start items-center gap-2 flex-wrap rounded-md bg-white/10">
+          {selected.map((studio, i) => (
             <div
               key={studio.id}
               className="flex px-2 py-1 gap-2 bg-white/10 rounded-md whitespace-nowrap"
@@ -76,16 +76,11 @@ function StudioSelect({ studios }: { studios: Studio[] }) {
                 className="p-0.5 bg-white/10 rounded-md hover:bg-white/15"
               >
                 <XMarkIcon className="w-5" />
-                {/* <XMarkIcon className="w-6 p-0.5 absolute top-1/2 right-1 -translate-y-1/2 bg-white/10 rounded-md hover:bg-white/15" /> */}
               </button>
             </div>
-          ))
-        ) : (
-          <div className="text-white/30 cursor-default">
-            Select studios from the list or add new
-          </div>
-        )}
-      </div>
+          ))}
+        </div>
+      ) : null}
       <div className="p-2 space-y-2 bg-white/10 rounded-md">
         <div className="relative">
           <input
@@ -97,7 +92,7 @@ function StudioSelect({ studios }: { studios: Studio[] }) {
           />
           <MagnifyingGlassIcon className="absolute left-2 top-1/2 w-5 -translate-y-1/2" />
         </div>
-        <div className="max-h-40 overflow-y-scroll">
+        <div className="max-h-32 overflow-y-scroll">
           {nonSelected.length ? (
             nonSelected.map((studio, i) => (
               <div key={studio.id}>
@@ -139,7 +134,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
 
   return (
     <form action={dispatch}>
-      <div className="w-96 px-6 py-4 space-y-4 bg-white/10 rounded-md">
+      <div className="min-w-[30rem] px-6 py-4 space-y-4 bg-white/10 rounded-md">
         {/* Studios */}
         <div className="space-y-2">
           <label htmlFor="type">Studios</label>
