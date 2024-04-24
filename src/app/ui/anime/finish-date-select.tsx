@@ -1,8 +1,10 @@
 import { PlusIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import React from 'react'
 
-export function FinishDates() {
-  const [finishDates, setFinishDates] = React.useState<Date[]>([])
+export function FinishDates({ defaultValues }: { defaultValues?: Date[] }) {
+  const [finishDates, setFinishDates] = React.useState<Date[]>(
+    defaultValues ?? []
+  )
 
   function handleAddDate(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()

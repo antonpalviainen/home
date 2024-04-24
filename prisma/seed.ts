@@ -129,32 +129,32 @@ async function seedAnime(deleteRecords = false) {
     await prisma.anime.deleteMany({})
   }
 
-  await prisma.$transaction(
-    data.series.map((anime) =>
-      prisma.anime.create({
-        data: {
-          title: anime.title,
-          episodes: anime.episodes,
-          runtime: anime.runtime,
-          type: animeTypeEnum(anime.type),
-          year: anime.year,
-          season: seasonEnum(anime.season),
-          rating: anime.rating,
-          status: animeStatusEnum(anime.status),
-          progress: anime.progress,
-          studios: {
-            connectOrCreate: anime.studios.map((studio) => ({
-              where: { name: studio },
-              create: { name: studio },
-            })),
-          },
-          finishDates: {
-            create: anime.finishDates.map((date) => ({ date: new Date(date) })),
-          },
+  for (const anime of data.series) {
+    await prisma.anime.create({
+      data: {
+        title: anime.title,
+        episodes: anime.episodes,
+        runtime: anime.runtime,
+        type: animeTypeEnum(anime.type),
+        year: anime.year,
+        season: seasonEnum(anime.season),
+        rating: anime.rating,
+        status: animeStatusEnum(anime.status),
+        progress: anime.progress,
+        studios: {
+          connectOrCreate: anime.studios.map((studio) => ({
+            where: { name: studio },
+            create: { name: studio },
+          })),
         },
-      })
-    )
-  )
+        finishDates: {
+          create: anime.finishDates.map((ts) => ({
+            date: new Date(ts * 1000),
+          })),
+        },
+      },
+    })
+  }
 
   console.log('Seeded database')
 }
@@ -230,7 +230,7 @@ async function seedGaki(deleteRecords = false) {
 
 async function main() {
   await seedAnime(true)
-  await seedGaki(true)
+  // await seedGaki(true)
 }
 
 main()

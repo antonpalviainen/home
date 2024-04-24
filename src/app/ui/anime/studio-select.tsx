@@ -11,9 +11,16 @@ function sortStudios(a: Studio, b: Studio) {
   return a.name.localeCompare(b.name)
 }
 
-export function StudioSelect({ studios }: { studios: Studio[] }) {
-  const [selected, setSelected] = useState<Studio[]>([])
+export function StudioSelect({
+  studios,
+  defaultValues,
+}: {
+  studios: Studio[]
+  defaultValues?: Studio[]
+}) {
+  const [selected, setSelected] = useState<Studio[]>(defaultValues ?? [])
   const [nonSelected, setNonSelected] = useState<Studio[]>(studios)
+  const [newStudios, setNewStudios] = useState<Studio[]>([])
   const [search, setSearch] = useState('')
 
   function handleSelect(id: number) {
@@ -22,7 +29,9 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
     if (studio) {
       setSelected((s) => [...s, studio].sort(sortStudios))
       setSearch('')
-      setNonSelected(() => studios.filter((s) => s.id !== id))
+      setNonSelected(() =>
+        studios.filter((s) => s.id !== id && !selected.includes(s))
+      )
     }
   }
 
@@ -48,18 +57,40 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
 
   function handleAdd(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
-    const newStudio = { id: studios.length + selected.length + 1, name: search }
-    setSelected((s) => [...s, newStudio].sort(sortStudios))
-    setNonSelected(() =>
-      studios.filter((studio) => studio.name.toLowerCase().includes(''))
-    )
+    const newStudio = {
+      id: studios.length + newStudios.length + 1,
+      name: search,
+    }
+    setNewStudios((ns) => [...ns, newStudio])
+    setNonSelected(() => studios.filter((studio) => !selected.includes(studio)))
     setSearch('')
+  }
+
+  function handleRemoveNew(id: number) {
+    setNewStudios(newStudios.filter((studio) => studio.id !== id))
   }
 
   return (
     <div className="space-y-2">
-      {selected.length ? (
+      {selected.length || newStudios.length ? (
         <div className="min-h-12 p-2 flex justify-start items-center gap-2 flex-wrap rounded-md bg-white/10">
+          {newStudios.map((studio, i) => (
+            <div
+              key={studio.id}
+              className="flex px-2 py-1 gap-2 bg-white/10 rounded-md whitespace-nowrap"
+            >
+              <span>{studio.name}</span>
+              <input type="hidden" name="studios" value={studio.name} />
+              <button
+                onClick={() => handleRemoveNew(studio.id)}
+                title="Remove studio"
+                tabIndex={0}
+                className="p-0.5 bg-white/10 rounded-md hover:bg-white/15"
+              >
+                <XMarkIcon className="w-5" />
+              </button>
+            </div>
+          ))}
           {selected.map((studio, i) => (
             <div
               key={studio.id}

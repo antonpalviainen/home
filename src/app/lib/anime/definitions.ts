@@ -1,4 +1,4 @@
-import { Anime, AnimeStatus, AnimeType, Prisma, Season } from '@prisma/client'
+import { Anime, AnimeStatus, AnimeType, Season } from '@prisma/client'
 
 export type SortableField =
   | 'status'

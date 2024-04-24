@@ -98,41 +98,29 @@ export async function createAnime(prevState: State, formData: FormData) {
     }
   }
 
-  const {
-    title,
-    episodes,
-    runtime,
-    type,
-    year,
-    season,
-    rating,
-    progress,
-    status,
-    studios,
-    finishDates,
-  } = validatedFields.data
+  const data = validatedFields.data
 
   try {
     await prisma.anime.create({
       data: {
-        title,
-        episodes,
-        runtime,
-        type,
-        year,
-        season,
-        rating,
-        progress,
-        status,
+        title: data.title,
+        episodes: data.episodes,
+        runtime: data.runtime,
+        type: data.type,
+        year: data.year,
+        season: data.season,
+        rating: data.rating,
+        progress: data.progress,
+        status: data.status,
         studios: {
-          connectOrCreate: studios.map((name) => ({
+          connectOrCreate: data.studios.map((name) => ({
             where: { name },
             create: { name },
           })),
         },
         finishDates: {
           // create: finishDates.map((date) => ({ date })),
-          createMany: { data: finishDates.map((date) => ({ date })) },
+          createMany: { data: data.finishDates.map((date) => ({ date })) },
         },
       },
     })
@@ -161,7 +149,7 @@ export async function updateAnime(
     rating: formData.get('rating'),
     progress: formData.get('progress'),
     status: formData.get('status'),
-    studioIds: formData.getAll('studioIds'),
+    studios: formData.getAll('studios'),
     finishDates: formData.getAll('finishDates'),
   })
 
@@ -172,55 +160,41 @@ export async function updateAnime(
     }
   }
 
-  const {
-    title,
-    episodes,
-    runtime,
-    type,
-    year,
-    season,
-    rating,
-    progress,
-    status,
-    studios: studioIds,
-    finishDates,
-  } = validatedFields.data
+  const data = validatedFields.data
 
-  // try {
-  //   await prisma.anime.update({
-  //     where: { id },
-  //     data: {
-  //       title,
-  //       episodes,
-  //       runtime,
-  //       type,
-  //       year,
-  //       season,
-  //       rating,
-  //       progress,
-  //       status,
-  //       studios: {
-  //         set: studioIds.map((id) => ({ id })),
-  //       },
-  //       finishDates: {
-  //         set: finishDates.map((date) => ({ date })),
-  //       },
-  //     },
-  //   })
-  // } catch (error) {
-  //   return {
-  //     message: 'Database Error: Failed to update anime.',
-  //   }
-  // }
-
-  console.log('Anime updated successfully.')
-
-  return {
-    message: 'Anime updated successfully.',
+  try {
+    await prisma.anime.update({
+      where: { id },
+      data: {
+        title: data.title,
+        episodes: data.episodes,
+        runtime: data.runtime,
+        type: data.type,
+        year: data.year,
+        season: data.season,
+        rating: data.rating,
+        progress: data.progress,
+        status: data.status,
+        studios: {
+          connectOrCreate: data.studios.map((name) => ({
+            where: { name },
+            create: { name },
+          })),
+        },
+        finishDates: {
+          // create: finishDates.map((date) => ({ date })),
+          createMany: { data: data.finishDates.map((date) => ({ date })) },
+        },
+      },
+    })
+  } catch (error) {
+    return {
+      message: 'Database Error: Failed to update anime.',
+    }
   }
 
-  // revalidatePath('/anime')
-  // redirect('/anime')
+  revalidatePath('/anime')
+  redirect('/anime')
 }
 
 export async function incrementProgress(id: number) {

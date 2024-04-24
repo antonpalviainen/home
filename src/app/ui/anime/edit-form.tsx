@@ -1,12 +1,12 @@
 'use client'
 
-import { Anime } from '@prisma/client'
 import { clsx } from 'clsx'
 import Link from 'next/link'
 import React from 'react'
 import { useFormState } from 'react-dom'
 
 import { updateAnime } from '@/lib/anime/actions'
+import { fetchAnimeById } from '@/lib/anime/data'
 import { FinishDates } from '@/ui/anime/finish-date-select'
 import { type Studio, StudioSelect } from '@/ui/anime/studio-select'
 
@@ -14,11 +14,12 @@ export default function Form({
   anime,
   studios,
 }: {
-  anime: Anime
+  anime: Exclude<Awaited<ReturnType<typeof fetchAnimeById>>, null>
   studios: Studio[]
 }) {
   const initialState = { message: '', errors: {} }
-  const [state, dispatch] = useFormState(updateAnime, initialState)
+  const updateAnimeWithId = updateAnime.bind(null, anime.id)
+  const [state, dispatch] = useFormState(updateAnimeWithId, initialState)
 
   const commonStyles =
     'px-2 py-1 bg-white/10 rounded-md border-2 border-transparent hover:bg-white/15'
@@ -31,11 +32,11 @@ export default function Form({
       clsx(commonStyles, 'w-full', errors && 'border-red-500/100'),
   }
 
+  console.log(anime)
+
   return (
     <form action={dispatch}>
       <div className="w-[30rem] px-6 py-4 space-y-4 bg-white/10 rounded-md">
-        {/* Finish dates */}
-        <FinishDates />
         {/* Title */}
         <div className="space-y-2">
           <label htmlFor="title">Title*</label>
@@ -325,10 +326,12 @@ export default function Form({
               ))}
           </div>
         </div>
+        {/* Finish dates */}
+        <FinishDates defaultValues={anime.finishDates.map((d) => d.date)} />
         {/* Studios */}
         <div className="space-y-2">
           <label htmlFor="type">Studios</label>
-          <StudioSelect studios={studios} />
+          <StudioSelect studios={studios} defaultValues={anime.studios} />
           <div id="studios-error" aria-live="polite" aria-atomic="true">
             {state.errors?.studios &&
               state.errors.studios.map((error) => (

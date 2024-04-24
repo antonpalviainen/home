@@ -27,8 +27,6 @@ export default function Form({ studios }: { studios: Studio[] }) {
   return (
     <form action={dispatch}>
       <div className="w-[30rem] px-6 py-4 space-y-4 bg-white/10 rounded-md">
-        {/* Finish dates */}
-        <FinishDates />
         {/* Title */}
         <div className="space-y-2">
           <label htmlFor="title">Title*</label>
@@ -311,6 +309,8 @@ export default function Form({ studios }: { studios: Studio[] }) {
               ))}
           </div>
         </div>
+        {/* Finish dates */}
+        <FinishDates />
         {/* Studios */}
         <div className="space-y-2">
           <label htmlFor="type">Studios</label>
