@@ -6,9 +6,11 @@ export interface Studio {
   id: number
   name: string
 }
+
 function sortStudios(a: Studio, b: Studio) {
   return a.name.localeCompare(b.name)
 }
+
 export function StudioSelect({ studios }: { studios: Studio[] }) {
   const [selected, setSelected] = useState<Studio[]>([])
   const [nonSelected, setNonSelected] = useState<Studio[]>(studios)
@@ -18,8 +20,9 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
     const studio = nonSelected.find((studio) => studio.id === id)
 
     if (studio) {
-      setSelected([...selected, studio].sort(sortStudios))
-      setNonSelected(nonSelected.filter((s) => s.id !== id))
+      setSelected((s) => [...s, studio].sort(sortStudios))
+      setSearch('')
+      setNonSelected(() => studios.filter((s) => s.id !== id))
     }
   }
 
@@ -28,15 +31,17 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
 
     if (studio) {
       setSelected(selected.filter((s) => s.id !== id))
-      setNonSelected([...nonSelected, studio].sort(sortStudios))
+      setNonSelected((ns) => [...ns, studio].sort(sortStudios))
     }
   }
 
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
     setSearch(e.target.value)
-    setNonSelected(
-      studios.filter((studio) =>
-        studio.name.toLowerCase().includes(e.target.value.toLowerCase())
+    setNonSelected(() =>
+      studios.filter(
+        (studio) =>
+          !selected.includes(studio) &&
+          studio.name.toLowerCase().includes(e.target.value.toLowerCase())
       )
     )
   }
@@ -44,11 +49,11 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
   function handleAdd(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
     const newStudio = { id: studios.length + selected.length + 1, name: search }
-    setSelected([...selected, newStudio].sort(sortStudios))
-    setSearch('')
-    setNonSelected(
+    setSelected((s) => [...s, newStudio].sort(sortStudios))
+    setNonSelected(() =>
       studios.filter((studio) => studio.name.toLowerCase().includes(''))
     )
+    setSearch('')
   }
 
   return (
@@ -61,6 +66,7 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
               className="flex px-2 py-1 gap-2 bg-white/10 rounded-md whitespace-nowrap"
             >
               <span>{studio.name}</span>
+              <input type="hidden" name="studios" value={studio.name} />
               <button
                 onClick={() => handleRemove(studio.id)}
                 title="Remove studio"
@@ -99,7 +105,10 @@ export function StudioSelect({ studios }: { studios: Studio[] }) {
               </div>
             ))
           ) : (
-            <button onClick={handleAdd}>
+            <button
+              onClick={handleAdd}
+              className="w-full px-1.5 py-0.5 text-left rounded-md hover:bg-white/5"
+            >
               Add new studio &quot;{search}&quot;
             </button>
           )}

@@ -39,7 +39,7 @@ model AnimeFinishDate {
   id   Int      @id @default(autoincrement())
   date DateTime @default(now())
 
-  Anime   Anime? @relation(fields: [animeId], references: [id])
+  Anime   Anime? @relation(fields: [animeId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   animeId Int?
 
   // Non-unique foreign key
@@ -85,7 +85,7 @@ model GakiEpisodeTitle {
   title    String
   language Language
 
-  Episode   GakiEpisode @relation(fields: [episodeId], references: [id])
+  Episode   GakiEpisode @relation(fields: [episodeId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   episodeId Int
 
   // Non-unique foreign key
@@ -102,7 +102,7 @@ model GakiSeriesName {
   abbreviation String
   language     Language
 
-  Series   GakiSeries @relation(fields: [seriesId], references: [id])
+  Series   GakiSeries @relation(fields: [seriesId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   seriesId Int
 
   // Non-unique foreign key

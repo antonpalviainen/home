@@ -54,9 +54,10 @@ const FormSchema = z.object({
     ],
     { errorMap: () => ({ message: 'Invalid value for status' }) }
   ),
-  studioIds: z.array(z.coerce.number().int()),
-  finishDates: z.array(z.date()),
+  studios: z.array(z.string()),
+  finishDates: z.array(z.coerce.date()),
 })
+
 export type State = {
   errors?: {
     title?: string[]
@@ -68,7 +69,7 @@ export type State = {
     rating?: string[]
     progress?: string[]
     status?: string[]
-    studioIds?: string[]
+    studios?: string[]
     finishDates?: string[]
   }
   message?: string | null
@@ -85,7 +86,7 @@ export async function createAnime(prevState: State, formData: FormData) {
     rating: formData.get('rating') || null,
     progress: formData.get('progress') || null,
     status: formData.get('status'),
-    studioIds: formData.getAll('studioIds'),
+    studios: formData.getAll('studios'),
     finishDates: formData.getAll('finishDates'),
   })
 
@@ -107,41 +108,42 @@ export async function createAnime(prevState: State, formData: FormData) {
     rating,
     progress,
     status,
-    studioIds,
+    studios,
     finishDates,
   } = validatedFields.data
 
-  // try {
-  //   await prisma.anime.create({
-  //     data: {
-  //       title,
-  //       episodes,
-  //       runtime,
-  //       type,
-  //       year,
-  //       season,
-  //       rating,
-  //       progress,
-  //       status,
-  //       studios: {
-  //         c
-  //       },
-  //       finishDates: {
-  //         set: finishDates.map((date) => ({ date })),
-  //       },
-  //     },
-  //   })
-  // } catch (error) {
-  //   return {
-  //     message: 'Database Error: Failed to create anime.',
-  //   }
-  // }
-
-  console.log(validatedFields.data)
-
-  return {
-    message: 'Anime created successfully.',
+  try {
+    await prisma.anime.create({
+      data: {
+        title,
+        episodes,
+        runtime,
+        type,
+        year,
+        season,
+        rating,
+        progress,
+        status,
+        studios: {
+          connectOrCreate: studios.map((name) => ({
+            where: { name },
+            create: { name },
+          })),
+        },
+        finishDates: {
+          // create: finishDates.map((date) => ({ date })),
+          createMany: { data: finishDates.map((date) => ({ date })) },
+        },
+      },
+    })
+  } catch (error) {
+    return {
+      message: 'Database Error: Failed to create anime.',
+    }
   }
+
+  revalidatePath('/anime')
+  redirect('/anime')
 }
 
 export async function updateAnime(
@@ -180,7 +182,7 @@ export async function updateAnime(
     rating,
     progress,
     status,
-    studioIds,
+    studios: studioIds,
     finishDates,
   } = validatedFields.data
 

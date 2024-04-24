@@ -6,7 +6,8 @@ import React from 'react'
 import { useFormState } from 'react-dom'
 
 import { createAnime } from '@/lib/anime/actions'
-import { Studio, StudioSelect } from '@/ui/anime/studio-select'
+import { FinishDates } from '@/ui/anime/finish-date-select'
+import { type Studio, StudioSelect } from '@/ui/anime/studio-select'
 
 export default function Form({ studios }: { studios: Studio[] }) {
   const initialState = { message: '', errors: {} }
@@ -25,11 +26,12 @@ export default function Form({ studios }: { studios: Studio[] }) {
 
   return (
     <form action={dispatch}>
-      <div className="min-w-[30rem] px-6 py-4 space-y-4 bg-white/10 rounded-md">
+      <div className="w-[30rem] px-6 py-4 space-y-4 bg-white/10 rounded-md">
         {/* Finish dates */}
+        <FinishDates />
         {/* Title */}
         <div className="space-y-2">
-          <label htmlFor="title">Title</label>
+          <label htmlFor="title">Title*</label>
           <div>
             <input
               type="text"
@@ -178,7 +180,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
             </div>
             {/* Runtime */}
             <div className="space-y-2">
-              <label htmlFor="runtime">Runtime</label>
+              <label htmlFor="runtime">Runtime*</label>
               <div>
                 <input
                   type="number"
@@ -279,7 +281,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
             </div>
             {/* Year */}
             <div className="space-y-2">
-              <label htmlFor="year">Year</label>
+              <label htmlFor="year">Year*</label>
               <div>
                 <input
                   type="number"
@@ -289,6 +291,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   className={classNames.number(state.errors?.year)}
                   min={1900}
                   max={2100}
+                  defaultValue={new Date().getFullYear()}
                 />
               </div>
             </div>
@@ -313,8 +316,8 @@ export default function Form({ studios }: { studios: Studio[] }) {
           <label htmlFor="type">Studios</label>
           <StudioSelect studios={studios} />
           <div id="studios-error" aria-live="polite" aria-atomic="true">
-            {state.errors?.studioIds &&
-              state.errors.studioIds.map((error) => (
+            {state.errors?.studios &&
+              state.errors.studios.map((error) => (
                 <p className="text-red-500" key={error}>
                   {error}
                 </p>

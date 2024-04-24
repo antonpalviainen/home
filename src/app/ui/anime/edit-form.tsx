@@ -1,30 +1,52 @@
 'use client'
 
 import { Anime } from '@prisma/client'
+import { clsx } from 'clsx'
 import Link from 'next/link'
+import React from 'react'
 import { useFormState } from 'react-dom'
 
 import { updateAnime } from '@/lib/anime/actions'
+import { FinishDates } from '@/ui/anime/finish-date-select'
+import { type Studio, StudioSelect } from '@/ui/anime/studio-select'
 
-export default function AnimeForm({ anime }: { anime: Anime }) {
+export default function Form({
+  anime,
+  studios,
+}: {
+  anime: Anime
+  studios: Studio[]
+}) {
   const initialState = { message: '', errors: {} }
-  const updateAnimeWithId = updateAnime.bind(null, anime.id)
-  const [state, dispatch] = useFormState(updateAnimeWithId, initialState)
+  const [state, dispatch] = useFormState(updateAnime, initialState)
+
+  const commonStyles =
+    'px-2 py-1 bg-white/10 rounded-md border-2 border-transparent hover:bg-white/15'
+  const classNames = {
+    number: (errors?: string[]) =>
+      clsx(commonStyles, 'w-20', errors && 'border-red-500/100'),
+    select: (errors?: string[]) =>
+      clsx(commonStyles, 'w-36', errors && 'border-red-500/100'),
+    title: (errors?: string[]) =>
+      clsx(commonStyles, 'w-full', errors && 'border-red-500/100'),
+  }
 
   return (
     <form action={dispatch}>
-      <div className="w-96 px-6 py-4 space-y-4 bg-white/10 rounded-md">
+      <div className="w-[30rem] px-6 py-4 space-y-4 bg-white/10 rounded-md">
+        {/* Finish dates */}
+        <FinishDates />
         {/* Title */}
         <div className="space-y-2">
-          <label htmlFor="title">Title</label>
+          <label htmlFor="title">Title*</label>
           <div>
             <input
               type="text"
               name="title"
               id="title"
-              defaultValue={anime.title}
               aria-describedby="title-error"
-              className="w-full px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
+              className={classNames.title(state.errors?.title)}
+              defaultValue={anime.title}
             />
           </div>
           <div id="title-error" aria-live="polite" aria-atomic="true">
@@ -46,12 +68,28 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
                 <select
                   name="status"
                   id="status"
-                  defaultValue={anime.status}
                   aria-describedby="status-rating-error"
-                  className="w-32 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
+                  className={classNames.select(state.errors?.status)}
+                  defaultValue={anime.status}
                 >
-                  <option value="">Watching</option>
-                  <option value="">Rewatching</option>
+                  <option value="watching" className="bg-[#5c637c]">
+                    Watching
+                  </option>
+                  <option value="watching" className="bg-[#5c637c]">
+                    Rewatching
+                  </option>
+                  <option value="completed" className="bg-[#5c637c]">
+                    Completed
+                  </option>
+                  <option value="on_hold" className="bg-[#5c637c]">
+                    On hold
+                  </option>
+                  <option value="dropped" className="bg-[#5c637c]">
+                    Dropped
+                  </option>
+                  <option value="plan_to_watch" className="bg-[#5c637c]">
+                    Plan to watch
+                  </option>
                 </select>
               </div>
             </div>
@@ -59,14 +97,47 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
             <div className="space-y-2">
               <label htmlFor="rating">Rating</label>
               <div>
-                <input
-                  type="number"
+                <select
                   name="rating"
                   id="rating"
-                  defaultValue={anime.rating ?? '-'}
                   aria-describedby="status-rating-error"
-                  className="w-20 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
-                />
+                  defaultValue={anime.rating ?? ''}
+                  className={classNames.select(state.errors?.rating)}
+                >
+                  <option value="10" className="bg-[#5c637c]">
+                    10
+                  </option>
+                  <option value="9" className="bg-[#5c637c]">
+                    9
+                  </option>
+                  <option value="8" className="bg-[#5c637c]">
+                    8
+                  </option>
+                  <option value="7" className="bg-[#5c637c]">
+                    7
+                  </option>
+                  <option value="6" className="bg-[#5c637c]">
+                    6
+                  </option>
+                  <option value="5" className="bg-[#5c637c]">
+                    5
+                  </option>
+                  <option value="4" className="bg-[#5c637c]">
+                    4
+                  </option>
+                  <option value="3" className="bg-[#5c637c]">
+                    3
+                  </option>
+                  <option value="2" className="bg-[#5c637c]">
+                    2
+                  </option>
+                  <option value="1" className="bg-[#5c637c]">
+                    1
+                  </option>
+                  <option value="" className="bg-[#5c637c]">
+                    -
+                  </option>
+                </select>
               </div>
             </div>
           </div>
@@ -92,14 +163,14 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
             <div className="space-y-2">
               <label htmlFor="progress">Progress</label>
               <div>
-                {' '}
                 <input
                   type="number"
                   name="progress"
                   id="progress"
-                  defaultValue={anime.progress ?? 0}
                   aria-describedby="progress-episodes-runtime-error"
-                  className="w-20 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
+                  className={classNames.number(state.errors?.progress)}
+                  min={1}
+                  defaultValue={anime.progress ?? undefined}
                 />
               </div>
             </div>
@@ -111,23 +182,25 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
                   type="number"
                   name="episodes"
                   id="episodes"
-                  defaultValue={anime.episodes ?? 1}
                   aria-describedby="progress-episodes-runtime-error"
-                  className="w-20 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
+                  className={classNames.number(state.errors?.episodes)}
+                  min={1}
+                  defaultValue={anime.episodes ?? undefined}
                 />
               </div>
             </div>
             {/* Runtime */}
             <div className="space-y-2">
-              <label htmlFor="runtime">Runtime</label>
+              <label htmlFor="runtime">Runtime*</label>
               <div>
                 <input
                   type="number"
                   name="runtime"
                   id="runtime"
-                  defaultValue={anime.runtime ?? 0}
                   aria-describedby="progress-episodes-runtime-error"
-                  className="w-20 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
+                  className={classNames.number(state.errors?.runtime)}
+                  min={1}
+                  defaultValue={anime.runtime ?? undefined}
                 />
               </div>
             </div>
@@ -161,14 +234,26 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
         <div className="space-y-2">
           <label htmlFor="type">Type</label>
           <div>
-            <input
-              type="text"
+            <select
               name="type"
               id="type"
-              defaultValue={anime.type}
               aria-describedby="type-error"
-              className="w-32 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
-            />
+              className={classNames.select(state.errors?.type)}
+              defaultValue={anime.type}
+            >
+              <option value="tv" className="bg-[#5c637c]">
+                TV
+              </option>
+              <option value="movie" className="bg-[#5c637c]">
+                Movie
+              </option>
+              <option value="ova" className="bg-[#5c637c]">
+                OVA
+              </option>
+              <option value="ona" className="bg-[#5c637c]">
+                ONA
+              </option>
+            </select>
           </div>
           <div id="type-error" aria-live="polite" aria-atomic="true">
             {state.errors?.type &&
@@ -186,28 +271,41 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
             <div className="space-y-2">
               <label htmlFor="season">Season</label>
               <div>
-                {' '}
-                <input
-                  type="text"
+                <select
                   name="season"
                   id="season"
-                  defaultValue={anime.season}
                   aria-describedby="season-year-error"
-                  className="w-32 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
-                />
+                  className={classNames.select(state.errors?.season)}
+                  defaultValue={anime.season}
+                >
+                  <option value="winter" className="bg-[#5c637c]">
+                    Winter
+                  </option>
+                  <option value="spring" className="bg-[#5c637c]">
+                    Spring
+                  </option>
+                  <option value="summer" className="bg-[#5c637c]">
+                    Summer
+                  </option>
+                  <option value="fall" className="bg-[#5c637c]">
+                    Fall
+                  </option>
+                </select>
               </div>
             </div>
             {/* Year */}
             <div className="space-y-2">
-              <label htmlFor="year">Year</label>
+              <label htmlFor="year">Year*</label>
               <div>
                 <input
                   type="number"
                   name="year"
                   id="year"
-                  defaultValue={anime.year}
                   aria-describedby="season-year-error"
-                  className="w-20 px-2 py-1 bg-white/10 rounded-md hover:bg-white/15"
+                  className={classNames.number(state.errors?.year)}
+                  min={1900}
+                  max={2100}
+                  defaultValue={anime.year}
                 />
               </div>
             </div>
@@ -227,13 +325,26 @@ export default function AnimeForm({ anime }: { anime: Anime }) {
               ))}
           </div>
         </div>
+        {/* Studios */}
+        <div className="space-y-2">
+          <label htmlFor="type">Studios</label>
+          <StudioSelect studios={studios} />
+          <div id="studios-error" aria-live="polite" aria-atomic="true">
+            {state.errors?.studios &&
+              state.errors.studios.map((error) => (
+                <p className="text-red-500" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
+        </div>
       </div>
       <div className="flex justify-between gap-6 mt-4 px-6">
         <button
           type="submit"
           className="w-full px-2 py-1 bg-green-500/65 rounded-md hover:bg-green-500"
         >
-          Update
+          Create
         </button>
         <Link
           href="/anime"
