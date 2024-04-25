@@ -5,13 +5,29 @@ import Link from 'next/link'
 import React from 'react'
 import { useFormState } from 'react-dom'
 
-import { createAnime } from '@/lib/anime/actions'
+import { State } from '@/lib/anime/actions'
+import { fetchAnimeById } from '@/lib/anime/data'
 import { FinishDates } from '@/ui/anime/finish-date-select'
-import { type Studio, StudioSelect } from '@/ui/anime/studio-select'
+import { StudioSelect, type Studio } from '@/ui/anime/studio-select'
 
-export default function Form({ studios }: { studios: Studio[] }) {
+interface Action {
+  (prevState: State, formData: FormData): Promise<{
+    message?: string
+    errors?: Record<string, string[]>
+  }>
+}
+
+export default function Form({
+  action,
+  studios,
+  anime,
+}: {
+  action: Action
+  studios: Studio[]
+  anime?: Exclude<Awaited<ReturnType<typeof fetchAnimeById>>, null>
+}) {
   const initialState = { message: '', errors: {} }
-  const [state, dispatch] = useFormState(createAnime, initialState)
+  const [state, dispatch] = useFormState(action, initialState)
 
   const commonStyles =
     'px-2 py-1 bg-white/10 rounded-md border-2 hover:bg-white/15'
@@ -49,6 +65,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
               id="title"
               aria-describedby="title-error"
               className={classNames.title(state.errors?.title)}
+              defaultValue={anime?.title}
             />
           </div>
           <div id="title-error" aria-live="polite" aria-atomic="true">
@@ -72,6 +89,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   id="status"
                   aria-describedby="status-rating-error"
                   className={classNames.select(state.errors?.status)}
+                  defaultValue={anime?.status}
                 >
                   <option value="watching" className="bg-[#5c637c]">
                     Watching
@@ -102,7 +120,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   name="rating"
                   id="rating"
                   aria-describedby="status-rating-error"
-                  defaultValue=""
+                  defaultValue={anime?.rating ?? ''}
                   className={classNames.select(state.errors?.rating)}
                 >
                   <option value="10" className="bg-[#5c637c]">
@@ -171,6 +189,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   aria-describedby="progress-episodes-runtime-error"
                   className={classNames.number(state.errors?.progress)}
                   min={1}
+                  defaultValue={anime?.progress ?? undefined}
                 />
               </div>
             </div>
@@ -185,6 +204,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   aria-describedby="progress-episodes-runtime-error"
                   className={classNames.number(state.errors?.episodes)}
                   min={1}
+                  defaultValue={anime?.episodes ?? undefined}
                 />
               </div>
             </div>
@@ -199,6 +219,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   aria-describedby="progress-episodes-runtime-error"
                   className={classNames.number(state.errors?.runtime)}
                   min={1}
+                  defaultValue={anime?.runtime ?? undefined}
                 />
               </div>
             </div>
@@ -237,6 +258,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
               id="type"
               aria-describedby="type-error"
               className={classNames.select(state.errors?.type)}
+              defaultValue={anime?.type}
             >
               <option value="tv" className="bg-[#5c637c]">
                 TV
@@ -273,6 +295,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   id="season"
                   aria-describedby="season-year-error"
                   className={classNames.select(state.errors?.season)}
+                  defaultValue={anime?.season}
                 >
                   <option value="winter" className="bg-[#5c637c]">
                     Winter
@@ -301,7 +324,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
                   className={classNames.number(state.errors?.year)}
                   min={1900}
                   max={2100}
-                  defaultValue={new Date().getFullYear()}
+                  defaultValue={anime?.year}
                 />
               </div>
             </div>
@@ -322,11 +345,11 @@ export default function Form({ studios }: { studios: Studio[] }) {
           </div>
         </div>
         {/* Finish dates */}
-        <FinishDates />
+        <FinishDates defaultValues={anime?.finishDates.map((d) => d.date)} />
         {/* Studios */}
         <div className="space-y-2">
           <label htmlFor="type">Studios</label>
-          <StudioSelect studios={studios} />
+          <StudioSelect studios={studios} defaultValues={anime?.studios} />
           <div id="studios-error" aria-live="polite" aria-atomic="true">
             {state.errors?.studios &&
               state.errors.studios.map((error) => (
@@ -345,7 +368,7 @@ export default function Form({ studios }: { studios: Studio[] }) {
           type="submit"
           className="w-full px-2 py-1 bg-green-500/65 rounded-md hover:bg-green-500"
         >
-          Create
+          Save
         </button>
         <Link
           href="/anime"

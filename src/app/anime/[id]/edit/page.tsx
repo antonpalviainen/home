@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 
+import { updateAnime } from '@/lib/anime/actions'
 import { fetchAnimeById, fetchStudios } from '@/lib/anime/data'
-import AnimeForm from '@/ui/anime/edit-form'
+import Form from '@/ui/anime/form'
 
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id
@@ -14,5 +15,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     notFound()
   }
 
-  return <AnimeForm anime={anime} studios={studios} />
+  const updateAnimeWithId = updateAnime.bind(null, Number(id))
+
+  return <Form action={updateAnimeWithId} anime={anime} studios={studios} />
 }
