@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 import { useFormState } from 'react-dom'
 
-import { State } from '@/lib/anime/actions'
+import type { State } from '@/lib/anime/actions'
 import { fetchAnimeById } from '@/lib/anime/data'
 import { FinishDates } from '@/ui/anime/finish-date-select'
 import { StudioSelect, type Studio } from '@/ui/anime/studio-select'
