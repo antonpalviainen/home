@@ -1,3 +1,4 @@
+import { PencilSquareIcon } from '@heroicons/react/24/solid'
 import { clsx } from 'clsx'
 import Link from 'next/link'
 import { Suspense } from 'react'
@@ -32,9 +33,14 @@ function Row({ anime }: { anime: Anime }) {
   return (
     <tr key={anime.id} className="hover:bg-white/5">
       <td className={`${getStatusColor(anime.status)} w-3`}></td>
-      <Cell>
-        {anime.title} <Link href={`/anime/${anime.id}/edit`}>Edit</Link>
-      </Cell>
+      <td>
+        <div className="group flex justify-between px-3 py-1 whitespace-nowrap">
+          {anime.title}
+          <Link href={`/anime/${anime.id}/edit`} title="Edit">
+            <PencilSquareIcon className="w-5 text-white/90 invisible group-hover:visible hover:text-white/50" />
+          </Link>
+        </div>
+      </td>
       {completed || !anime.episodes ? (
         <Cell className="text-center">{anime.episodes}</Cell>
       ) : (

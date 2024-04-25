@@ -6,10 +6,12 @@ export function Select({
   current,
   options,
   handler,
+  title,
 }: {
   current: number | null
   options: number
   handler: (progress: number) => void
+  title?: string
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLSelectElement>(null)
@@ -37,7 +39,11 @@ export function Select({
           ))}
         </select>
       ) : (
-        <button onClick={() => setOpen(true)} className="hover:text-white/50">
+        <button
+          onClick={() => setOpen(true)}
+          title={title}
+          className="hover:text-white/50"
+        >
           {current || '-'}
         </button>
       )}

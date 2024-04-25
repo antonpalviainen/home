@@ -41,10 +41,12 @@ export function ProgressCell({
         current={progress}
         options={episodes}
         handler={handleUpdateProgress}
+        title="Set progress"
       />
       {`/${episodes}`}
       <button
         onClick={handleIncrement}
+        title="Increment progress"
         className="flex justify-center items-center text-white/90 hover:text-white/50"
       >
         <PlusCircleIcon className="w-4 ml-0.5 pt-0.5" />
@@ -71,7 +73,12 @@ export function RatingCell({
 
   return (
     <td className="flex justify-center items-center px-1.5 py-1">
-      <Select current={rating} options={10} handler={handleUpdateRating} />
+      <Select
+        current={rating}
+        options={10}
+        handler={handleUpdateRating}
+        title="Set rating"
+      />
     </td>
   )
 }
