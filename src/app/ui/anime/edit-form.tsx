@@ -22,17 +22,27 @@ export default function Form({
   const [state, dispatch] = useFormState(updateAnimeWithId, initialState)
 
   const commonStyles =
-    'px-2 py-1 bg-white/10 rounded-md border-2 border-transparent hover:bg-white/15'
+    'px-2 py-1 bg-white/10 rounded-md border-2 hover:bg-white/15'
   const classNames = {
     number: (errors?: string[]) =>
-      clsx(commonStyles, 'w-20', errors && 'border-red-500/100'),
+      clsx(
+        commonStyles,
+        'w-20',
+        errors ? 'border-red-500/100' : 'border-transparent'
+      ),
     select: (errors?: string[]) =>
-      clsx(commonStyles, 'w-36', errors && 'border-red-500/100'),
+      clsx(
+        commonStyles,
+        'w-36',
+        errors ? 'border-red-500/100' : 'border-transparent'
+      ),
     title: (errors?: string[]) =>
-      clsx(commonStyles, 'w-full', errors && 'border-red-500/100'),
+      clsx(
+        commonStyles,
+        'w-full',
+        errors ? 'border-red-500/100' : 'border-transparent'
+      ),
   }
-
-  console.log(anime)
 
   return (
     <form action={dispatch}>
@@ -341,13 +351,16 @@ export default function Form({
               ))}
           </div>
         </div>
+        <div>
+          {state.message && <p className="text-red-500">{state.message}</p>}
+        </div>
       </div>
       <div className="flex justify-between gap-6 mt-4 px-6">
         <button
           type="submit"
           className="w-full px-2 py-1 bg-green-500/65 rounded-md hover:bg-green-500"
         >
-          Create
+          Save
         </button>
         <Link
           href="/anime"

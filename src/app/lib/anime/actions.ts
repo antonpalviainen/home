@@ -91,7 +91,7 @@ export async function createAnime(prevState: State, formData: FormData) {
   })
 
   if (!validatedFields.success) {
-    console.dir(validatedFields.error.flatten())
+    console.error(validatedFields.error.flatten())
     return {
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Missing fields. Failed to create anime.',
@@ -141,19 +141,20 @@ export async function updateAnime(
 ) {
   const validatedFields = FormSchema.safeParse({
     title: formData.get('title'),
-    episodes: formData.get('episodes'),
+    episodes: formData.get('episodes') || null,
     runtime: formData.get('runtime'),
     type: formData.get('type'),
     year: formData.get('year'),
     season: formData.get('season'),
-    rating: formData.get('rating'),
-    progress: formData.get('progress'),
+    rating: formData.get('rating') || null,
+    progress: formData.get('progress') || null,
     status: formData.get('status'),
     studios: formData.getAll('studios'),
     finishDates: formData.getAll('finishDates'),
   })
 
   if (!validatedFields.success) {
+    console.error(validatedFields.error.flatten())
     return {
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Missing fields. Failed to update anime.',
