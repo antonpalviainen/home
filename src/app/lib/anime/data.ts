@@ -25,7 +25,7 @@ export async function fetchFilteredAnime(options: Options) {
         progress: true,
         status: true,
         studios: {
-          select: { name: true },
+          select: { id: true, name: true },
         },
         finishDates: {
           select: { date: true },

@@ -5,17 +5,10 @@ import Link from 'next/link'
 import React from 'react'
 import { useFormState } from 'react-dom'
 
-import type { State } from '@/lib/anime/actions'
-import { fetchAnimeById } from '@/lib/anime/data'
-import { FinishDates } from '@/ui/anime/finish-date-select'
-import { StudioSelect, type Studio } from '@/ui/anime/studio-select'
+import type { Action, Anime, Studio } from '@/lib/anime/definitions'
 
-interface Action {
-  (prevState: State, formData: FormData): Promise<{
-    message?: string
-    errors?: Record<string, string[]>
-  }>
-}
+import { FinishDates } from './finish-date-select'
+import { StudioSelect } from './studio-select'
 
 export default function Form({
   action,
@@ -24,7 +17,7 @@ export default function Form({
 }: {
   action: Action
   studios: Studio[]
-  anime?: Exclude<Awaited<ReturnType<typeof fetchAnimeById>>, null>
+  anime?: Anime
 }) {
   const initialState = { message: '', errors: {} }
   const [state, dispatch] = useFormState(action, initialState)

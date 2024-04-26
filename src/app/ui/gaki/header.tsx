@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 
 import { resolveLanguage } from '@/lib/gaki/utils'
-import LanguageSwitcher from '@/ui/gaki/language-switcher'
+
+import LanguageSwitcher from './language-switcher'
 
 export default function Header() {
   const searchParams = useSearchParams()

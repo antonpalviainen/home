@@ -2,10 +2,7 @@ import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import React from 'react'
 import { useState } from 'react'
 
-export interface Studio {
-  id: number
-  name: string
-}
+import { Studio } from '@/lib/anime/definitions'
 
 function sortStudios(a: Studio, b: Studio) {
   return a.name.localeCompare(b.name)

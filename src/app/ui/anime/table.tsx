@@ -1,40 +1,26 @@
 import { PencilSquareIcon } from '@heroicons/react/24/solid'
-import { clsx } from 'clsx'
 import Link from 'next/link'
 import { Suspense } from 'react'
 
 import { fetchFilteredAnime } from '@/lib/anime/data'
-import type { Options } from '@/lib/anime/definitions'
+import type { Anime, Options } from '@/lib/anime/definitions'
 import { getStatusColor, isCompleted } from '@/lib/anime/utils'
 import { formatType } from '@/lib/anime/utils'
 import { capitalize } from '@/lib/utils'
-import { ProgressCell, RatingCell } from '@/ui/anime/cells'
-import { HeaderSkeleton } from '@/ui/anime/skeletons'
-import TableHead from '@/ui/anime/table-head'
 
-export type Anime = Awaited<ReturnType<typeof fetchFilteredAnime>>[0]
-
-export function Cell({
-  children,
-  className: customClassName,
-}: {
-  children?: React.ReactNode
-  className?: string
-}) {
-  const className = clsx('px-3 py-1 whitespace-nowrap', customClassName)
-
-  return <td className={className}>{children}</td>
-}
+import { ProgressCell, RatingCell } from './cells'
+import { HeaderSkeleton } from './skeletons'
+import TableHead from './table-head'
 
 function Row({ anime }: { anime: Anime }) {
   const completed = isCompleted(anime.status)
   const studios = anime.studios.map((studio) => studio.name).join(', ')
 
   return (
-    <tr key={anime.id} className="hover:bg-white/5">
+    <tr key={anime.id} className="group hover:bg-white/5">
       <td className={`${getStatusColor(anime.status)} w-3`}></td>
       <td>
-        <div className="group flex justify-between px-3 py-1 whitespace-nowrap">
+        <div className="flex justify-between px-3 py-1 whitespace-nowrap">
           {anime.title}
           <Link href={`/anime/${anime.id}/edit`} title="Edit">
             <PencilSquareIcon className="w-5 text-white/90 invisible group-hover:visible hover:text-white/50" />
@@ -42,7 +28,9 @@ function Row({ anime }: { anime: Anime }) {
         </div>
       </td>
       {completed || !anime.episodes ? (
-        <Cell className="text-center">{anime.episodes}</Cell>
+        <td className="px-3 py-1 whitespace-nowrap text-center">
+          {anime.episodes}
+        </td>
       ) : (
         <ProgressCell
           id={anime.id}
@@ -50,11 +38,15 @@ function Row({ anime }: { anime: Anime }) {
           episodes={anime.episodes}
         />
       )}
-      <Cell className="text-center">{anime.runtime}</Cell>
-      <Cell className="text-center">{formatType(anime.type)}</Cell>
-      <Cell>{`${anime.year} ${capitalize(anime.season)}`}</Cell>
+      <td className="px-3 py-1 whitespace-nowrap text-center">
+        {anime.runtime}
+      </td>
+      <td className="px-3 py-1 whitespace-nowrap text-center">
+        {formatType(anime.type)}
+      </td>
+      <td>{`${anime.year} ${capitalize(anime.season)}`}</td>
       <RatingCell id={anime.id} rating={anime.rating} />
-      <Cell className="rounded-r-md">{studios}</Cell>
+      <td className="px-3 py-1 whitespace-nowrap rounded-r-md">{studios}</td>
     </tr>
   )
 }

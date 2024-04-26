@@ -1,6 +1,7 @@
 import { fetchStudios, fetchYears } from '@/lib/anime/data'
-import { HeaderDataWithFilter, HeaderData } from '@/lib/anime/definitions'
-import { Header, HeaderWithFilter } from '@/ui/anime/headers'
+import type { HeaderDataWithFilter, HeaderData } from '@/lib/anime/definitions'
+
+import { Header, HeaderWithFilter } from './headers'
 
 export default async function TableHead() {
   const [studios, years] = await Promise.all([fetchStudios(), fetchYears()])

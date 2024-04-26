@@ -1,4 +1,14 @@
-import { Anime, AnimeStatus, AnimeType, Season } from '@prisma/client'
+import * as PrismaTypes from '@prisma/client'
+
+export type Studio = PrismaTypes.AnimeStudio
+
+export type FinishDate = Partial<PrismaTypes.AnimeFinishDate> &
+  Pick<PrismaTypes.AnimeFinishDate, 'date'>
+
+export interface Anime extends PrismaTypes.Anime {
+  studios: Studio[]
+  finishDates: FinishDate[]
+}
 
 export type SortableField =
   | 'status'
@@ -9,16 +19,18 @@ export type SortableField =
   | 'rating'
   | 'progress'
 
+export type SortDirection = 'asc' | 'desc'
+
 export interface SortOptions {
   sort?: SortableField
   direction?: SortDirection
 }
 
 export interface FilterOptions {
-  status?: AnimeStatus[]
-  type?: AnimeType[]
+  status?: PrismaTypes.AnimeStatus[]
+  type?: PrismaTypes.AnimeType[]
   year?: number[]
-  season?: Season[]
+  season?: PrismaTypes.Season[]
   rating?: Anime['rating'][]
   studios?: string[]
 }
@@ -47,8 +59,6 @@ export type SortKey =
   | 'rating'
   | 'studios'
 
-export type SortDirection = 'asc' | 'desc'
-
 interface FilterOption {
   label: string
   value: string
@@ -62,4 +72,28 @@ export interface HeaderData {
 
 export interface HeaderDataWithFilter extends HeaderData {
   filterOptions: FilterOption[]
+}
+
+export type State = {
+  errors?: {
+    title?: string[]
+    episodes?: string[]
+    runtime?: string[]
+    type?: string[]
+    year?: string[]
+    season?: string[]
+    rating?: string[]
+    progress?: string[]
+    status?: string[]
+    studios?: string[]
+    finishDates?: string[]
+  }
+  message?: string | null
+}
+
+export interface Action {
+  (prevState: State, formData: FormData): Promise<{
+    message?: string
+    errors?: Record<string, string[]>
+  }>
 }

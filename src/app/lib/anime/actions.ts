@@ -7,6 +7,8 @@ import { z } from 'zod'
 
 import prisma from '@/lib/prisma'
 
+import type { State } from './definitions'
+
 const FormSchema = z.object({
   title: z
     .string()
@@ -57,23 +59,6 @@ const FormSchema = z.object({
   studios: z.array(z.string()),
   finishDates: z.array(z.coerce.date()),
 })
-
-export type State = {
-  errors?: {
-    title?: string[]
-    episodes?: string[]
-    runtime?: string[]
-    type?: string[]
-    year?: string[]
-    season?: string[]
-    rating?: string[]
-    progress?: string[]
-    status?: string[]
-    studios?: string[]
-    finishDates?: string[]
-  }
-  message?: string | null
-}
 
 export async function createAnime(prevState: State, formData: FormData) {
   const validatedFields = FormSchema.safeParse({
