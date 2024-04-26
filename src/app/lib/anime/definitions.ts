@@ -59,15 +59,15 @@ export type SortKey =
   | 'rating'
   | 'studios'
 
-interface FilterOption {
-  label: string
-  value: string
-}
-
 export interface HeaderData {
   label: string
   key: SortKey
   width?: string
+}
+
+interface FilterOption {
+  label: string
+  value: string
 }
 
 export interface HeaderDataWithFilter extends HeaderData {
