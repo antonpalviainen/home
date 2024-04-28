@@ -10,7 +10,6 @@ export default async function TableHead() {
     {
       label: '',
       key: 'status',
-      width: 'w-3',
       filterOptions: [
         { label: 'Watching', value: 'watching' },
         { label: 'Rewatching', value: 'rewatching' },
@@ -21,8 +20,8 @@ export default async function TableHead() {
       ],
     },
     { label: 'Title', key: 'title', width: 'w-full' },
-    { label: 'Progress', key: 'progress', width: 'w-[5rem]' },
-    { label: 'Runtime', key: 'runtime', width: 'w-[5rem]' },
+    { label: 'Progress', key: 'progress', width: 'w-[6rem]' },
+    { label: 'Runtime', key: 'runtime', width: 'w-[6rem]' },
     {
       label: 'Type',
       key: 'type',

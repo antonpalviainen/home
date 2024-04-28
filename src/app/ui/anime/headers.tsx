@@ -32,6 +32,10 @@ export function Header({
   }
 
   const classNames = {
+    th: clsx(
+      'cursor-pointer rounded-md hover:bg-white/5',
+      data.width ? `${data.width} px-3 py-1` : 'w-3'
+    ),
     relativeOrigin: clsx(
       'absolute h-20',
       hasFilter ? 'min-w-28 w-1/2' : 'min-w-36 w-full'
@@ -49,7 +53,7 @@ export function Header({
     <th
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
-      className={`${data.width} y-1 cursor-pointer rounded-md hover:bg-white/5`}
+      className={classNames.th}
     >
       {data.label || <wbr />}
       {isActive ? (

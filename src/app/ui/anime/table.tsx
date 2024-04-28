@@ -19,14 +19,7 @@ function Row({ anime }: { anime: Anime }) {
   return (
     <tr key={anime.id} className="group hover:bg-white/5">
       <td className={`${getStatusColor(anime.status)} w-3`}></td>
-      <td>
-        <div className="flex justify-between px-3 py-1 whitespace-nowrap">
-          {anime.title}
-          <Link href={`/anime/${anime.id}/edit`} title="Edit">
-            <PencilSquareIcon className="w-5 text-white/90 invisible group-hover:visible hover:text-white/50" />
-          </Link>
-        </div>
-      </td>
+      <td className="px-3 py-1 whitespace-nowrap">{anime.title}</td>
       {completed || !anime.episodes ? (
         <td className="px-3 py-1 whitespace-nowrap text-center">
           {anime.episodes}
@@ -46,7 +39,14 @@ function Row({ anime }: { anime: Anime }) {
       </td>
       <td>{`${anime.year} ${capitalize(anime.season)}`}</td>
       <RatingCell id={anime.id} rating={anime.rating} />
-      <td className="px-3 py-1 whitespace-nowrap rounded-r-md">{studios}</td>
+      <td>
+        <div className="flex justify-between px-3 py-1 whitespace-nowrap rounded-r-md">
+          {studios}
+          <Link href={`/anime/${anime.id}/edit`} title="Edit">
+            <PencilSquareIcon className="w-5 text-white/90 invisible group-hover:visible hover:text-white/50" />
+          </Link>
+        </div>
+      </td>
     </tr>
   )
 }

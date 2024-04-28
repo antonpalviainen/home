@@ -1,4 +1,4 @@
-// import 'server-only'
+import 'server-only'
 
 import type { Options } from '@/lib/anime/definitions'
 import { generateFilter, generateSortOrder } from '@/lib/anime/utils'

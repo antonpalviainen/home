@@ -3,38 +3,37 @@ export function HeaderSkeleton() {
     <thead className="animate-pulse">
       <tr>
         {/* Status */}
-        <th className="w-3">
+        <th className="w-3 h-8">
           <div className="w-3 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Title */}
-        <th className="w-full">
+        <th className="w-full h-8">
           <div className="w-12 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Progress */}
-        <th className="w-[5rem]">
+        <th className="w-[6rem] h-8">
           <div className="w-16 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Runtime */}
-        <th className="w-[5rem]">
+        <th className="w-[6rem] h-8">
           <div className="w-16 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Type */}
-        <th className="w-[5rem]">
+        <th className="w-[5rem] h-8">
           <div className="w-14 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Premiered */}
-        <th className="w-[8rem]">
+        <th className="w-[8rem] h-8">
           <div className="w-24 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Rating */}
-        <th className="w-[5rem]">
+        <th className="w-[5rem] h-8">
           <div className="w-14 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
         {/* Studios */}
-        <th className="w-[18rem]">
+        <th className="w-[18rem] h-8">
           <div className="w-20 h-6 mx-auto bg-white/20 rounded-md"></div>
         </th>
-        <col />
       </tr>
     </thead>
   )
