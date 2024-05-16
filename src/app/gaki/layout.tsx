@@ -8,7 +8,7 @@ import './style.css'
 
 export const metadata: Metadata = {
   title: {
-    template: 'Gaki no Tsukai - %s',
+    template: '%s - Gaki no Tsukai',
     default: 'Gaki no Tsukai',
   },
 }

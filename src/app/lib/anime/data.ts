@@ -106,3 +106,61 @@ export async function fetchYears() {
     throw new Error('Failed to fetch years')
   }
 }
+
+export async function fetchRatingData() {
+  try {
+    const data = await prisma.anime.groupBy({
+      by: ['rating'],
+      _count: {
+        _all: true,
+      },
+      orderBy: { rating: { sort: 'desc', nulls: 'last' } },
+    })
+
+    return data.map((item) => ({
+      rating: item.rating?.toString() ?? '-',
+      count: item._count._all,
+    }))
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch rating data')
+  }
+}
+
+interface FinishData {
+  dates: { date: Date; type: 'watch' | 'rewatch' }[]
+  avg: number
+}
+
+export async function fetchTitleFinishData() {
+  try {
+    const rawData = await prisma.$queryRaw<{ dates: Date[] }[]>`
+      SELECT array_agg(date_trunc('month', "date")) as "dates"
+      FROM "AnimeFinishDate"
+      WHERE date >= '2016-01-01'
+      GROUP BY "animeId"
+      ORDER BY "animeId"
+    `
+
+    const data: FinishData = {
+      dates: [],
+      avg:
+        rawData.reduce((acc, item) => acc + item.dates.length, 0) /
+        rawData.length,
+    }
+
+    for (const { dates } of rawData) {
+      for (let i = 0; i < dates.length; i++) {
+        data.dates.push({
+          date: dates[i],
+          type: i === 0 ? 'watch' : 'rewatch',
+        })
+      }
+    }
+
+    return data
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch title finish data')
+  }
+}
