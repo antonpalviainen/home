@@ -1,38 +1,24 @@
 import { fetchChannelVideos } from '@/lib/kpop/data'
+import Table from '@/ui/kpop/table'
 
 export default async function Page({
   params,
+  searchParams,
 }: {
   params: { channel: string }
+  searchParams: { page?: string; order?: string }
 }) {
+  const page = Math.max(Number(searchParams?.page ?? 1), 1)
+  const order = searchParams?.order === 'asc' ? 'asc' : 'desc'
   const videos = await fetchChannelVideos({
     name: decodeURIComponent(params.channel),
-    order: 'desc',
-    page: 1,
+    order,
+    page,
   })
 
-  if (!videos) {
-    return <div>Channel not found</div>
+  if (!videos || videos.length === 0) {
+    return <p>No videos found</p>
   }
 
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th className="">Date</th>
-          <th className="">Title</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-gray-200">
-        {videos.map((video) => (
-          <tr key={video.id}>
-            <td className="px-4 py-2">
-              {new Date(video.date).toLocaleDateString()}
-            </td>
-            <td className="px-4 py-2">{video.title}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  )
+  return <Table videos={videos} />
 }
