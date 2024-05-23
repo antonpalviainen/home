@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
+
 import { fetchAllVideos } from '@/lib/kpop/data'
 import Table from '@/ui/kpop/table'
+
+export const metadata: Metadata = {
+  title: 'All Videos',
+}
 
 export default async function Page({
   searchParams,
