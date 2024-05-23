@@ -67,17 +67,17 @@ export default function Table({ videos }: { videos: Videos }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <>
+    <div>
       <div className="w-full divide-y divide-gray-200">
         {videos.map((video, i) => {
           const isOpen = openIndex === i
           return (
             <div key={video.id} className="group">
               <div className="flex justify-between items-center">
-                <div className="w-28 px-4 py-2 whitespace-nowrap">
+                <div className="px-4 py-2 whitespace-nowrap">
                   {formatDate(new Date(video.date))}
                 </div>
-                <div className="w-40 px-4 py-2 whitespace-nowrap">
+                <div className="px-4 py-2 whitespace-nowrap">
                   <Link href={`/kpop/${video.channel.name}`}>
                     {video.channel.name}
                   </Link>
@@ -90,7 +90,7 @@ export default function Table({ videos }: { videos: Videos }) {
                     {video.title}
                   </a>
                 </div>
-                <div className="min-w-14 flex items-center px-4 py-2 space-x-1 text-sm whitespace-nowrap">
+                <div className="flex items-center px-4 py-2 space-x-1 text-sm whitespace-nowrap">
                   {video.tags.map(({ name }) => (
                     <Tag key={name} name={name} />
                   ))}
@@ -119,6 +119,6 @@ export default function Table({ videos }: { videos: Videos }) {
           )
         })}
       </div>
-    </>
+    </div>
   )
 }

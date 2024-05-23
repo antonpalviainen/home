@@ -1,6 +1,16 @@
 import { fetchChannelVideos } from '@/lib/kpop/data'
 import Table from '@/ui/kpop/table'
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { channel: string }
+}) {
+  return {
+    title: decodeURIComponent(params.channel),
+  }
+}
+
 export default async function Page({
   params,
   searchParams,
