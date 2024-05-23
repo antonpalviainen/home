@@ -111,6 +111,38 @@ model GakiSeriesName {
   @@index([language, name, abbreviation])
 }
 
+model YoutubeChannel {
+  id                String  @id
+  name              String  @unique // Custom name
+  title             String // Title from YouTube
+  thumbnail         String
+  customUrl         String?
+  uploadsPlaylistId String
+
+  videos YoutubeVideo[]
+}
+
+model YoutubeVideo {
+  id    String   @id
+  title String
+  date  DateTime
+
+  channel   YoutubeChannel @relation(fields: [channelId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  channelId String
+
+  tags YoutubeVideoTag[]
+
+  // Non-unique foreign key
+  @@index([channelId])
+}
+
+model YoutubeVideoTag {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  Videos YoutubeVideo[]
+}
+
 // Universal models
 
 enum Language {

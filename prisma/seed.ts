@@ -7,6 +7,7 @@ import {
   PrismaClient,
   Season,
 } from '@prisma/client'
+import { Y } from 'vitest/dist/reporters-P7C2ytIv.js'
 
 interface Anime {
   title: string
@@ -56,6 +57,24 @@ interface GakiJSON {
   episodes: GakiEpisode[]
   series: GakiSeries[]
 }
+
+interface YoutubeVideo {
+  id: string
+  title: string
+  date: string
+}
+
+interface YoutubeChannel {
+  id: string
+  name: string
+  title: string
+  thumbnail: string
+  custom_url: string
+  uploads_playlist_id: string
+  videos: YoutubeVideo[]
+}
+
+type YoutubeJSON = YoutubeChannel[]
 
 function languageEnum(lang: Language) {
   switch (lang) {
@@ -228,9 +247,45 @@ async function seedGaki(deleteRecords = false) {
   console.log('Seeded database')
 }
 
+async function seedYoutube(deleteRecords = false) {
+  const raw = await readFile('./prisma/youtube.json', 'utf-8')
+  const data = JSON.parse(raw) as YoutubeJSON
+
+  if (deleteRecords) {
+    await prisma.youtubeVideoTag.deleteMany({})
+    await prisma.youtubeVideo.deleteMany({})
+    await prisma.youtubeChannel.deleteMany({})
+  }
+
+  await prisma.$transaction(
+    data.map((channel) =>
+      prisma.youtubeChannel.create({
+        data: {
+          id: channel.id,
+          name: channel.name,
+          title: channel.title,
+          thumbnail: channel.thumbnail,
+          customUrl: channel.custom_url,
+          uploadsPlaylistId: channel.uploads_playlist_id,
+          videos: {
+            create: channel.videos.map((video) => ({
+              id: video.id,
+              title: video.title,
+              date: new Date(video.date),
+            })),
+          },
+        },
+      })
+    )
+  )
+
+  console.log('Seeded database')
+}
+
 async function main() {
-  await seedAnime(true)
+  // await seedAnime(true)
   // await seedGaki(true)
+  await seedYoutube(true)
 }
 
 main()
