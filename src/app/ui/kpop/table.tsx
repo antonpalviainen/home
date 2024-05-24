@@ -2,7 +2,7 @@
 
 import { PencilIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 
 import { updateTags } from '@/lib/kpop/actions'
 import { fetchAllVideos } from '@/lib/kpop/data'
@@ -15,90 +15,93 @@ function EditTags({ videoId, tags }: { videoId: string; tags: string[] }) {
   const updateTagsWithId = updateTags.bind(null, videoId)
 
   return (
-    <div className="px-4 py-2">
-      <form action={updateTagsWithId} className="flex space-x-2">
-        <label htmlFor="tags">Edit tags:</label>
-        <input
-          type="text"
-          id="tags"
-          name="tags"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          className="flex-1 border border-gray-300 rounded"
-        />
-        <button
-          type="submit"
-          className="px-1.5 border rounded-md text-gray-600 hover:bg-gray-50"
-        >
-          Save
-        </button>
-      </form>
-    </div>
+    <tr>
+      <td colSpan={5} className="px-8 py-2 text-gray-500">
+        <form action={updateTagsWithId} className="flex space-x-2">
+          <label htmlFor="tags">Edit tags:</label>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            className="flex-1 px-1 border border-gray-300 rounded"
+          />
+          <button
+            type="submit"
+            className="px-1.5 border border-gray-300 rounded-md hover:bg-gray-50"
+          >
+            Save
+          </button>
+        </form>
+      </td>
+    </tr>
   )
 }
 
 function Tag({ name }: { name: string }) {
-  let colors: string
-
-  switch (name) {
-    case 'watched':
-      colors = 'border-green-200 bg-green-50 text-green-600'
-      break
-    case 'cover':
-      colors = 'border-blue-200 bg-blue-50 text-blue-600'
-      break
-    case 'dance':
-      colors = 'border-indigo-200 bg-indigo-50 text-indigo-600'
-      break
-    case 'live':
-      colors = 'border-yellow-200 bg-yellow-50 text-yellow-600'
-      break
-    case 'mv':
-      colors = 'border-pink-200 bg-pink-50 text-pink-600'
-      break
-    default:
-      colors = 'border-gray-200 bg-gray-50 text-gray-600'
+  const colors = {
+    watched: 'border-green-200 bg-green-50 text-green-600',
+    cover: 'border-blue-200 bg-blue-50 text-blue-600',
+    dance: 'border-indigo-200 bg-indigo-50 text-indigo-600',
+    live: 'border-yellow-200 bg-yellow-50 text-yellow-600',
+    mv: 'border-pink-200 bg-pink-50 text-pink-600',
   }
 
-  return <span className={`px-1.5 rounded-md border ${colors}`}>{name}</span>
+  const color =
+    colors[name as keyof typeof colors] ??
+    'border-gray-200 bg-gray-50 text-gray-600'
+
+  return <span className={`px-1.5 rounded-md border ${color}`}>{name}</span>
 }
 
 export default function Table({ videos }: { videos: Videos }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div>
-      <div className="w-full divide-y divide-gray-200">
+    <table>
+      <thead>
+        <tr>
+          <th className="px-4 py-2">Date</th>
+          <th className="px-4 py-2">Channel</th>
+          <th className="px-4 py-2">Title</th>
+          <th className="px-4 py-2">Tags</th>
+          <th className="px-4 py-2"></th>
+        </tr>
+      </thead>
+      <tbody className="w-full">
         {videos.map((video, i) => {
           const isOpen = openIndex === i
           return (
-            <div key={video.id} className="group">
-              <div className="flex justify-between items-center">
-                <div className="px-4 py-2 whitespace-nowrap">
+            <Fragment key={video.id}>
+              <tr className="group border-t">
+                <td className="px-4 py-2 whitespace-nowrap">
                   {formatDate(new Date(video.date))}
-                </div>
-                <div className="px-4 py-2 whitespace-nowrap">
+                </td>
+                <td className="px-4 py-2 whitespace-nowrap">
                   <Link href={`/kpop/${video.channel.name}`}>
                     {video.channel.name}
                   </Link>
-                </div>
-                <div className=" grow px-4 py-2">
+                </td>
+                <td className="px-4 py-2">
                   <a
                     href={`https://www.youtube.com/watch?v=${video.id}`}
                     target="_blank"
                   >
                     {video.title}
                   </a>
-                </div>
-                <div className="flex items-center px-4 py-2 space-x-1 text-sm whitespace-nowrap">
+                </td>
+                <td className="flex items-center px-4 py-2 space-x-1 text-sm whitespace-nowrap">
                   {video.tags.map(({ name }) => (
                     <Tag key={name} name={name} />
                   ))}
+                </td>
+                <td>
                   <button
                     title={isOpen ? 'Cancel' : 'Edit tags'}
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className={`justify-center items-center p-1 border border-gray-200 rounded-md text-gray-400 hover:bg-gray-50 ${
-                      isOpen ? 'flex' : 'hidden group-hover:flex'
+                    className={`flex justify-center items-center p-1 border border-gray-200 rounded-md text-gray-400 hover:bg-gray-50 ${
+                      isOpen ? 'visible' : 'invisible group-hover:visible'
                     }`}
                   >
                     {isOpen ? (
@@ -107,18 +110,18 @@ export default function Table({ videos }: { videos: Videos }) {
                       <PencilIcon className="w-3 h-3" />
                     )}
                   </button>
-                </div>
-              </div>
+                </td>
+              </tr>
               {isOpen ? (
                 <EditTags
                   videoId={video.id}
                   tags={video.tags.map(({ name }) => name)}
                 />
               ) : null}
-            </div>
+            </Fragment>
           )
         })}
-      </div>
-    </div>
+      </tbody>
+    </table>
   )
 }

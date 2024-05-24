@@ -1,6 +1,10 @@
 'use server'
 
+import { unstable_noStore as noStore } from 'next/cache'
+
 import prisma from '@/lib/prisma'
+
+const ITEMS_PER_PAGE = 50
 
 export async function fetchAllVideos({
   order,
@@ -11,8 +15,6 @@ export async function fetchAllVideos({
   page: number
   tags?: string[]
 }) {
-  const take = 50
-
   try {
     const data = await prisma.youtubeVideo.findMany({
       select: {
@@ -24,8 +26,8 @@ export async function fetchAllVideos({
       },
       where: { OR: tags?.map((name) => ({ tags: { some: { name } } })) },
       orderBy: { date: order },
-      take,
-      skip: (page - 1) * take,
+      take: ITEMS_PER_PAGE,
+      skip: (page - 1) * ITEMS_PER_PAGE,
     })
 
     return data
@@ -44,8 +46,6 @@ export async function fetchChannelVideos({
   order: 'asc' | 'desc'
   page: number
 }) {
-  const take = 50
-
   try {
     const data = await prisma.youtubeVideo.findMany({
       select: {
@@ -57,8 +57,8 @@ export async function fetchChannelVideos({
       },
       where: { channel: { name } },
       orderBy: { date: order },
-      take,
-      skip: (page - 1) * take,
+      take: ITEMS_PER_PAGE,
+      skip: (page - 1) * ITEMS_PER_PAGE,
     })
 
     return data
@@ -66,4 +66,23 @@ export async function fetchChannelVideos({
     console.error('Database Error:', error)
     throw new Error('Failed to fetch videos')
   }
+}
+
+export async function fetchVideosPages({
+  channel,
+  tags,
+}: {
+  channel?: string
+  tags?: string[]
+}) {
+  noStore()
+
+  const count = await prisma.youtubeVideo.count({
+    where: {
+      channel: { name: channel },
+      OR: tags?.map((name) => ({ tags: { some: { name } } })),
+    },
+  })
+
+  return Math.ceil(count / ITEMS_PER_PAGE)
 }

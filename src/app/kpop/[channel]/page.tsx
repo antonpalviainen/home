@@ -1,4 +1,5 @@
-import { fetchChannelVideos } from '@/lib/kpop/data'
+import { fetchChannelVideos, fetchVideosPages } from '@/lib/kpop/data'
+import Pagination from '@/ui/kpop/pagination'
 import Table from '@/ui/kpop/table'
 
 export async function generateMetadata({
@@ -20,15 +21,25 @@ export default async function Page({
 }) {
   const page = Math.max(Number(searchParams?.page ?? 1), 1)
   const order = searchParams?.order === 'asc' ? 'asc' : 'desc'
+  const channel = decodeURIComponent(params.channel)
+
   const videos = await fetchChannelVideos({
-    name: decodeURIComponent(params.channel),
+    name: channel,
     order,
     page,
   })
+  const totalPages = await fetchVideosPages({ channel })
 
   if (!videos || videos.length === 0) {
     return <p>No videos found</p>
   }
 
-  return <Table videos={videos} />
+  return (
+    <div>
+      <Table videos={videos} />
+      <div className="flex mt-4 justify-center">
+        <Pagination totalPages={totalPages} />
+      </div>
+    </div>
+  )
 }
