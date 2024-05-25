@@ -62,12 +62,15 @@ interface YoutubeVideo {
   id: string
   title: string
   date: string
+  duration: string
+  description: string
 }
 
 interface YoutubeChannel {
   id: string
   name: string
   title: string
+  description: string
   thumbnail: string
   custom_url: string
   uploads_playlist_id: string
@@ -272,6 +275,7 @@ async function seedYoutube(deleteRecords = false) {
               id: video.id,
               title: video.title,
               date: new Date(video.date),
+              duration: video.duration,
             })),
           },
         },

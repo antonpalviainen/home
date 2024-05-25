@@ -7,7 +7,7 @@ import { useFormStatus } from 'react-dom'
 
 import { updateTags } from '@/lib/kpop/actions'
 import { fetchAllVideos } from '@/lib/kpop/data'
-import { formatDate } from '@/lib/utils'
+import { formatDate, formatDuration } from '@/lib/utils'
 
 type Videos = Awaited<ReturnType<typeof fetchAllVideos>>
 
@@ -76,6 +76,7 @@ export default function Table({ videos }: { videos: Videos }) {
             <th className="px-4 py-2">date</th>
             <th className="px-4 py-2">channel</th>
             <th className="px-4 py-2">title</th>
+            <th className="px-4 py-2">length</th>
             <th className="px-4 py-2">tags</th>
             <th className="px-4 py-2"></th>
           </tr>
@@ -101,6 +102,9 @@ export default function Table({ videos }: { videos: Videos }) {
                     >
                       {video.title}
                     </a>
+                  </td>
+                  <td className="px-4 py-2 text-right">
+                    {formatDuration(video.duration)}
                   </td>
                   <td className="flex justify-end items-center p-2 pl-4 space-x-1 text-sm whitespace-nowrap">
                     {video.tags.map(({ name }) => (

@@ -123,9 +123,10 @@ model YoutubeChannel {
 }
 
 model YoutubeVideo {
-  id    String   @id
-  title String
-  date  DateTime
+  id       String   @id
+  title    String
+  date     DateTime
+  duration String // ISO 8601 duration
 
   channel   YoutubeChannel @relation(fields: [channelId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   channelId String

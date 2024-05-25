@@ -61,7 +61,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="relative text-2xl lg:text-base">
+    <header className="relative text-2xl md:text-xl lg:text-base">
       <div className="flex justify-between px-4 py-2">
         <button
           ref={buttonRef}
