@@ -27,35 +27,41 @@ function Tag({ name }: { name: string }) {
   return <span className={`px-1 rounded-md border ${color}`}>{name}</span>
 }
 
+function VideoFilters() {
+  return (
+    <div className="flex justify-center p-4 pt-2 gap-8 lg:justify-end">
+      <div>
+        <input
+          type="checkbox"
+          name="hide-watched"
+          id="hide-watched"
+          className="accent-black"
+        />
+        <label htmlFor="hide-watched" className="ml-2">
+          hide watched
+        </label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="hide-shorts"
+          id="hide-shorts"
+          className="accent-black"
+        />
+        <label htmlFor="hide-shorts" className="ml-2">
+          hide shorts
+        </label>
+      </div>
+    </div>
+  )
+}
+
 export default function Table({ videos }: { videos: Videos }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <div>
-      <div className="flex justify-center p-4 pt-2 gap-8 lg:justify-end">
-        <div>
-          <input
-            type="checkbox"
-            name="hide-watched"
-            id="hide-watched"
-            className="accent-black"
-          />
-          <label htmlFor="hide-watched" className="ml-2">
-            hide watched
-          </label>
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            name="hide-shorts"
-            id="hide-shorts"
-            className="accent-black"
-          />
-          <label htmlFor="hide-shorts" className="ml-2">
-            hide shorts
-          </label>
-        </div>
-      </div>
+      <VideoFilters />
       <div className="border rounded-lg overflow-x-auto">
         <table className="w-full">
           <thead>
