@@ -12,7 +12,9 @@ export function formatDuration(duration: string) {
   if (!m) return '00:00'
 
   const hours = m[1] ? `${m[1]}:` : ''
-  const minutes = m[2] ? `${m[2]}:` : '0:'
+  const minutes = m[1]
+    ? `${m[2] ? m[2].padStart(2, '0') : '00'}:`
+    : `${m[2] ? `${m[2]}:` : '0:'}`
   const seconds = m[3] ? `${m[3].padStart(2, '0')}` : '00'
 
   return `${hours}${minutes}${seconds}`

@@ -4,11 +4,15 @@ import { revalidatePath } from 'next/cache'
 
 import prisma from '@/lib/prisma'
 
-export async function updateTags(id: string, formData: FormData) {
+export async function updateTags(
+  id: string,
+  prevState: { success: boolean | null; message?: string },
+  formData: FormData
+) {
   const rawTags = formData.get('tags')
-
+  
   if (typeof rawTags !== 'string') {
-    return { error: 'Invalid tags' }
+    return { success: false, message: 'Invalid tags' }
   }
 
   const tags = rawTags.split(' ').filter(Boolean)
@@ -28,8 +32,9 @@ export async function updateTags(id: string, formData: FormData) {
     })
 
     revalidatePath('/kpop', 'page')
+    return { success: true }
   } catch (error) {
     console.error(error)
-    return { error: 'Database error: Failed to update tags' }
+    return { success: false, message: 'Database error: Failed to update tags' }
   }
 }

@@ -3,51 +3,13 @@
 import { PencilIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
-import { useFormStatus } from 'react-dom'
 
-import { updateTags } from '@/lib/kpop/actions'
 import { fetchAllVideos } from '@/lib/kpop/data'
 import { formatDate, formatDuration } from '@/lib/utils'
 
+import { TagUpdateFormRow } from './tag-update-form-row'
+
 type Videos = Awaited<ReturnType<typeof fetchAllVideos>>
-
-function Submit() {
-  const status = useFormStatus()
-
-  return (
-    <button
-      type="submit"
-      disabled={status.pending}
-      className="px-1.5 border rounded-md hover:bg-gray-50 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400"
-    >
-      Save
-    </button>
-  )
-}
-
-function EditTags({ videoId, tags }: { videoId: string; tags: string[] }) {
-  const [value, setValue] = useState(tags.join(' '))
-  const updateTagsWithId = updateTags.bind(null, videoId)
-
-  return (
-    <tr>
-      <td colSpan={5} className="px-8 py-2">
-        <form action={updateTagsWithId} className="flex space-x-2">
-          <label htmlFor="tags">Edit tags:</label>
-          <input
-            type="text"
-            id="tags"
-            name="tags"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            className="flex-1 px-1 border rounded"
-          />
-          <Submit />
-        </form>
-      </td>
-    </tr>
-  )
-}
 
 function Tag({ name }: { name: string }) {
   const colors = {
@@ -70,7 +32,7 @@ export default function Table({ videos }: { videos: Videos }) {
 
   return (
     <div>
-      <div className="flex justify-center p-4 gap-8 lg:justify-end">
+      <div className="flex justify-center p-4 pt-2 gap-8 lg:justify-end">
         <div>
           <input
             type="checkbox"
@@ -153,9 +115,10 @@ export default function Table({ videos }: { videos: Videos }) {
                     </td>
                   </tr>
                   {isOpen ? (
-                    <EditTags
+                    <TagUpdateFormRow
                       videoId={video.id}
                       tags={video.tags.map(({ name }) => name)}
+                      onTagsUpdate={() => setOpenIndex(null)}
                     />
                   ) : null}
                 </Fragment>
