@@ -6,7 +6,7 @@ import prisma from '@/lib/prisma'
 
 export async function updateTags(
   id: string,
-  prevState: { success: boolean | null; message?: string },
+  prevState: { success: boolean; message?: string },
   formData: FormData
 ) {
   const rawTags = formData.get('tags')
