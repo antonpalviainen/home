@@ -113,13 +113,15 @@ model GakiSeriesName {
 
 model YoutubeChannel {
   id                String  @id
-  name              String  @unique // Custom name
+  name              String
   title             String // Title from YouTube
   thumbnail         String
   customUrl         String?
   uploadsPlaylistId String
 
   videos YoutubeVideo[]
+
+  @@index([name])
 }
 
 model YoutubeVideo {

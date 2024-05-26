@@ -250,15 +250,9 @@ async function seedGaki(deleteRecords = false) {
   console.log('Seeded database')
 }
 
-async function seedYoutube(deleteRecords = false) {
+async function seedYoutube() {
   const raw = await readFile('./prisma/youtube.json', 'utf-8')
   const data = JSON.parse(raw) as YoutubeJSON
-
-  if (deleteRecords) {
-    await prisma.youtubeVideoTag.deleteMany({})
-    await prisma.youtubeVideo.deleteMany({})
-    await prisma.youtubeChannel.deleteMany({})
-  }
 
   await prisma.$transaction(
     data.map((channel) =>
@@ -289,7 +283,7 @@ async function seedYoutube(deleteRecords = false) {
 async function main() {
   // await seedAnime(true)
   // await seedGaki(true)
-  await seedYoutube(true)
+  await seedYoutube()
 }
 
 main()

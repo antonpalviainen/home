@@ -85,7 +85,7 @@ export default function Table({ videos }: { videos: Videos }) {
                     </td>
                     <td className="px-4 py-2 whitespace-nowrap">
                       <Link href={`/kpop/${video.channel.name}`}>
-                        {video.channel.name}
+                        {video.channel.title}
                       </Link>
                     </td>
                     <td className="px-4 py-2">

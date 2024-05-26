@@ -51,7 +51,7 @@ export function TagUpdateFormRow({
           <Submit />
         </form>
         {state.success === false ? (
-          <p className="text-red-500">{state?.message}</p>
+          <p className="mt-2 text-red-500">{state?.message}</p>
         ) : null}
       </td>
     </tr>
