@@ -19,7 +19,7 @@ export async function updateTags(
 
   for (const tag of rawTags.split(' ')) {
     if (tag.length === 0) continue
-    if (tag.length >= 10) {
+    if (tag.length > 10) {
       return { success: false, message: `Tag '${tag}' is too long. Tags must be 10 characters or shorter.` }
     }
     tags.push(tag)
