@@ -8,7 +8,7 @@ export async function generateMetadata({
   params: { channel: string }
 }) {
   return {
-    title: decodeURIComponent(params.channel),
+    title: params.channel,
   }
 }
 
@@ -21,7 +21,7 @@ export default async function Page({
 }) {
   const page = Math.max(Number(searchParams?.page ?? 1), 1)
   const order = searchParams?.order === 'asc' ? 'asc' : 'desc'
-  const channel = decodeURIComponent(params.channel)
+  const channel = params.channel
 
   const videos = await fetchChannelVideos({
     name: channel,

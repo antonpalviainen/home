@@ -18,7 +18,7 @@ function Submit() {
     <button
       type="submit"
       disabled={status.pending}
-      className="px-1.5 border border-gray-300 rounded-md hover:bg-gray-50 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400"
+      className="px-1.5 border rounded-md hover:bg-gray-50 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400"
     >
       Save
     </button>
@@ -31,7 +31,7 @@ function EditTags({ videoId, tags }: { videoId: string; tags: string[] }) {
 
   return (
     <tr>
-      <td colSpan={5} className="px-8 py-2 text-gray-500">
+      <td colSpan={5} className="px-8 py-2">
         <form action={updateTagsWithId} className="flex space-x-2">
           <label htmlFor="tags">Edit tags:</label>
           <input
@@ -40,7 +40,7 @@ function EditTags({ videoId, tags }: { videoId: string; tags: string[] }) {
             name="tags"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            className="flex-1 px-1 border border-gray-300 rounded"
+            className="flex-1 px-1 border rounded"
           />
           <Submit />
         </form>
@@ -62,82 +62,108 @@ function Tag({ name }: { name: string }) {
     colors[name as keyof typeof colors] ??
     'border-gray-200 bg-gray-50 text-gray-600'
 
-  return <span className={`px-1.5 rounded-md border ${color}`}>{name}</span>
+  return <span className={`px-1 rounded-md border ${color}`}>{name}</span>
 }
 
 export default function Table({ videos }: { videos: Videos }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div className="border rounded-lg overflow-x-auto">
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th className="px-4 py-2">date</th>
-            <th className="px-4 py-2">channel</th>
-            <th className="px-4 py-2">title</th>
-            <th className="px-4 py-2">length</th>
-            <th className="px-4 py-2">tags</th>
-            <th className="px-4 py-2"></th>
-          </tr>
-        </thead>
-        <tbody className="w-full">
-          {videos.map((video, i) => {
-            const isOpen = openIndex === i
-            return (
-              <Fragment key={video.id}>
-                <tr className="group border-t">
-                  <td className="px-4 py-2 whitespace-nowrap">
-                    {formatDate(new Date(video.date))}
-                  </td>
-                  <td className="px-4 py-2 whitespace-nowrap">
-                    <Link href={`/kpop/${video.channel.name}`}>
-                      {video.channel.name}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-2">
-                    <a
-                      href={`https://www.youtube.com/watch?v=${video.id}`}
-                      target="_blank"
-                    >
-                      {video.title}
-                    </a>
-                  </td>
-                  <td className="px-4 py-2 text-right">
-                    {formatDuration(video.duration)}
-                  </td>
-                  <td className="flex justify-end items-center p-2 pl-4 space-x-1 text-sm whitespace-nowrap">
-                    {video.tags.map(({ name }) => (
-                      <Tag key={name} name={name} />
-                    ))}
-                  </td>
-                  <td>
-                    <button
-                      title={isOpen ? 'Cancel' : 'Edit tags'}
-                      onClick={() => setOpenIndex(isOpen ? null : i)}
-                      className={`flex justify-center items-center p-1 border border-gray-200 rounded-md text-gray-400 hover:bg-gray-50 ${
-                        isOpen ? 'visible' : 'invisible group-hover:visible'
-                      }`}
-                    >
-                      {isOpen ? (
-                        <XMarkIcon className="w-3 h-3" />
-                      ) : (
-                        <PencilIcon className="w-3 h-3" />
-                      )}
-                    </button>
-                  </td>
-                </tr>
-                {isOpen ? (
-                  <EditTags
-                    videoId={video.id}
-                    tags={video.tags.map(({ name }) => name)}
-                  />
-                ) : null}
-              </Fragment>
-            )
-          })}
-        </tbody>
-      </table>
+    <div>
+      <div className="flex justify-center p-4 gap-8 lg:justify-end">
+        <div>
+          <input
+            type="checkbox"
+            name="hide-watched"
+            id="hide-watched"
+            className="accent-black"
+          />
+          <label htmlFor="hide-watched" className="ml-2">
+            hide watched
+          </label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="hide-shorts"
+            id="hide-shorts"
+            className="accent-black"
+          />
+          <label htmlFor="hide-shorts" className="ml-2">
+            hide shorts
+          </label>
+        </div>
+      </div>
+      <div className="border rounded-lg overflow-x-auto">
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th className="px-4 py-2">date</th>
+              <th className="px-4 py-2">channel</th>
+              <th className="px-4 py-2">title</th>
+              <th className="px-4 py-2">length</th>
+              <th className="px-4 py-2">tags</th>
+              <th className="px-4 py-2"></th>
+            </tr>
+          </thead>
+          <tbody className="w-full">
+            {videos.map((video, i) => {
+              const isOpen = openIndex === i
+              return (
+                <Fragment key={video.id}>
+                  <tr className="group border-t">
+                    <td className="px-4 py-2 whitespace-nowrap">
+                      {formatDate(new Date(video.date))}
+                    </td>
+                    <td className="px-4 py-2 whitespace-nowrap">
+                      <Link href={`/kpop/${video.channel.name}`}>
+                        {video.channel.name}
+                      </Link>
+                    </td>
+                    <td className="px-4 py-2">
+                      <a
+                        href={`https://www.youtube.com/watch?v=${video.id}`}
+                        target="_blank"
+                      >
+                        {video.title}
+                      </a>
+                    </td>
+                    <td className="px-4 py-2 text-right">
+                      {formatDuration(video.duration)}
+                    </td>
+                    <td className="p-2 pl-4 space-x-1 text-sm whitespace-nowrap">
+                      {video.tags.map(({ name }) => (
+                        <Tag key={name} name={name} />
+                      ))}
+                    </td>
+                    <td>
+                      <button
+                        title={isOpen ? 'Cancel' : 'Edit tags'}
+                        onClick={() => setOpenIndex(isOpen ? null : i)}
+                        className={`flex justify-center items-center p-1 border rounded-md text-gray-400 hover:bg-gray-50 ${
+                          isOpen ? 'visible' : 'invisible group-hover:visible'
+                        }`}
+                      >
+                        {isOpen ? (
+                          <XMarkIcon className="w-3 h-3" />
+                        ) : (
+                          <PencilIcon className="w-3 h-3" />
+                        )}
+                      </button>
+                    </td>
+                  </tr>
+                  {isOpen ? (
+                    <EditTags
+                      videoId={video.id}
+                      tags={video.tags.map(({ name }) => name)}
+                    />
+                  ) : null}
+                </Fragment>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
