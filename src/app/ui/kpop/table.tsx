@@ -4,57 +4,12 @@ import { PencilIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 
-import { fetchAllVideos } from '@/lib/kpop/data'
+import { Videos } from '@/lib/kpop/definitions'
 import { formatDate, formatDuration } from '@/lib/utils'
 
+import { Tag } from './tag'
 import { TagUpdateFormRow } from './tag-update-form-row'
-
-type Videos = Awaited<ReturnType<typeof fetchAllVideos>>
-
-function Tag({ name }: { name: string }) {
-  const colors = {
-    watched: 'border-green-200 bg-green-50 text-green-600',
-    cover: 'border-blue-200 bg-blue-50 text-blue-600',
-    dance: 'border-indigo-200 bg-indigo-50 text-indigo-600',
-    live: 'border-yellow-200 bg-yellow-50 text-yellow-600',
-    mv: 'border-pink-200 bg-pink-50 text-pink-600',
-  }
-
-  const color =
-    colors[name as keyof typeof colors] ??
-    'border-gray-200 bg-gray-50 text-gray-600'
-
-  return <span className={`px-1 rounded-md border ${color}`}>{name}</span>
-}
-
-function VideoFilters() {
-  return (
-    <div className="flex justify-center p-4 pt-2 gap-8 lg:justify-end">
-      <div>
-        <input
-          type="checkbox"
-          name="hide-watched"
-          id="hide-watched"
-          className="accent-black"
-        />
-        <label htmlFor="hide-watched" className="ml-2">
-          hide watched
-        </label>
-      </div>
-      <div>
-        <input
-          type="checkbox"
-          name="hide-shorts"
-          id="hide-shorts"
-          className="accent-black"
-        />
-        <label htmlFor="hide-shorts" className="ml-2">
-          hide shorts
-        </label>
-      </div>
-    </div>
-  )
-}
+import { VideoFilters } from './video-filters'
 
 export default function Table({ videos }: { videos: Videos }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -74,7 +29,7 @@ export default function Table({ videos }: { videos: Videos }) {
               <th className="px-4 py-2"></th>
             </tr>
           </thead>
-          <tbody className="w-full">
+          <tbody>
             {videos.map((video, i) => {
               const isOpen = openIndex === i
               return (
