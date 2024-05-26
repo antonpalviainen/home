@@ -74,7 +74,7 @@ export default function Table({ videos }: { videos: Videos }) {
               <th className="px-4 py-2"></th>
             </tr>
           </thead>
-          <tbody className="w-full">
+          <tbody>
             {videos.map((video, i) => {
               const isOpen = openIndex === i
               return (
