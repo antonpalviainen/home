@@ -21,10 +21,10 @@ export default function VideosDisplay({
 }) {
   return (
     <>
-      <MediaQuery maxWidth={640}>
+      <MediaQuery maxWidth={1024}>
         <List videos={videos} />
       </MediaQuery>
-      <MediaQuery minWidth={641}>
+      <MediaQuery minWidth={1025}>
         <Table videos={videos} />
       </MediaQuery>
       <div className="flex mt-4 justify-center">

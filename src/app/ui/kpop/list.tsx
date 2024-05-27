@@ -9,7 +9,7 @@ export default function List({ videos }: { videos: Videos }) {
   return (
     <ul className="border divide-y rounded-lg">
       {videos.map((video) => (
-        <li key={video.id} className="px-4 py-2 space-y-1">
+        <li key={video.id} className="p-2 space-y-1">
           <div>
             <a
               href={`https://www.youtube.com/watch?v=${video.id}`}
