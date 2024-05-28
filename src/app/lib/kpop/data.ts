@@ -10,11 +10,19 @@ export async function fetchVideos({
   page,
   order,
   channel,
+  shorts,
 }: {
   page: number
   order: 'asc' | 'desc'
   channel?: string
+  shorts?: boolean
 }) {
+  const filteredTags = []
+
+  if (shorts) {
+    filteredTags.push('short')
+  }
+
   try {
     const data = await prisma.youtubeVideo.findMany({
       select: {
@@ -23,9 +31,12 @@ export async function fetchVideos({
         date: true,
         duration: true,
         channel: { select: { name: true, title: true } },
-        tags: { select: { name: true } },
+        tags: { select: { name: true }, orderBy: { name: 'asc' } },
       },
-      where: { channel: { name: channel } },
+      where: {
+        channel: { name: channel },
+        tags: { every: { name: { notIn: filteredTags } } },
+      },
       orderBy: { date: order },
       take: ITEMS_PER_PAGE,
       skip: (page - 1) * ITEMS_PER_PAGE,
@@ -38,12 +49,25 @@ export async function fetchVideos({
   }
 }
 
-export async function fetchVideosPages({ channel }: { channel?: string }) {
+export async function fetchVideosPages({
+  channel,
+  shorts,
+}: {
+  channel?: string
+  shorts?: boolean
+}) {
   noStore()
+
+  const filteredTags = []
+
+  if (shorts) {
+    filteredTags.push('short')
+  }
 
   const count = await prisma.youtubeVideo.count({
     where: {
       channel: { name: channel },
+      tags: { every: { name: { notIn: filteredTags } } },
     },
   })
 

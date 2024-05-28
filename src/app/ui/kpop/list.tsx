@@ -28,7 +28,7 @@ export default function List({ videos }: { videos: Videos }) {
               {' - '}
               <span>{formatDuration(video.duration)}</span>
             </div>
-            <div>
+            <div className="space-x-1">
               {video.tags.map(({ name }) => (
                 <Tag key={name} name={name} />
               ))}
