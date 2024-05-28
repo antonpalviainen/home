@@ -1,4 +1,3 @@
-
 export function VideoFilters() {
   return (
     <div className="flex justify-center p-4 pt-2 gap-8 lg:justify-end">
@@ -7,7 +6,8 @@ export function VideoFilters() {
           type="checkbox"
           name="hide-watched"
           id="hide-watched"
-          className="accent-black" />
+          className="accent-black"
+        />
         <label htmlFor="hide-watched" className="ml-2">
           hide watched
         </label>
@@ -17,7 +17,8 @@ export function VideoFilters() {
           type="checkbox"
           name="hide-shorts"
           id="hide-shorts"
-          className="accent-black" />
+          className="accent-black"
+        />
         <label htmlFor="hide-shorts" className="ml-2">
           hide shorts
         </label>
