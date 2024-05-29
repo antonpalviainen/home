@@ -54,10 +54,12 @@ export default function Table({ videos }: { videos: Videos }) {
                     <td className="px-4 py-2 text-right">
                       {formatDuration(video.duration)}
                     </td>
-                    <td className="p-2 pl-4 space-x-1 text-sm whitespace-nowrap">
-                      {video.tags.map(({ name }) => (
-                        <Tag key={name} name={name} />
-                      ))}
+                    <td className="p-2 pl-4">
+                      <div className="flex justify-end flex-wrap gap-1 text-sm whitespace-nowrap">
+                        {video.tags.map(({ name }) => (
+                          <Tag key={name} name={name} />
+                        ))}
+                      </div>
                     </td>
                     <td>
                       <button
