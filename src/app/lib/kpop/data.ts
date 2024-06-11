@@ -75,31 +75,42 @@ export async function fetchVideosPages({
 }
 
 export async function fetchNextVideo(channel: string) {
-  const lastVideo = await prisma.youtubeVideo.findFirst({
-    select: { date: true },
-    where: { channel: { name: channel }, tags: { some: { name: 'watched' } } },
-    orderBy: { date: 'desc' },
-  })
+  let lastVideo
 
-  console.log('lastVideo', lastVideo)
+  try {
+    lastVideo = await prisma.youtubeVideo.findFirst({
+      select: { date: true },
+      where: {
+        channel: { name: channel },
+        tags: { some: { name: 'watched' } },
+      },
+      orderBy: { date: 'desc' },
+    })
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch last video')
+  }
 
-  const nextVideo = await prisma.youtubeVideo.findFirst({
-    select: {
-      id: true,
-      title: true,
-      date: true,
-      duration: true,
-      channel: { select: { name: true } },
-    },
-    where: {
-      channel: { name: channel },
-      date: { gte: lastVideo?.date },
-      tags: { none: { name: 'watched' } },
-    },
-    orderBy: { date: 'asc' },
-  })
+  try {
+    const nextVideo = await prisma.youtubeVideo.findFirst({
+      select: {
+        id: true,
+        title: true,
+        date: true,
+        duration: true,
+        channel: { select: { name: true } },
+      },
+      where: {
+        channel: { name: channel },
+        date: { gte: lastVideo?.date },
+        tags: { none: { name: 'watched' } },
+      },
+      orderBy: { date: 'asc' },
+    })
 
-  console.log('nextVideo', nextVideo)
-
-  return nextVideo
+    return nextVideo
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch next video')
+  }
 }
