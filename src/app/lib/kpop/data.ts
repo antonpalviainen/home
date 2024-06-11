@@ -73,3 +73,33 @@ export async function fetchVideosPages({
 
   return Math.ceil(count / ITEMS_PER_PAGE)
 }
+
+export async function fetchNextVideo(channel: string) {
+  const lastVideo = await prisma.youtubeVideo.findFirst({
+    select: { date: true },
+    where: { channel: { name: channel }, tags: { some: { name: 'watched' } } },
+    orderBy: { date: 'desc' },
+  })
+
+  console.log('lastVideo', lastVideo)
+
+  const nextVideo = await prisma.youtubeVideo.findFirst({
+    select: {
+      id: true,
+      title: true,
+      date: true,
+      duration: true,
+      channel: { select: { name: true } },
+    },
+    where: {
+      channel: { name: channel },
+      date: { gte: lastVideo?.date },
+      tags: { none: { name: 'watched' } },
+    },
+    orderBy: { date: 'asc' },
+  })
+
+  console.log('nextVideo', nextVideo)
+
+  return nextVideo
+}
