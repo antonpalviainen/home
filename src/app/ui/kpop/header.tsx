@@ -8,7 +8,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="text-2xl">
+    <div className="relative text-2xl">
       <header className="px-2 py-2 border-b border-neutral-200">
         <button onClick={() => setOpen((prev) => !prev)}>channels</button>
       </header>
