@@ -11,7 +11,9 @@ function Video({ video }: { video: Video | null }) {
 
   return (
     <li className="mb-2">
-      <h2 className="p-2 text-lg">{video.channel.name}</h2>
+      <h2 className="p-2 text-lg">
+        <Link href={`/kpop/${video.channel.name}`}>{video.channel.name}</Link>
+      </h2>
       <div className="p-2 border border-neutral-200 rounded-lg">
         <h3>{video.title}</h3>
         <p className="text-neutral-500 text-sm">
