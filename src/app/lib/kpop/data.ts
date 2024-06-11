@@ -98,7 +98,7 @@ export async function fetchNextVideo(channel: string) {
         title: true,
         date: true,
         duration: true,
-        channel: { select: { name: true } },
+        channel: { select: { name: true, title: true } },
       },
       where: {
         channel: { name: channel },
