@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { fetchVideos, fetchVideosPages } from '@/lib/kpop/data'
 import type { Video } from '@/lib/kpop/definitions'
 import { formatDate, formatDuration } from '@/lib/utils'
@@ -16,11 +18,19 @@ function Video({ video }: { video: Video }) {
   return (
     <li>
       <div className="p-2 space-y-1 bg-white rounded-lg shadow">
-        <h3>{video.title}</h3>
+        <Link
+          href={`https://www.youtube.com/watch?v=${video.id}`}
+          target="_blank"
+        >
+          {video.title}
+        </Link>
         <div className="flex justify-between items-center">
           <span className="text-neutral-500 text-sm">
-            {formatDate(video.date)} - {video.channel.title} -{' '}
-            {formatDuration(video.duration)}
+            {formatDate(video.date)} -{' '}
+            <Link href={`/kpop/${video.channel.name}`}>
+              {video.channel.title}
+            </Link>{' '}
+            - {formatDuration(video.duration)}
           </span>
           <div className="space-x-1">
             {video.tags?.map(({ name }) => (
