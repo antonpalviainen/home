@@ -74,9 +74,25 @@ export function EditModal({
             className="w-full px-2 py-1 border border-neutral-200 rounded-lg"
           />
           <div className="mt-2 space-x-2">
-            <button onClick={() => addTag('watched')}>+watched</button>
-            <button onClick={() => addTag('bts')}>+bts</button>
-            <button onClick={() => addTag('vlog')}>+vlog</button>
+            <span className="text-neutral-500">Toggle tags:</span>
+            <button
+              onClick={() => addTag('watched')}
+              className="px-1.5 bg-neutral-100 rounded-md text-sm text-neutral-500 hover:bg-neutral-200"
+            >
+              watched
+            </button>
+            <button
+              onClick={() => addTag('bts')}
+              className="px-1.5 bg-neutral-100 rounded-md text-sm text-neutral-500 hover:bg-neutral-200"
+            >
+              bts
+            </button>
+            <button
+              onClick={() => addTag('vlog')}
+              className="px-1.5 bg-neutral-100 rounded-md text-sm text-neutral-500 hover:bg-neutral-200"
+            >
+              vlog
+            </button>
           </div>
           {error ? <p className="mt-2 text-red-500">{error}</p> : null}
           <div className="flex justify-end gap-2 mt-4">
