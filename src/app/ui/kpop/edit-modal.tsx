@@ -82,14 +82,14 @@ export function EditModal({
           <div className="flex justify-end gap-2 mt-4">
             <button
               onClick={onClose}
-              className="px-3 py-1 font-medium border rounded-lg"
+              className="px-3 py-1 font-medium border rounded-lg hover:bg-neutral-100"
             >
               close
             </button>
             <button
               disabled={submitting}
               onClick={handleSubmit}
-              className="px-3 py-1 font-medium border rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 py-1 font-medium border rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               save
             </button>
