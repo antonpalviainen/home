@@ -103,8 +103,8 @@ function PaginationArrow({
     {
       'pointer-events-none text-gray-300': isDisabled,
       'hover:bg-gray-100': !isDisabled,
-      'mr-2 rounded-l-lg md:mr-4': direction === 'left',
-      'ml-2 rounded-r-lg md:ml-4': direction === 'right',
+      'mr-2 rounded-l-lg': direction === 'left',
+      'ml-2 rounded-r-lg': direction === 'right',
     }
   )
 
