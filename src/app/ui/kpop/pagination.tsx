@@ -71,14 +71,11 @@ function PaginationNumber({
   position?: 'first' | 'last' | 'middle' | 'single'
   isActive: boolean
 }) {
-  const className = clsx(
-    'flex h-10 w-10 items-center justify-center bg-white text-sm',
-    {
-      'z-10 bg-black text-white': isActive,
-      'hover:bg-gray-100': !isActive && position !== 'middle',
-      'text-gray-300': position === 'middle',
-    }
-  )
+  const className = clsx('flex h-10 w-10 items-center justify-center text-sm', {
+    'z-10 bg-black text-white': isActive,
+    'hover:bg-gray-100': !isActive && position !== 'middle',
+    'text-gray-300': position === 'middle',
+  })
 
   return isActive || position === 'middle' ? (
     <div className={className}>{page}</div>
@@ -98,15 +95,12 @@ function PaginationArrow({
   direction: 'left' | 'right'
   isDisabled?: boolean
 }) {
-  const className = clsx(
-    'flex h-10 w-10 items-center justify-center bg-white',
-    {
-      'pointer-events-none text-gray-300': isDisabled,
-      'hover:bg-gray-100': !isDisabled,
-      'mr-2 rounded-l-lg': direction === 'left',
-      'ml-2 rounded-r-lg': direction === 'right',
-    }
-  )
+  const className = clsx('flex h-10 w-10 items-center justify-center', {
+    'pointer-events-none text-gray-300': isDisabled,
+    'hover:bg-gray-100': !isDisabled,
+    'mr-2 rounded-l-lg': direction === 'left',
+    'ml-2 rounded-r-lg': direction === 'right',
+  })
 
   const icon =
     direction === 'left' ? (
