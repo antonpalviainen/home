@@ -18,7 +18,10 @@ export default function Page({
     <>
       <Header sortable={true} />
       <main className="p-2">
-        <Suspense fallback={<VideoSkeleton />}>
+        <Suspense
+          key={JSON.stringify(searchParams)}
+          fallback={<VideoSkeleton />}
+        >
           <Videos channel={params.channel} page={page} order={order} />
         </Suspense>
       </main>
