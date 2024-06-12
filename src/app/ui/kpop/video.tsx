@@ -21,12 +21,7 @@ export default function Video({ video }: { video: Video }) {
 
   return (
     <li>
-      {open ? (
-        <EditModal
-          video={video}
-          onClose={() => setOpen(false)}
-        />
-      ) : null}
+      {open ? <EditModal video={video} onClose={() => setOpen(false)} /> : null}
       <div
         onClick={() => setOpen(true)}
         className="p-2 space-y-1 bg-white rounded-lg shadow"

@@ -50,12 +50,10 @@ export default async function Dashboard() {
   }
 
   return (
-    <main className="p-2">
-      <ul>
-        {videos.map((video, i) => (
-          <Video key={video?.id ?? i} video={video} />
-        ))}
-      </ul>
-    </main>
+    <ul>
+      {videos.map((video, i) => (
+        <Video key={video?.id ?? i} video={video} />
+      ))}
+    </ul>
   )
 }

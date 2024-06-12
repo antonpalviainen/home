@@ -16,7 +16,7 @@ export default async function Videos({
   const totalPages = await fetchVideosPages({ channel })
 
   return (
-    <main className="p-2">
+    <>
       <ul className="space-y-2">
         {videos.map((video) => (
           <Video key={video.id} video={video} />
@@ -25,6 +25,6 @@ export default async function Videos({
       <div className="flex justify-center my-4">
         <Pagination totalPages={totalPages} />
       </div>
-    </main>
+    </>
   )
 }

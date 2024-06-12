@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 
 import Header from '@/ui/kpop/header'
+import { VideoSkeleton } from '@/ui/kpop/skeletons'
 import Videos from '@/ui/kpop/videos'
 
 export default function Page({
@@ -16,9 +17,11 @@ export default function Page({
   return (
     <>
       <Header sortable={true} />
-      <Suspense fallback={<p>Loading...</p>}>
-        <Videos channel={params.channel} page={page} order={order} />
-      </Suspense>
+      <main className="p-2">
+        <Suspense fallback={<VideoSkeleton />}>
+          <Videos channel={params.channel} page={page} order={order} />
+        </Suspense>
+      </main>
     </>
   )
 }
