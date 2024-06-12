@@ -15,7 +15,7 @@ export default function Page({
 
   return (
     <>
-      <Header />
+      <Header sortable={true} />
       <Suspense fallback={<p>Loading...</p>}>
         <Videos channel={params.channel} page={page} order={order} />
       </Suspense>
