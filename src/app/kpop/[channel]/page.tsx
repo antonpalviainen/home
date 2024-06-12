@@ -14,11 +14,11 @@ export default function Page({
   const order = searchParams?.order === 'asc' ? 'asc' : 'desc'
 
   return (
-    <div>
+    <>
       <Header />
       <Suspense fallback={<p>Loading...</p>}>
         <Videos channel={params.channel} page={page} order={order} />
       </Suspense>
-    </div>
+    </>
   )
 }

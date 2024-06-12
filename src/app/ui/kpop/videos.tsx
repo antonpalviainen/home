@@ -4,7 +4,7 @@ import { formatDate, formatDuration } from '@/lib/utils'
 
 function Tag({ name }: { name: string }) {
   return (
-    <span className="px-1 bg-neutral-100 border border-neutral-200 rounded-lg text-sm text-neutral-500">
+    <span className="px-1.5 py-0.5 bg-red-200 rounded-lg text-sm text-neutral-500">
       {name}
     </span>
   )
@@ -13,7 +13,7 @@ function Tag({ name }: { name: string }) {
 function Video({ video }: { video: Video }) {
   return (
     <li>
-      <div className="p-2 space-y-1">
+      <div className="p-2 space-y-1 bg-white rounded-lg shadow">
         <h3>{video.title}</h3>
         <div className="flex justify-between items-center">
           <span className="text-neutral-500 text-sm">
@@ -43,8 +43,8 @@ export default async function Videos({
   const videos = await fetchVideos({ channel, page, order })
 
   return (
-    <main>
-      <ul className="divide-y divide-neutral-200">
+    <main className="p-2 bg-neutral-200">
+      <ul className="space-y-2">
         {videos.map((video) => (
           <Video key={video.id} video={video} />
         ))}
