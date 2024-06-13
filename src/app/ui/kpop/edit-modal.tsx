@@ -4,6 +4,23 @@ import { updateTags } from '@/lib/kpop/actions'
 import type { Video } from '@/lib/kpop/definitions'
 import { formatDate, formatDuration } from '@/lib/utils'
 
+function Tag({
+  name,
+  onClick,
+}: {
+  name: string
+  onClick: (tag: string) => void
+}) {
+  return (
+    <button
+      className="px-1 py-px bg-neutral-100 rounded-md text-sm text-neutral-600 hover:bg-neutral-200"
+      onClick={() => onClick(name)}
+    >
+      {name}
+    </button>
+  )
+}
+
 export function EditModal({
   video,
   onClose,
@@ -75,24 +92,10 @@ export function EditModal({
           />
           <div className="mt-2 space-x-2">
             <span className="text-neutral-500">Toggle tags:</span>
-            <button
-              onClick={() => addTag('watched')}
-              className="px-1.5 bg-neutral-100 rounded-md text-sm text-neutral-500 hover:bg-neutral-200"
-            >
-              watched
-            </button>
-            <button
-              onClick={() => addTag('bts')}
-              className="px-1.5 bg-neutral-100 rounded-md text-sm text-neutral-500 hover:bg-neutral-200"
-            >
-              bts
-            </button>
-            <button
-              onClick={() => addTag('vlog')}
-              className="px-1.5 bg-neutral-100 rounded-md text-sm text-neutral-500 hover:bg-neutral-200"
-            >
-              vlog
-            </button>
+            <Tag name="watched" onClick={addTag} />
+            <Tag name="bts" onClick={addTag} />
+            <Tag name="vlog" onClick={addTag} />
+            <Tag name="short" onClick={addTag} />
           </div>
           {error ? <p className="mt-2 text-red-500">{error}</p> : null}
           <div className="flex justify-end gap-2 mt-4">

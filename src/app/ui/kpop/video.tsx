@@ -7,14 +7,7 @@ import type { Video } from '@/lib/kpop/definitions'
 import { formatDate, formatDuration } from '@/lib/utils'
 
 import { EditModal } from './edit-modal'
-
-function Tag({ name }: { name: string }) {
-  return (
-    <span className="px-1.5 py-0.5 bg-red-200 rounded-lg text-sm text-neutral-500">
-      {name}
-    </span>
-  )
-}
+import Tag from './tag'
 
 export default function Video({ video }: { video: Video }) {
   const [open, setOpen] = useState(false)
@@ -32,7 +25,7 @@ export default function Video({ video }: { video: Video }) {
         >
           {video.title}
         </Link>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center h-6">
           <span className="text-neutral-500 text-sm">
             {formatDate(video.date)} -{' '}
             <Link href={`/kpop/${video.channel.name}`}>
