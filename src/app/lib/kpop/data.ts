@@ -103,7 +103,7 @@ export async function fetchNextVideo(channel: string) {
       where: {
         channel: { name: channel },
         date: { gte: lastVideo?.date },
-        tags: { none: { name: 'watched' } },
+        tags: { none: { name: { in: ['short', 'watched'] } } },
       },
       orderBy: { date: 'asc' },
     })
