@@ -1,30 +1,26 @@
 export default function Tag({ name }: { name: string }) {
-  let colors
+  let color
 
   switch (name) {
     case 'watched':
-      colors = 'bg-green-500'
+      color = 'green'
       break
     case 'vlog':
-      colors = 'bg-blue-500'
+      color = 'blue'
       break
     case 'bts':
-      colors = 'bg-yellow-500'
+      color = 'yellow'
       break
     case 'mv':
-      colors = 'bg-pink-500'
+      color = 'pink'
       break
     default:
-      colors = 'bg-neutral-500'
+      color = 'neutral'
   }
 
   return (
-    <span
-      className={`inline-flex items-center h-5 pl-1 rounded-l-md rounded-r-xl ${colors}`}
-    >
-      <span className="px-1 bg-neutral-100 text-sm text-neutral-500 rounded-r-md">
-        {name}
-      </span>
+    <span className={`px-1 bg-${color}-100 text-${color}-600 text-sm rounded-md`}>
+      {name}
     </span>
   )
 }
