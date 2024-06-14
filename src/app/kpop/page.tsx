@@ -8,10 +8,12 @@ export default function Page() {
   return (
     <>
       <Header />
-      <main className="p-2">
-        <Suspense fallback={<VideoSkeleton />}>
-          <Dashboard />
-        </Suspense>
+      <main className="flex justify-center p-2">
+        <div className="max-w-3xl w-full">
+          <Suspense fallback={<VideoSkeleton />}>
+            <Dashboard />
+          </Suspense>
+        </div>
       </main>
     </>
   )

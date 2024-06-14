@@ -17,13 +17,15 @@ export default function Page({
   return (
     <>
       <Header sortable={true} />
-      <main className="p-2">
-        <Suspense
-          key={JSON.stringify(searchParams)}
-          fallback={<VideoSkeleton />}
-        >
-          <Videos channel={params.channel} page={page} order={order} />
-        </Suspense>
+      <main className="flex justify-center p-2">
+        <div className="max-w-3xl w-full">
+          <Suspense
+            key={JSON.stringify(searchParams)}
+            fallback={<VideoSkeleton />}
+          >
+            <Videos channel={params.channel} page={page} order={order} />
+          </Suspense>
+        </div>
       </main>
     </>
   )
