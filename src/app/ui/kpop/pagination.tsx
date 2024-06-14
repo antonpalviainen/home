@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
@@ -104,9 +104,9 @@ function PaginationArrow({
 
   const icon =
     direction === 'left' ? (
-      <ArrowLeftIcon className="w-4" />
+      <ChevronLeftIcon className="w-4" />
     ) : (
-      <ArrowRightIcon className="w-4" />
+      <ChevronRightIcon className="w-4" />
     )
 
   return isDisabled ? (
