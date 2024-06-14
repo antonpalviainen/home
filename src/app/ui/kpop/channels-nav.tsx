@@ -4,6 +4,7 @@ export function ChannelsNav() {
   return (
     <div className="absolute w-full p-2">
       <nav className="flex flex-col gap-2 px-2 py-2 bg-white border-b border-neutral-200 rounded-lg shadow-xl">
+        <Link href="/kpop">home</Link>
         <Link href="/kpop/all">all</Link>
         <Link href="/kpop/aespa">aespa</Link>
         <Link href="/kpop/chuucandoit">chuucandoit</Link>
