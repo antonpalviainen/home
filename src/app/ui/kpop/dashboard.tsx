@@ -16,22 +16,21 @@ export default async function Dashboard() {
     'nmixx',
   ]
 
-  const results = await Promise.all(
-    channels.map(async (channel) => {
-      return await fetchNextVideo(channel)
-    })
-  )
-
-  if (!results.length) {
-    return <p>No videos found</p>
-  }
-
   const videos = []
 
-  for (const result of results) {
-    if (result) {
-      videos.push(result)
+  for (const channel of channels) {
+    const video = await fetchNextVideo(channel)
+    if (video) {
+      videos.push(video)
     }
+  }
+
+  if (!videos.length) {
+    return (
+      <p className="px-2 py-1 bg-white rounded-lg text-center">
+        No videos found
+      </p>
+    )
   }
 
   return (
