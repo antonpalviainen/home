@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import type { Video } from '@/lib/kpop/definitions'
 import { formatDate, formatDuration } from '@/lib/utils'
@@ -11,6 +11,14 @@ import Tag from './tag'
 
 export default function Video({ video }: { video: Video }) {
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
 
   return (
     <li>

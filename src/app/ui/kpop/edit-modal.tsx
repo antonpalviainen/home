@@ -72,7 +72,7 @@ export function EditModal({
 
   return (
     <div className="fixed flex items-center justify-center inset-0 p-2 z-50 bg-black/50">
-      <div className="w-full p-4 bg-white rounded-lg shadow-lg">
+      <div className="max-w-xl w-full p-4 bg-white rounded-lg shadow-lg">
         <div className="space-y-1">
           <p>{video.title}</p>
           <p className="text-neutral-500 text-sm">
