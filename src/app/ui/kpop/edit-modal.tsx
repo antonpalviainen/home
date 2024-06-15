@@ -102,7 +102,7 @@ export function EditModal({
           <div className="flex justify-end gap-4 mt-4">
             <button
               onClick={onClose}
-              className="px-3 py-1 border border-red-200 rounded-xl shadow-sm font-medium hover:bg-neutral-100"
+              className="px-3 py-1 border border-red-200 rounded-xl shadow-sm font-medium hover:bg-neutral-100 focus:outline-red-500"
             >
               close
             </button>
