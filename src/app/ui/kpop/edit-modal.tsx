@@ -83,12 +83,13 @@ export function EditModal({
         <div className="mt-4">
           <input
             type="text"
+            placeholder='Add tags separated by spaces. Ex: "watched bts"'
             value={value}
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === 'Enter') handleSubmit()
             }}
-            className="w-full px-2 py-1 border border-neutral-200 rounded-lg"
+            className="w-full px-2 py-1 border-2 border-neutral-200 rounded-lg placeholder:text-neutral-400"
           />
           <div className="mt-2 space-x-2">
             <span className="text-neutral-500">Toggle tags:</span>
@@ -98,17 +99,17 @@ export function EditModal({
             <Tag name="short" onClick={addTag} />
           </div>
           {error ? <p className="mt-2 text-red-500">{error}</p> : null}
-          <div className="flex justify-end gap-2 mt-4">
+          <div className="flex justify-end gap-4 mt-4">
             <button
               onClick={onClose}
-              className="px-3 py-1 font-medium border rounded-lg hover:bg-neutral-100"
+              className="px-3 py-1 font-medium border rounded-xl shadow-sm hover:bg-neutral-100"
             >
               close
             </button>
             <button
               disabled={submitting}
               onClick={handleSubmit}
-              className="px-3 py-1 font-medium border rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 py-1 font-medium border rounded-xl shadow-sm hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               save
             </button>
