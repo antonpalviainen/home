@@ -85,6 +85,7 @@ export function EditModal({
             type="text"
             placeholder='Add tags separated by spaces. Ex: "watched bts"'
             value={value}
+            autoFocus
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === 'Enter') handleSubmit()

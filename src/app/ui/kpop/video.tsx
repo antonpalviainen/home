@@ -25,6 +25,8 @@ export default function Video({ video }: { video: Video }) {
       {open ? <EditModal video={video} onClose={() => setOpen(false)} /> : null}
       <div
         onClick={() => setOpen(true)}
+        onKeyDown={(e) => e.key === 'Enter' && setOpen(true)}
+        tabIndex={0}
         className="p-2 space-y-1 bg-white rounded-lg shadow"
       >
         <Link
