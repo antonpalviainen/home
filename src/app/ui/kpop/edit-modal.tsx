@@ -101,6 +101,7 @@ export default function EditModal({ video }: { video: Video }) {
               value={value}
               placeholder='Add tags separated by spaces. Ex: "watched bts"'
               onChange={(e) => setValue(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
               className="w-full px-2 py-1 border-2 border-neutral-200 rounded-lg placeholder:text-neutral-400"
             />
             <div className="space-x-2">

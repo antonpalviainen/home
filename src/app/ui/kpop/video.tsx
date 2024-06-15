@@ -11,7 +11,7 @@ import Tag from './tag'
 export default function Video({ video }: { video: Video }) {
   return (
     <li>
-      <div tabIndex={0} className="p-2 bg-white rounded-lg shadow">
+      <div className="p-2 bg-white rounded-lg shadow">
         <Link
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
