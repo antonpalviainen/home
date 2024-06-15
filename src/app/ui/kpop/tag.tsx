@@ -18,5 +18,5 @@ export default function Tag({ name }: { name: string }) {
       colors = 'bg-neutral-100 text-neutral-600'
   }
 
-  return <span className={`px-1 ${colors} text-sm rounded-md`}>{name}</span>
+  return <span className={`px-1 ${colors} text-sm rounded-lg`}>{name}</span>
 }
