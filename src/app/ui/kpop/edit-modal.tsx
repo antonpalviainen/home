@@ -14,7 +14,7 @@ function Tag({
 }) {
   return (
     <button
-      className="px-1 py-px bg-neutral-100 rounded-lg text-sm text-neutral-600 hover:bg-neutral-200"
+      className="px-1 py-px bg-neutral-100 rounded-lg text-sm transition-colors text-neutral-600 hover:bg-neutral-200"
       onClick={() => onClick(name)}
     >
       {name}
@@ -83,7 +83,6 @@ export default function EditModal({
           className="fixed inset-0 flex justify-center items-center p-2 bg-black/50"
         >
           <motion.div
-            inert={true}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
@@ -118,14 +117,14 @@ export default function EditModal({
             <div className="flex justify-end gap-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-3 py-1 border border-neutral-100 rounded-xl shadow shadow-neutral-200 font-medium hover:bg-neutral-100 focus:outline-red-500"
+                className="px-3 py-1 border border-neutral-100 rounded-xl shadow shadow-neutral-200 font-medium transition-colors hover:bg-neutral-100 focus:outline-red-500"
               >
                 close
               </button>
               <button
                 disabled={submitting}
                 onClick={handleSubmit}
-                className="px-3 py-1 border border-neutral-100 rounded-xl shadow shadow-neutral-200 font-medium hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-3 py-1 border border-neutral-100 rounded-xl shadow shadow-neutral-200 font-medium transition-colors hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 save
               </button>

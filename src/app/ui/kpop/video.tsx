@@ -1,6 +1,5 @@
 'use client'
 
-import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -36,7 +35,7 @@ export default function Video({ video }: { video: Video }) {
             ))}
             <button
               onClick={() => setOpen(true)}
-              className="px-1 py-px bg-neutral-100 rounded-lg text-sm text-neutral-600 hover:bg-neutral-200"
+              className="px-1 py-px bg-neutral-100 rounded-lg text-sm text-neutral-600 transition-colors hover:bg-neutral-200"
             >
               edit
             </button>
