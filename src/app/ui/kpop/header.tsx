@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 
 import { ChannelsNav } from './channels-nav'
 
@@ -11,23 +11,18 @@ function SortNav() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
 
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString())
-      params.set(name, value)
-      params.delete('page')
+  function createPageURL(order: 'asc' | 'desc') {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('order', order)
+    params.delete('page')
 
-      return params.toString()
-    },
-    [searchParams]
-  )
+    return `${pathname}?${params.toString()}`
+  }
 
   return (
     <div className="space-x-4">
-      <Link href={pathname + '?' + createQueryString('order', 'asc')}>old</Link>
-      <Link href={pathname + '?' + createQueryString('order', 'desc')}>
-        new
-      </Link>
+      <Link href={createPageURL('asc')}>old</Link>
+      <Link href={createPageURL('desc')}>new</Link>
     </div>
   )
 }
@@ -37,7 +32,7 @@ export default function Header({ sortable }: { sortable?: boolean }) {
 
   return (
     <div className="relative text-2xl">
-      <header className="flex justify-between px-4 py-2 bg-white shadow">
+      <header className="flex justify-between px-4 py-2 bg-white shadow z-[100]">
         <button onClick={() => setOpen((prev) => !prev)}>channels</button>
         {sortable ? <SortNav /> : null}
       </header>
