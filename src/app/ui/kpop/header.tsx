@@ -1,5 +1,6 @@
 'use client'
 
+import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useCallback, useState } from 'react'
@@ -40,7 +41,17 @@ export default function Header({ sortable }: { sortable?: boolean }) {
         <button onClick={() => setOpen((prev) => !prev)}>channels</button>
         {sortable ? <SortNav /> : null}
       </header>
-      {open ? <ChannelsNav /> : null}
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+          >
+            <ChannelsNav />
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </div>
   )
 }
