@@ -1,6 +1,8 @@
 'use client'
 
+import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import { useState } from 'react'
 
 import type { Video } from '@/lib/kpop/definitions'
 import { formatDate, formatDuration } from '@/lib/utils'
@@ -9,6 +11,8 @@ import EditModal from './edit-modal'
 import Tag from './tag'
 
 export default function Video({ video }: { video: Video }) {
+  const [open, setOpen] = useState(false)
+
   return (
     <li>
       <div className="p-2 bg-white rounded-lg shadow">
@@ -30,10 +34,16 @@ export default function Video({ video }: { video: Video }) {
             {video.tags?.map(({ name }) => (
               <Tag key={name} name={name} />
             ))}
-            <EditModal video={video} />
+            <button
+              onClick={() => setOpen(true)}
+              className="px-1 py-px bg-neutral-100 rounded-lg text-sm text-neutral-600 hover:bg-neutral-200"
+            >
+              edit
+            </button>
           </div>
         </div>
       </div>
+      <EditModal video={video} open={open} setOpen={setOpen} />
     </li>
   )
 }
