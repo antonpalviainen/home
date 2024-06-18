@@ -12,8 +12,12 @@ export default async function Videos({
   page: number
   order: 'asc' | 'desc'
 }) {
-  const videos = await fetchVideos({ channel, page, order })
-  const totalPages = await fetchVideosPages({ channel })
+  const parsedChannel = channel === 'all' ? undefined : channel
+
+  const videos = await fetchVideos({ channel: parsedChannel, page, order })
+  const totalPages = await fetchVideosPages({
+    channel: parsedChannel,
+  })
 
   return (
     <>
