@@ -30,3 +30,13 @@ export default function Page({
     </>
   )
 }
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { channel: string }
+}) {
+  return {
+    title: params.channel,
+  }
+}

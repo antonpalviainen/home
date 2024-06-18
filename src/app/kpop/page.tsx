@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Suspense } from 'react'
 
 import Dashboard from '@/ui/kpop/dashboard'
@@ -17,4 +18,8 @@ export default function Page() {
       </main>
     </>
   )
+}
+
+export const metadata: Metadata = {
+  title: 'kpop',
 }
