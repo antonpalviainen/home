@@ -86,7 +86,7 @@ export default function EditModal({
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
-            className="p-4 space-y-4 bg-white rounded-lg shadow-lg"
+            className="max-w-xl w-full p-4 space-y-4 bg-white rounded-lg shadow-lg"
           >
             <div className="space-y-1">
               <p>{video.title}</p>
